@@ -14,7 +14,7 @@ const App = () => {
     <Router>
       <Navbar />
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/FlagFinder" element={<Homepage />} />
           <Route path="/flagsquiz" element={<FlagsQuiz />} />
           <Route path="/scriptsquiz" element={<ScriptsQuiz />} />
           <Route path="/settings" element={<Settings />} />

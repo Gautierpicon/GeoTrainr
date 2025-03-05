@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between px-6 py-4 bg-white dark:bg-black shadow-sm">
       {/* Logo et Nom */}
-      <Link to="/" className="flex items-center space-x-3 cursor-pointer">
+      <Link to="/FlagFinder" className="flex items-center space-x-3 cursor-pointer">
         <svg width="45" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="25" cy="25" r="25" fill="#0090C9" />
           <path
