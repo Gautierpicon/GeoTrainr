@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ButtonQuizz = ({ 
+const QuizAnswerButtons = ({ 
   children, 
   isCorrect, 
   isSelected, 
@@ -20,7 +20,7 @@ const ButtonQuizz = ({
                         (showFeedback && isSelected && !isCorrect);
 
   const buttonColor = showFeedback 
-    ? (isCorrect ? "bg-green-400" : "bg-red-400") // Directement rouge si incorrect
+    ? (isCorrect ? "bg-green-400" : "bg-red-400")
     : "bg-gray-200";
 
   return (
@@ -44,4 +44,4 @@ const ButtonQuizz = ({
   );
 };
 
-export default ButtonQuizz;
+export default QuizAnswerButtons;

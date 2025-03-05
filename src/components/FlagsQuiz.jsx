@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import countryData from "../../data/countries.json";
+import countryData from "../data/countries.json";
 import Favicon from "./Favicon";
-import ButtonQuizz from "./ButtonQuizz";
+import QuizAnswerButtons from "./QuizAnswerButtons";
 
 const countries = Object.entries(countryData).map(([code, name]) => ({
   code,
   name
 }));
 
-const Quiz = () => {
+const FlagsQuiz = () => {
   const [question, setQuestion] = useState(null);
   const [selected, setSelected] = useState(null);
   const [showFeedback, setShowFeedback] = useState(false);
@@ -73,7 +73,7 @@ const Quiz = () => {
       
       <div className="grid grid-cols-1 gap-4 w-full max-w-md">
         {question.options.map((option) => (
-          <ButtonQuizz
+          <QuizAnswerButtons
             key={option.code}
             isCorrect={option.code === question.correct.code}
             isSelected={selected?.code === option.code}
@@ -82,7 +82,7 @@ const Quiz = () => {
             disabled={showFeedback}
           >
             {option.name}
-          </ButtonQuizz>
+          </QuizAnswerButtons>
         ))}
       </div>
       
@@ -99,4 +99,4 @@ const Quiz = () => {
   );
 };
 
-export default Quiz;
+export default FlagsQuiz;

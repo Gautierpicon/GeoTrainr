@@ -1,15 +1,22 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import Navbar from './components/Navbar';
-import Quiz from "./components/Quiz";
+import FlagsQuiz from './components/FlagsQuiz';
+import Homepage from './pages/Homepage';
+import ScriptsQuiz from './pages/ScriptsQuiz';
 
 const App = () => {
   return (
-    <div>
+    <Router>
       <Navbar />
-      <Quiz />
-    </div>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/flagsquiz" element={<FlagsQuiz />} />
+          <Route path="/scriptsquiz" element={<ScriptsQuiz />} />
+        </Routes>
+    </Router>
   )
-} 
+}
 
 export default App
