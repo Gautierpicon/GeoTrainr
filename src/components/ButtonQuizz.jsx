@@ -26,8 +26,8 @@ const ButtonQuizz = ({
   return (
     <button
       onClick={handleClick}
-      className={`bg-white text-center w-full max-w-md rounded-2xl h-14 relative text-black text-xl font-semibold overflow-hidden shadow-lg transition-all duration-500 
-        ${!disabled ? "hover:shadow-xl" : ""} // Accentue légèrement l'ombre au hover si pas désactivé
+      className={`bg-white cursor-pointer text-center w-full max-w-md rounded-2xl h-14 relative text-black text-xl font-semibold overflow-hidden shadow-lg transition-shadow duration-500 
+        ${!disabled ? "hover:border hover:border-gray-400" : ""} // Accentue légèrement l'ombre au hover si pas désactivé
       `}
       type="button"
       disabled={disabled}

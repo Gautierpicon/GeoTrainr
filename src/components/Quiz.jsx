@@ -62,7 +62,7 @@ const Quiz = () => {
   if (!question) return <div>Chargement...</div>;
 
   return (
-    <div className="flex flex-col items-center p-4">
+    <div className="flex flex-col items-center p-4 justify-center min-h-screen bg-gray-100">
       <Favicon countryCode={question.correct.code} />
       
       <img
@@ -88,7 +88,7 @@ const Quiz = () => {
       
       <button
         onClick={generateQuestion}
-        className={`mt-6 py-2 px-4 rounded text-white transition-all duration-300
+        className={`mt-6 py-2 px-4 rounded text-white transition-all duration-300 cursor-pointer
           ${showFeedback ? "bg-blue-500 hover:bg-blue-600" : "bg-gray-400 cursor-not-allowed"}
         `}
         disabled={!showFeedback} // Désactivé tant qu'aucune réponse n'est sélectionnée
