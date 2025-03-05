@@ -1,7 +1,12 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+    const location = useLocation();
+
+    const isFlagsPage = location.pathname === "/FlagsQuiz";
+    const isScriptsPage = location.pathname === "/ScriptsQuiz";
+    
   return (
     <nav className="flex items-center justify-between px-6 py-4 bg-white shadow-sm">
       {/* Logo et Nom */}
@@ -20,7 +25,8 @@ const Navbar = () => {
 
       {/* Drapeaux et Langues */}
       <div className="flex items-center space-x-6">
-        <Link to="/FlagsQuiz" className="flex items-center space-x-2 cursor-pointer text-gray-700 hover:opacity-80">
+        <Link to="/FlagsQuiz" className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
+            ${isFlagsPage ? "bg-blue-500 text-white" : "bg-white text-gray-700"}`}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
             <path
               fillRule="evenodd"
@@ -28,10 +34,11 @@ const Navbar = () => {
               clipRule="evenodd"
             />
           </svg>
-          <span className="text-gray-700">Drapeaux</span>
+          <span>Drapeaux</span>
         </Link>
 
-        <Link to="/ScriptsQuiz" className="flex items-center space-x-2 cursor-pointer text-gray-700 hover:opacity-80">
+        <Link to="/ScriptsQuiz" className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
+            ${isScriptsPage ? "bg-green-500 text-white" : "bg-white text-gray-700"}`}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="size-6">
             <path
               strokeLinecap="round"
@@ -39,7 +46,7 @@ const Navbar = () => {
               d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802"
             />
           </svg>
-          <span className="text-gray-700">Langues</span>
+          <span>Écritures</span>
         </Link>
 
         <div className="border-l border-gray-300 h-8 ml-4"></div>
