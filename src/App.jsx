@@ -1,11 +1,11 @@
 import React from 'react'
 
-import Flag from "./components/Flag";
+import Quiz from "./components/Quiz";
 
 const App = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <Flag />
+      <Quiz />
     </div>
   )
 } 
