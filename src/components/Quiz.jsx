@@ -43,10 +43,9 @@ const Quiz = () => {
 
   return (
     <div className="flex flex-col items-center p-4">
-      {/* Mettre à jour la favicon avec le code du pays */}
+      {/* Mettre à jour la favicon et le titre de la page */}
       <Favicon countryCode={question.correct.code} />
 
-      <h1 className="text-2xl font-bold mb-4">Quiz des Drapeaux</h1>
       <img
         src={`https://flagcdn.com/${question.correct.code}.svg`}
         alt={`${question.correct.name}`}
