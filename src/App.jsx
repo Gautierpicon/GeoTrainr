@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from './components/Navbar';
-import FlagsQuiz from './components/FlagsQuiz';
+import FlagsQuiz from './pages/FlagsQuiz';
 import Homepage from './pages/Homepage';
 import ScriptsQuiz from './pages/ScriptsQuiz';
 

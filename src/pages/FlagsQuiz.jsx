@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import countryData from "../data/countries.json";
-import Favicon from "./Favicon";
-import QuizAnswerButtons from "./QuizAnswerButtons";
+import Favicon from "../components/Favicon";
+import QuizAnswerButtons from "../components/QuizAnswerButtons";
 
 const countries = Object.entries(countryData).map(([code, name]) => ({
   code,
@@ -62,7 +62,7 @@ const FlagsQuiz = () => {
   if (!question) return <div>Chargement...</div>;
 
   return (
-    <div className="flex flex-col items-center p-4 justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center p-4 justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
       <Favicon countryCode={question.correct.code} />
       
       <img
@@ -89,7 +89,7 @@ const FlagsQuiz = () => {
       <button
         onClick={generateQuestion}
         className={`mt-6 py-2 px-4 rounded text-white transition-all duration-300 cursor-pointer
-          ${showFeedback ? "bg-blue-500 hover:bg-blue-600" : "bg-gray-400 cursor-not-allowed"}
+          ${showFeedback ? "bg-blue-500 hover:bg-blue-600 dark:hover:bg-blue-400" : "bg-gray-400 dark:bg-gray-400 cursor-not-allowed"}
         `}
         disabled={!showFeedback} // Désactivé tant qu'aucune réponse n'est sélectionnée
       >

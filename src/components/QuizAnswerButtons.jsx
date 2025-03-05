@@ -20,14 +20,14 @@ const QuizAnswerButtons = ({
                         (showFeedback && isSelected && !isCorrect);
 
   const buttonColor = showFeedback 
-    ? (isCorrect ? "bg-green-400" : "bg-red-400")
-    : "bg-gray-200";
+    ? (isCorrect ? "bg-green-400 dark:bg-green-600" : "bg-red-400 dark:bg-red-600")
+    : "bg-gray-200 dark:bg-gray-800";
 
   return (
     <button
       onClick={handleClick}
-      className={`bg-white cursor-pointer text-center w-full max-w-md rounded-2xl h-14 relative text-black text-xl font-semibold overflow-hidden shadow-lg transition-shadow duration-500 
-        ${!disabled ? "hover:border hover:border-gray-400" : ""} // Accentue légèrement l'ombre au hover si pas désactivé
+      className={`bg-white dark:bg-black cursor-pointer text-center w-full max-w-md rounded-2xl h-14 relative text-black dark:text-white text-xl font-semibold overflow-hidden shadow-lg transition-shadow duration-500 
+        ${!disabled ? "hover:border hover:border-gray-400 dark:hover:border-gray-600" : ""} // Accentue légèrement l'ombre au hover si pas désactivé
       `}
       type="button"
       disabled={disabled}
