@@ -2,7 +2,7 @@ import React from 'react'
 
 const ScriptsQuiz = () => {
   return (
-    <div>ScriptsQuiz</div>
+    <div>coming soon</div>
   )
 }
 

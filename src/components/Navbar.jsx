@@ -26,7 +26,7 @@ const Navbar = () => {
       {/* Drapeaux et Langues */}
       <div className="flex items-center space-x-6">
         <Link to="/FlagsQuiz" className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
-            ${isFlagsPage ? "bg-blue-500 text-white dark:text-black" : "bg-white text-gray-700 dark:bg-black dark:text-gray-300"}`}>
+            ${isFlagsPage ? "bg-blue-500 text-white dark:text-black" : "bg-white text-gray-800 dark:bg-black dark:text-gray-200"}`}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
             <path
               fillRule="evenodd"
@@ -38,7 +38,7 @@ const Navbar = () => {
         </Link>
 
         <Link to="/ScriptsQuiz" className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
-            ${isScriptsPage ? "bg-green-500 text-white dark:text-black" : "bg-white text-gray-700 dark:bg-black dark:text-gray-300"}`}>
+            ${isScriptsPage ? "bg-green-500 text-white dark:text-black" : "bg-white text-gray-800 dark:bg-black dark:text-gray-200"}`}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="size-6">
             <path
               strokeLinecap="round"
@@ -49,9 +49,9 @@ const Navbar = () => {
           <span>Écritures</span>
         </Link>
 
-        <div className="border-l border-gray-300 h-8 ml-4"></div>
+        <div className="border-l border-gray-200 h-8 ml-4"></div>
 
-        <button className="text-gray-700 dark:text-gray-300 hover:opacity-80 cursor-pointer">
+        <button className="text-gray-800 dark:text-gray-200 hover:opacity-80 cursor-pointer">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="size-6">
             <path
               strokeLinecap="round"
