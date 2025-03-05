@@ -6,6 +6,7 @@ const Navbar = () => {
 
     const isFlagsPage = location.pathname === "/FlagsQuiz";
     const isScriptsPage = location.pathname === "/ScriptsQuiz";
+    const isSettingsPage = location.pathname === "/settings";
     
   return (
     <nav className="flex items-center justify-between px-6 py-4 bg-white dark:bg-black shadow-sm">
@@ -51,7 +52,8 @@ const Navbar = () => {
 
         <div className="border-l border-gray-200 h-8 ml-4"></div>
 
-        <button className="text-gray-800 dark:text-gray-200 hover:opacity-80 cursor-pointer">
+        <Link to="/settings" className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
+            ${isSettingsPage ? "bg-gray-600 dark:bg-gray-400 text-white dark:text-black" : "bg-white text-gray-800 dark:bg-black dark:text-gray-200"}`}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="size-6">
             <path
               strokeLinecap="round"
@@ -64,7 +66,7 @@ const Navbar = () => {
               d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
             />
           </svg>
-        </button>
+        </Link>
       </div>
     </nav>
   );
