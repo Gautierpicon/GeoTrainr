@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import countryData from "../countries.json"; // Importation du JSON local
+import Favicon from "./Favicon";
 
 const countries = Object.entries(countryData).map(([code, name]) => ({
   code,
@@ -42,6 +43,9 @@ const Quiz = () => {
 
   return (
     <div className="flex flex-col items-center p-4">
+      {/* Mettre à jour la favicon avec le code du pays */}
+      <Favicon countryCode={question.correct.code} />
+
       <h1 className="text-2xl font-bold mb-4">Quiz des Drapeaux</h1>
       <img
         src={`https://flagcdn.com/${question.correct.code}.svg`}
