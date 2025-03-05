@@ -68,7 +68,7 @@ const Quiz = () => {
       <img
         src={`https://flagcdn.com/${question.correct.code}.svg`}
         alt={`${question.correct.name}`}
-        className="w-96 h-auto mb-6 shadow-lg rounded-xl"
+        className="w-96 h-auto mb-6 shadow-lg"
       />
       
       <div className="grid grid-cols-1 gap-4 w-full max-w-md">
