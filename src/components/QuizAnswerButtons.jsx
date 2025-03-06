@@ -20,7 +20,7 @@ const QuizAnswerButtons = ({
                         (showFeedback && isSelected && !isCorrect);
 
   const buttonColor = showFeedback 
-    ? (isCorrect ? "bg-green-400 dark:bg-green-600" : "bg-red-400 dark:bg-red-600")
+    ? (isCorrect ? "bg-green-400 dark:bg-green-800" : "bg-red-400 dark:bg-red-800")
     : "bg-gray-200 dark:bg-gray-800";
 
   return (

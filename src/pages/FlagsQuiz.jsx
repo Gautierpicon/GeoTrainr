@@ -62,7 +62,7 @@ const FlagsQuiz = () => {
   if (!question) return <div>Chargement...</div>;
 
   return (
-    <div className="flex flex-col items-center p-4 justify-center min-h-[calc(100vh-4.75rem)] bg-gradient-to-b from-indigo-100 to-violet-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="flex flex-col items-center p-4 justify-center min-h-[calc(100vh-4.75rem)] bg-gradient-to-b from-indigo-100 to-violet-100 dark:from-gray-900 dark:to-indigo-950">
       <Favicon countryCode={question.correct.code} />
       
       <img

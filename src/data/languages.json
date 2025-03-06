@@ -1,0 +1,642 @@
+{
+    "en": {
+      "name": "Anglais",
+      "sentences": [
+        "Current geopolitical dynamics influence international relations, shaping a world in constant evolution.",
+        "Postmodern literature questions conventional narrative structures, offering fragmented and polyphonic stories.",
+        "Contemporary architecture transcends traditional boundaries, incorporating futuristic and ecological elements."
+      ]
+    },
+    "zh": {
+      "name": "Chinois Mandarin",
+      "sentences": [
+        "当前的地缘政治动态影响着国际关系，塑造了一个不断演变的世界。",
+        "后现代文学质疑传统叙事结构，呈现出支离破碎且多声部的叙述。",
+        "当代建筑超越了传统界限，融合了未来主义和生态元素。"
+      ]
+    },
+    "hi": {
+      "name": "Hindi",
+      "sentences": [
+        "वर्तमान भू-राजनीतिक गतिशीलताएँ अंतरराष्ट्रीय संबंधों को प्रभावित करती हैं, और एक लगातार विकसित हो रही दुनिया का निर्माण करती हैं।",
+        "पोस्टमॉडर्न साहित्य पारंपरिक कथात्मक संरचनाओं पर प्रश्न उठाता है, खंडित और बहुस्वर कथाएँ प्रस्तुत करता है।",
+        "समकालीन वास्तुकला पारंपरिक सीमाओं से परे जाती है, भविष्यवादी और पर्यावरणीय तत्वों को शामिल करती है।"
+      ]
+    },
+    "es": {
+      "name": "Espagnol",
+      "sentences": [
+        "Las dinámicas geopolíticas actuales influyen en las relaciones internacionales, configurando un mundo en constante evolución.",
+        "La literatura posmoderna cuestiona las estructuras narrativas convencionales, ofreciendo relatos fragmentados y polifónicos.",
+        "La arquitectura contemporánea trasciende las fronteras tradicionales, integrando elementos futuristas y ecológicos."
+      ]
+    },
+    "fr": {
+      "name": "Français",
+      "sentences": [
+        "Les dynamiques géopolitiques actuelles influencent les relations internationales, façonnant un monde en constante évolution.",
+        "La littérature postmoderne interroge les structures narratives conventionnelles, offrant des récits fragmentés et polyphoniques.",
+        "L'architecture contemporaine transcende les frontières traditionnelles, intégrant des éléments futuristes et écologiques."
+      ]
+    },
+    "ar": {
+      "name": "Arabe Standard",
+      "sentences": [
+        "تؤثر الديناميات الجيوسياسية الحالية على العلاقات الدولية، مشكّلة عالماً يتطور باستمرار.",
+        "تتحدى الأدب ما بعد الحداثة الهياكل السردية التقليدية، مقدماً روايات مجزأة ومتعددة الأصوات.",
+        "تتجاوز العمارة المعاصرة الحدود التقليدية، مدمجةً عناصر مستقبلية وبيئية."
+      ]
+    },
+    "bn": {
+      "name": "Bengali",
+      "sentences": [
+        "বর্তমান ভূ-রাজনৈতিক গতিশীলতা আন্তর্জাতিক সম্পর্ককে প্রভাবিত করছে, একটি ক্রমাগত পরিবর্তনশীল বিশ্বের রূপ দিচ্ছে।",
+        "পোস্টমডার্ন সাহিত্য প্রচলিত বর্ণনামূলক কাঠামোকে প্রশ্ন করে, টুকরো টুকরো ও বহুনাদী গল্প উপস্থাপন করে।",
+        "সমকালীন স্থাপত্য ঐতিহ্যবাহী সীমানা অতিক্রম করে, ভবিষ্যতবাদী এবং পরিবেশগত উপাদান সংযুক্ত করে।"
+      ]
+    },
+    "ru": {
+      "name": "Russe",
+      "sentences": [
+        "Современные геополитические динамики влияют на международные отношения, формируя мир, постоянно находящийся в развитии.",
+        "Постмодернистская литература ставит под вопрос традиционные нарративные структуры, предлагая фрагментарные и полифонические рассказы.",
+        "Современная архитектура превосходит традиционные границы, интегрируя футуристические и экологические элементы."
+      ]
+    },
+    "pt": {
+      "name": "Portugais",
+      "sentences": [
+        "As dinâmicas geopolíticas atuais influenciam as relações internacionais, moldando um mundo em constante evolução.",
+        "A literatura pós-moderna questiona as estruturas narrativas convencionais, oferecendo relatos fragmentados e polifônicos.",
+        "A arquitetura contemporânea transcende as fronteiras tradicionais, integrando elementos futuristas e ecológicos."
+      ]
+    },
+    "id": {
+      "name": "Indonésien",
+      "sentences": [
+        "Dinamika geopolitik saat ini mempengaruhi hubungan internasional, membentuk dunia yang terus berkembang.",
+        "Sastra postmodern mempertanyakan struktur naratif konvensional, menawarkan cerita-cerita yang terfragmentasi dan polifonik.",
+        "Arsitektur kontemporer melampaui batasan tradisional, mengintegrasikan elemen-elemen futuristik dan ekologis."
+      ]
+    },
+    "ur": {
+      "name": "Ourdou",
+      "sentences": [
+        "موجودہ جیوپولیٹیکل حرکات بین الاقوامی تعلقات کو متاثر کرتی ہیں، ایک مسلسل ارتقا پذیر دنیا کی تشکیل کرتی ہیں۔",
+        "پوسٹ ماڈرن ادب روایتی بیانیہ ڈھانچوں پر سوال اٹھاتا ہے، ٹکڑوں ٹکڑوں اور کثیر صوابی کہانیاں پیش کرتا ہے۔",
+        "جدید تعمیرات روایتی حدود سے ماورا ہیں، مستقبل پسند اور ماحولیاتی عناصر کو یکجا کرتی ہیں۔"
+      ]
+    },
+    "de": {
+      "name": "Allemand",
+      "sentences": [
+        "Die aktuellen geopolitischen Dynamiken beeinflussen die internationalen Beziehungen und gestalten eine sich ständig wandelnde Welt.",
+        "Die postmoderne Literatur hinterfragt konventionelle narrative Strukturen und bietet fragmentierte sowie polyphone Erzählungen.",
+        "Die zeitgenössische Architektur überschreitet traditionelle Grenzen und integriert futuristische sowie ökologische Elemente."
+      ]
+    },
+    "ja": {
+      "name": "Japonais",
+      "sentences": [
+        "現代の地政学的ダイナミクスは国際関係に影響を与え、絶えず変化する世界を形作っています。",
+        "ポストモダン文学は従来の物語構造に疑問を呈し、断片的でポリフォニックな物語を提供します。",
+        "現代建築は伝統的な境界を超越し、未来的かつ環境に優しい要素を取り入れています。"
+      ]
+    },
+    "sw": {
+      "name": "Swahili",
+      "sentences": [
+        "Mienendo ya kisiasa ya sasa inaathiri uhusiano wa kimataifa, ikiumba dunia inayobadilika kila wakati.",
+        "Fasihi ya postmodern inachunguza miundo ya riwaya za kawaida, ikitoa hadithi zilizokatiza na zenye sauti nyingi.",
+        "Usanifu wa kisasa unavuka mipaka ya jadi, ukijumuisha vipengele vya mustakabali na vya kiikolojia."
+      ]
+    },
+    "mr": {
+      "name": "Marathi",
+      "sentences": [
+        "सध्याच्या भूराजकीय गतिक्रमामुळे आंतरराष्ट्रीय संबंधांवर परिणाम होतो, आणि एक सतत बदलणारी दुनिया घडते.",
+        "पोस्टमॉडर्न साहित्य पारंपरिक कथा संरचनांना आव्हान देते, तुटलेल्या आणि बहुस्वरात्मक कथांचे प्रदर्शन करते.",
+        "समकालीन वास्तुकला पारंपरिक सीमांना पार करते, भविष्यवादी आणि पर्यावरणीय घटक समाविष्ट करते."
+      ]
+    },
+    "te": {
+      "name": "Telougou",
+      "sentences": [
+        "ప్రస్తుత భౌగోళిక-రాజకీయ ప్రవర్తనలు అంతర్జాతీయ సంబంధాలను ప్రభావితం చేస్తూ, నిరంతరం మారుతున్న ప్రపంచాన్ని రూపొందిస్తున్నాయి.",
+        "పోస్ట్‌మోడరన్ సాహిత్యం సాంప్రదాయ కథా నిర్మాణాలను ప్రశ్నిస్తూ, చిత్తరెక్కిన మరియు బహుస్వర కథనాలను అందిస్తుంది.",
+        "ఆధునిక వాస్తవశాస్త్రం సాంప్రదాయ సరిహద్దులను దాటి, భవిష్యత్తు మరియు పర్యావరణ అంశాలను సమీకరిస్తుంది."
+      ]
+    },
+    "tr": {
+      "name": "Turc",
+      "sentences": [
+        "Güncel jeopolitik dinamikler uluslararası ilişkileri etkileyerek sürekli değişen bir dünya oluşturuyor.",
+        "Postmodern edebiyat, geleneksel anlatı yapısını sorgulayarak parçalı ve çok sesli hikayeler sunuyor.",
+        "Çağdaş mimari, geleneksel sınırları aşarak geleceğe yönelik ve ekolojik unsurları entegre ediyor."
+      ]
+    },
+    "ta": {
+      "name": "Tamoul",
+      "sentences": [
+        "தற்போதைய புவியியல்-ராஜনৈতিক இயக்கங்கள் சர்வதேச உறவுகளை பாதித்து, எப்போதும் மாறும் ஒரு உலகத்தை உருவாக்குகின்றன.",
+        "போஸ்ட்-மாடர்ன் இலக்கியம் பாரம்பரிய கதைக்கள அமைப்புகளை சோதித்து, துண்டிக்கப்பட்ட மற்றும் பலச்சபை கதைகளை வழங்குகிறது.",
+        "நவீன கட்டிடக்கலை பாரம்பரிய எல்லைகளை தாண்டி, எதிர்காலத்தையும் சுற்றுச்சூழல் அம்சங்களையும் ஒருங்கிணைக்கிறது."
+      ]
+    },
+    "vi": {
+      "name": "Vietnamien",
+      "sentences": [
+        "Các động thái địa chính trị hiện nay ảnh hưởng đến quan hệ quốc tế, tạo nên một thế giới không ngừng thay đổi.",
+        "Văn học hậu hiện đại đặt câu hỏi về các cấu trúc kể chuyện truyền thống, mang đến những câu chuyện phân mảnh và đa âm.",
+        "Kiến trúc đương đại vượt qua ranh giới truyền thống, tích hợp các yếu tố tương lai và sinh thái."
+      ]
+    },
+    "ko": {
+      "name": "Coréen",
+      "sentences": [
+        "현대의 지정학적 역학은 국제 관계에 영향을 미치며 끊임없이 변화하는 세계를 형성합니다.",
+        "포스트모던 문학은 전통적인 서사 구조에 의문을 제기하며, 단편적이고 다성적인 이야기를 제공합니다.",
+        "현대 건축은 전통적인 경계를 초월하여 미래적이고 생태학적인 요소를 통합합니다."
+      ]
+    },
+    "it": {
+      "name": "Italien",
+      "sentences": [
+        "Le dinamiche geopolitiche attuali influenzano le relazioni internazionali, plasmando un mondo in continua evoluzione.",
+        "La letteratura postmoderna mette in discussione le strutture narrative convenzionali, offrendo racconti frammentati e polifonici.",
+        "L'architettura contemporanea trascende i confini tradizionali, integrando elementi futuristici ed ecologici."
+      ]
+    },
+    "ha": {
+      "name": "Haoussa",
+      "sentences": [
+        "Yanayin siyasar duniya na yanzu suna shafar dangantakar ƙasashen duniya, suna tsara duniya wacce ke ci gaba da canzawa.",
+        "Adabin bayan zamani na tambayar tsarin labarai na gargajiya, yana ba da labarai masu tsagewa da masu sauti da dama.",
+        "Ginin zamani ya wuce iyakokin al'ada, yana haɗa abubuwan fasaha na gaba da na muhalli."
+      ]
+    },
+    "th": {
+      "name": "Thaïlandais",
+      "sentences": [
+        "พลวัตทางภูมิรัฐศาสตร์ในปัจจุบันมีอิทธิพลต่อความสัมพันธ์ระหว่างประเทศ สร้างโลกที่เปลี่ยนแปลงอย่างต่อเนื่อง",
+        "วรรณกรรมโพสต์โมเดิร์นตั้งคำถามกับโครงสร้างการเล่าเรื่องแบบดั้งเดิม นำเสนอเรื่องราวที่เป็นชิ้นส่วนและหลายเสียง",
+        "สถาปัตยกรรมร่วมสมัยข้ามผ่านขอบเขตแบบดั้งเดิม ผสมผสานองค์ประกอบที่ล้ำสมัยและเป็นมิตรกับสิ่งแวดล้อม"
+      ]
+    },
+    "gu": {
+      "name": "Gujarati",
+      "sentences": [
+        "વર્તમાન ભૂ-રાજકીય ગતિશીલતા આંતરરાષ્ટ્રીય સંબંધો પર પ્રભાવ પાડી રહી છે, અને સતત વિકસતા વિશ્વનું નિર્માણ કરી રહી છે.",
+        "પોસ્ટમોડર્ન સાહિત્ય પરંપરાગત વાર્તાકથન માળખાને પ્રશ્ન કરે છે, ખંડિત અને બહુસ્વરવાળી વાર્તાઓ રજૂ કરે છે.",
+        "આધુનિક વાસ્તુકલા પરંપરાગત સીમાઓને પાર કરી, ભવિષ્યવાદી અને પર્યાવરણને અનુકૂળ તત્વો એકત્રિત કરે છે."
+      ]
+    },
+    "kn": {
+      "name": "Kannada",
+      "sentences": [
+        "ಪ್ರಸ್ತುತ ಭೌಗೋಳಿಕ-ರಾಜಕೀಯ ಚಲನೆಗಳು ಅಂತಾರಾಷ್ಟ್ರೀಯ ಸಂಬಂಧಗಳನ್ನು ಪ್ರಭಾವಿಸುತ್ತಾ, ನಿರಂತರವಾಗಿ ಬದಲಾಗುತ್ತಿರುವ ಜಗತ್ತನ್ನು ರೂಪಿಸುತ್ತಿವೆ.",
+        "ಪೋಸ್ಟ್‌ಮಾಡರ್ನ್ ಸಾಹಿತ್ಯವು ಪರಂಪರാഗത ಕಥಾ ರಚನೆಗಳನ್ನು ಪ್ರಶ್ನಿಸುತ್ತದೆ, ತುಂಡು ತುಂಡಾಗಿ ಮತ್ತು ಬಹುಸ್ವರ ಕಥನಗಳನ್ನು ನೀಡುತ್ತದೆ.",
+        "ಆಧುನಿಕ ವಾಸ್ತುಶಿಲ್ಪವು ಪರಂಪರাগত ಗಡಿಗಳನ್ನು ದಾಟಿ, ಭವಿಷ್ಯ ಮತ್ತು ಪರಿಸರ ಸಂಬಂಧಿ ಅಂಶಗಳನ್ನು ಒಳಗೊಂಡಿದೆ."
+      ]
+    },
+    "fa": {
+      "name": "Persan",
+      "sentences": [
+        "پویاشناسی‌های ژئوپولیتیکی کنونی بر روابط بین‌الملل تأثیر می‌گذارند و جهانی در حال تحول مستمر را شکل می‌دهند.",
+        "ادبیات پست‌مدرن ساختارهای روایی متعارف را به چالش می‌کشد و روایت‌های تکه‌تکه و چندصدایی ارائه می‌دهد.",
+        "معماری معاصر از مرزهای سنتی فراتر رفته و عناصر آینده‌نگر و بوم‌شناختی را در خود جای داده است."
+      ]
+    },
+    "pl": {
+      "name": "Polonais",
+      "sentences": [
+        "Obecne dynamiczne procesy geopolityczne wpływają na stosunki międzynarodowe, kształtując świat w ciągłej ewolucji.",
+        "Literatura postmodernistyczna kwestionuje konwencjonalne struktury narracyjne, oferując fragmentaryczne i polifoniczne opowieści.",
+        "Współczesna architektura przekracza tradycyjne granice, integrując futurystyczne i ekologiczne elementy."
+      ]
+    },
+    "uk": {
+      "name": "Ukrainien",
+      "sentences": [
+        "Сучасна геополітична динаміка впливає на міжнародні відносини, формуючи світ, що постійно змінюється.",
+        "Постмодерна література ставить під сумнів традиційні наративні структури, пропонуючи фрагментарні та полифонічні розповіді.",
+        "Сучасна архітектура перевищує традиційні межі, інтегруючи футуристичні та екологічні елементи."
+      ]
+    },
+    "ml": {
+      "name": "Malayalam",
+      "sentences": [
+        "നിലവിലെ ഭൗഗോളിക-രാജ്യാന്തര പ്രേരണകൾ അന്താരാഷ്ട്ര ബന്ധങ്ങളെ സ്വാധീനിച്ച്, സ്ഥിരമായി മാറുന്ന ലോകത്തെ രൂപപ്പെടുത്തുന്നു.",
+        "പോസ്റ്റ്‌മോഡേൺ സാഹിത്യം പരമ്പരാഗത കഥാസംരചനകളെ ചോദ്യംചെയ്ത്, തുളഞ്ഞും പലശബ്ദമുമായ കഥകൾ അവതരിപ്പിക്കുന്നു.",
+        "സമകാലീന വാസ്തുശിൽപം പരമ്പരാഗത അതിരുകൾ മറികടക്കിയും, ഭാവി ദർശനവും പരിസ്ഥിതി ഘടകങ്ങളും ഉൾക്കൊള്ളുകയും ചെയ്യുന്നു."
+      ]
+    },
+    "or": {
+      "name": "Odia",
+      "sentences": [
+        "ବର୍ତ୍ତମାନ ଭୌଗୋଳିକ-ରାଜନୈତିକ ଗତିବିଧିଗୁଡ଼ିକ ଆନ୍ତର୍ଜାତୀୟ ସମ୍ପର୍କକୁ ପ୍ରଭାବିତ କରୁଛି, ଏକ ନିରନ୍ତର ପରିବର୍ତ୍ତନଶୀଳ ଜଗତର ଗଢ଼ନା କରୁଛି।",
+        "ପୋଷ୍ଟମଡର୍ନ ସାହିତ୍ୟ ପାରମ୍ପରିକ କାହାଣୀ ଗଠନକୁ ପ୍ରଶ୍ନ କରେ, ଭାଙ୍ଗିଯାଇଥିବା ଏବଂ ବହୁସ୍ୱରୀ କାହାଣୀ ଦେଇଥାଏ।",
+        "ଆଧୁନିକ ବାସ୍ତୁଶିଳ୍ପ ପାରମ୍ପରିକ ସୀମାକୁ ଅତିକ୍ରମ କରି, ଭବିଷ୍ୟତମୁଖୀ ଏବଂ ପରିସ୍ଥିତିଗତ ଉପାଦାନଗୁଡ଼ିକୁ ସାମିଲ କରିଛି।"
+      ]
+    },
+    "my": {
+      "name": "Birman",
+      "sentences": [
+        "လက်ရှိဂျီအိုပိုလီတစ်ကွက်ရဲ့ လှုပ်ရှားမှုများသည် နိုင်ငံတကာဆက်ဆံရေးကို သက်ရောက်စေပြီး အဆက်မပြတ် ပြောင်းလဲနေသော ကမ္ဘာတစ်ခုကို ဖန်တီးပေးသည်။",
+        "ပို့စ့်မော်ဒန် စာပေသည် ရိုးရာကဏ္ဍဇာတ်လမ်းဖွဲ့စည်းပုံများကို စိစစ်မေးခွန်းထုတ်ပြီး အပိုင်းပိုင်းခွဲခြားထားသောနှင့် အသံများစွာပါသော ပုံပြင်များကို ဖန်တီးပေးသည်။",
+        "ခေတ်သစ် နိုင်ငံတကာနေရာဗေဒင်ပညာသည် ရိုးရာနယ်စပ်များကို ကျော်လွှားကာ အနာဂတ်နှင့် ပတ်ဝန်းကျင်ဆိုင်ရာ အစိတ်အပိုင်းများကို ထည့်သွင်းပေါင်းစည်းထားသည်။"
+      ]
+    },
+    "so": {
+      "name": "Somali",
+      "sentences": [
+        "Dhaqdhaqaaqyada juqraafiga siyaasadeed ee hadda jira waxay saameeyaan xiriirka caalamiga ah, iyaga oo qaabeynaya aduun si joogto ah isu beddelaya.",
+        "Suugaanta post-modern waxay su'aal gelisaa qaab-dhismeedyada sheekooyinka dhaqameed, iyadoo soo bandhigaysa qisooyin jajaban oo cod badan leh.",
+        "Naqshadeynta casriga ah waxay dhaaftaa xuduudaha dhaqanka, iyadoo isku daraysa curiyeyaasha mustaqbalka iyo deegaanka."
+      ]
+    },
+    "ne": {
+      "name": "Népalais",
+      "sentences": [
+        "वर्तमान भू-राजनीतिक गतिशीलताहरूले अन्तर्राष्ट्रिय सम्बन्धहरूलाई प्रभाव पार्दै, लगातार परिवर्तन हुँदै गरेको संसार निर्माण गरिरहेका छन्।",
+        "पोस्टमोडर्न साहित्यले परम्परागत कथानक संरचनाहरूमाथि प्रश्न उठाउँदै, खण्डित र बहुस्वर कथाहरू प्रस्तुत गर्दछ।",
+        "समकालीन वास्तुकला परम्परागत सीमाहरू पार गर्दै, भविष्यवादी र पर्यावरणीय तत्त्वहरूलाई समाहित गर्दछ।"
+      ]
+    },
+    "si": {
+      "name": "Cingalais",
+      "sentences": [
+        "වත්මන් ජූගාත්මක දේශපාලන ගතිගුණයන් ජාත්‍යන්තර සම්බන්ධතා බලපාමින්, නිතර වෙනස්වන ලෝකයක් හැඩගස්සයි.",
+        "පොස්ට්මෝඩර්න් සාහිත්‍යය සාම්ප්‍රදායික නරේටිව් ව්‍යුහයන් අභියෝග කරමින්, කැබිලි හා බහුඅන්ස කතා ඉදිරිපත් කරයි.",
+        "අධුනික වාස්තු ශිල්පය සාම්ප්‍රදායික සීමා ඉක්මවා, අනාගත හා පාරිසරික සංවිධාන ඒකාබද්ධ කරයි."
+      ]
+    },
+    "km": {
+      "name": "Khmer",
+      "sentences": [
+        "ដំណើរការបច្ចុប្បន្ននៃយុទ្ធសាស្រ្តភូមិសាស្ត្របានមានឥទ្ធិពលលើទំនាក់ទំនងអន្តរជាតិ ដោយបង្កើតពិភពលោកដែលកំពុងផ្លាស់ប្តូរជាបន្តបន្ទាប់។",
+        "សាស្ត្រសិល្បៈបន្ទាប់ម៉ូដឺនសួរទៅលើរចនាសម្ព័ន្ធរឿងរ៉ាវប្រពៃណី ដោយផ្តល់នូវរឿងរ៉ាវដែលខូចខាតនិងពហុសូរ។",
+        "ស្ថាបត្យកម្មសម័យទំនើបលើសព្រំដែនប្រពៃណី ដោយបញ្ចូលធាតុអនាគតនិងបរិស្ថាន។"
+      ]
+    },
+    "ro": {
+      "name": "Roumain",
+      "sentences": [
+        "Dinamicile geopolitice actuale influențează relațiile internaționale, conturând o lume în continuă evoluție.",
+        "Literatura postmodernă pune sub semnul întrebării structurile narative convenționale, oferind povești fragmentate și polifonice.",
+        "Arhitectura contemporană transcende granițele tradiționale, integrând elemente futuriste și ecologice."
+      ]
+    },
+    "om": {
+      "name": "Oromo",
+      "sentences": [
+        "Haala siyaasaa ammaa walitti dhufeenya idil-addunyaa irratti dhiibbaa uuma, addunyaa yeroo hunda jijjiiramaa taate uuma.",
+        "Barreessuu postmodern, ijaarsa seenaa aadaa gaafachuudhaan, gabaasa ciccimoo fi sagalee hedduu dhiheessa.",
+        "Archiitireekcharri ammayyaa daangaa aadaa ceesisuun, wantoota fuulduratti fi naannoo wal qabatan hammata."
+      ]
+    },
+    "ig": {
+      "name": "Igbo",
+      "sentences": [
+        "Ihe ndọrọ ndọrọ ọchịchị ugbu a na-emetụta mmekọrịta mba ụwa, na-eme ka ụwa na-adịgide agbanwe agbanwe.",
+        "Akwụkwọ postmodern na-ajụ ajụjụ banyere usoro akụkọ ọdịnala, na-enye akụkọ gbajiri agbaji na ọtụtụ olu.",
+        "Ụlọ ọrụ nka nke oge a na-aga gafee ókè ọdịnala, na-etinye ihe ndị na-ele anya n’ọdịnihu na gburugburu ebe obibi."
+      ]
+    },
+    "az": {
+      "name": "Azéri",
+      "sentences": [
+        "Hazırki geosiyasi dinamikalar beynəlxalq münasibətlərə təsir edir və daim dəyişən bir dünyanı formalaşdırır.",
+        "Postmodern ədəbiyyat ənənəvi izah strukturlarına sual verir, parçalanmış və çox səsli hekayələr təqdim edir.",
+        "Müasir memarlıq ənənəvi sərhədləri aşaraq, futuristik və ekoloji elementləri inteqrasiya edir."
+      ]
+    },
+    "uz": {
+      "name": "Ouzbek",
+      "sentences": [
+        "Hozirgi geosiyosiy dinamikalar xalqaro munosabatlarga ta'sir ko'rsatib, doimiy o'zgarishda bo'lgan dunyoni shakllantiradi.",
+        "Postmodern adabiyot an'anaviy bayonot tuzilmalariga savol tug'dirib, fragmentli va polifonik hikoyalarni taqdim etadi.",
+        "Zamonaviy arxitektura an'anaviy chegara va chegaralarni oshib, futuristik va ekologik elementlarni o'z ichiga oladi."
+      ]
+    },
+    "sd": {
+      "name": "Sindhi",
+      "sentences": [
+        "موجوده جيوپوليٽيڪل حرڪتون بين الاقوامي لاڳاپن کي متاثر ڪنديون آهن، هڪ هميشه تبديل ٿيندڙ دنيا ٺاهي رهيون آهن.",
+        "پوسٽ ماڊرن ادب روايتي قصي جي جوڙجڪ تي سوال اٿاري ٿو، ٽٽل ۽ گهڻ صوتي داستان پيش ڪري ٿو.",
+        "معاصر فن تعمير روايتي حدن کان مٿي وڃي، مستقبل پرستي ۽ ماحولياتي عنصر شامل ڪري ٿي."
+      ]
+    },
+    "am": {
+      "name": "Amharique",
+      "sentences": [
+        "የአሁኑ የጂኦፖሊቲካ እንቅስቃሴዎች ዓለምአቀፍ ግንኙነቶችን ተፅእኖ አሳያሉ፣ እና ቀጣይ ለውጥ የሚያሳይ ዓለም ይፈጥራሉ።",
+        "ፖስት ሞደርን ስነ-ጽሑፍ ባለሞደርን ተለመዱ ተናጋሪ አወናቀሮችን ይጠይቃል፣ ተፈላጊና በርካታ ድምፆች ያሉ ታሪኮችን ይሰጣል።",
+        "ዘመናዊ አርክቴክቸር ባለሞደርን ግዴታዎችን ይበልጣል፣ የፊት ዘመናዊና የአካባቢ አካላትን ያካትታል።"
+      ]
+    },
+    "ff": {
+      "name": "Peul",
+      "sentences": [
+        "Janngirde geopolitiikal waɗi nde ɓe anndaa baɗte international, ɗe ndaarata duniyaru mum waawataa nder mbernde.",
+        "Literature postmodern ngolla ko ñaawoore naatnude hayre ɗe, o yiɗi ɗe heftinde itanji ɗiɗi ɗe ɓuri jeeri.",
+        "Arquitectuur feere mum ndaarata ko duuɓi heewɓe, njiyataa ɓurɗe futuriste e ekoloji."
+      ]
+    },
+    "yo": {
+      "name": "Yoruba",
+      "sentences": [
+        "Àwọn ìlànà ìṣèlú àgbáyé lónìí ń nípa lórí ìbáṣepọ̀ orílẹ̀-èdè, tí ń dá ayé tí ń yí padà sílẹ̀.",
+        "Àṣà ìtàn tuntun ń béèrè lórí ìtòsọ́nà àkọ́lé àtẹ́yẹ ẹ̀dá, tí ń fúnni ní àwọn ìtàn tí a ti fọ́, tí ó sì ní òpọ̀ ohùn.",
+        "Àmọ̀ ṣíṣe ilé tó wà lónìí ń kọja ààlà ìbílẹ̀, tí ń darapọ̀ mọ́ àwọn eroja ti ọjọ́ iwájú àti ti ayé aláyíká."
+      ]
+    },
+    "mai": {
+      "name": "Maïthili",
+      "sentences": [
+        "वर्तमान भू-राजनीतिक गतिक्रम अंतरराष्ट्रीय संबंध सभ पर प्रभाव पारि रहल अछि, जे लगातार बदलैत संसार के निर्माण करैत अछि।",
+        "पोस्टमोडर्न साहित्य पारंपरिक कथा संरचना सभ के प्रश्न करैत अछि, टुकड़ा-टुकड़ा आ बहु-स्वरी कथा प्रस्तुत करैत अछि।",
+        "आधुनिक वास्तुकला पारंपरिक सीमा सभ के पार करैत, भविष्यवादी आ पारिस्थितिक तत्त्व सभ के समाहित करैत अछि।"
+      ]
+    },
+    "xh": {
+      "name": "Xhosa",
+      "sentences": [
+        "Imilinganiselo ye-geopolitics yangoku inefuthe kubudlelwane bamazwe ngamazwe, yenza umhlaba ohlaziyiweyo.",
+        "Ubugcisa bepostmodern buvavanya imigaqo yokulandisa eqhelekileyo, bubonelela ngezibhalo ezaphukileyo nezineendawo ezininzi.",
+        "Ubugcisa bokwakha bokuhlaziywa budlula imida yendabuko, buhlanganisa izinto zekamva kunye nezo zendalo."
+      ]
+    },
+    "zu": {
+      "name": "Zoulou",
+      "sentences": [
+        "Izimo zanamuhla zezepolitiki zomhlaba zithinta ubudlelwano bamazwe, zakha umhlaba oqhubekayo ushintsha.",
+        "Ezobuciko be-postmodern zibeka imibuzo ezakhiweni zendabuko zokulandisa, zinikeza izindaba eziqhekekile nezinezwi eliningi.",
+        "Ubuciko bokwakha banamuhla budlula imingcele yendabuko, buhlanganisa izinto zesikhathi esizayo nezemvelo."
+      ]
+    },
+    "be": {
+      "name": "Biélorusse",
+      "sentences": [
+        "Сучасныя геапалітычныя дынамікі ўплываюць на міжнародныя адносіны, фармуючы свет, які пастаянна змяняецца.",
+        "Постмадэрнісная літаратура пастаўляе пад сумнеў традыцыйныя наратыўныя структуры, прапаноўваючы фрагментарныя і паліфанічныя апавяданні.",
+        "Сучасная архітэктура пераадольвае традыцыйныя межы, інтэгруючы футурыстычныя і экалагічныя элементы."
+      ]
+    },
+    "bg": {
+      "name": "Bulgare",
+      "sentences": [
+        "Съвременните геополитически динамики влияят на международните отношения, формирайки свят, който непрекъснато се развива.",
+        "Постмодерната литература поставя под въпрос конвенционалните наративни структури, предлагайки фрагментирани и полифонични разкази.",
+        "Съвременната архитектура надхвърля традиционните граници, интегрирайки футуристични и екологични елементи."
+      ]
+    },
+    "cs": {
+      "name": "Tchèque",
+      "sentences": [
+        "Současné geopolitické dynamiky ovlivňují mezinárodní vztahy a formují svět, který se neustále vyvíjí.",
+        "Postmoderní literatura zpochybňuje konvenční narativní struktury a nabízí fragmentované a polyfonní příběhy.",
+        "Moderní architektura překonává tradiční hranice a integruje futuristické i ekologické prvky."
+      ]
+    },
+    "el": {
+      "name": "Grec",
+      "sentences": [
+        "Οι σύγχρονες γεωπολιτικές δυναμικές επηρεάζουν τις διεθνείς σχέσεις, διαμορφώνοντας έναν κόσμο σε συνεχή εξέλιξη.",
+        "Η μεταμοντέρνα λογοτεχνία αμφισβητεί τις συμβατικές αφηγηματικές δομές, προσφέροντας κατακερματισμένες και πολυφωνικές αφηγήσεις.",
+        "Η σύγχρονη αρχιτεκτονική υπερβαίνει τα παραδοσιακά όρια, ενσωματώνοντας φουτουριστικά και οικολογικά στοιχεία."
+      ]
+    },
+    "nl": {
+      "name": "Néerlandais",
+      "sentences": [
+        "De huidige geopolitieke dynamiek beïnvloedt de internationale betrekkingen en vormt een constant evoluerende wereld.",
+        "De postmoderne literatuur bevraagt conventionele verhaallijnen en biedt gefragmenteerde en polyfone verhalen.",
+        "De hedendaagse architectuur overstijgt traditionele grenzen door futuristische en ecologische elementen te integreren."
+      ]
+    },
+    "sv": {
+      "name": "Suédois",
+      "sentences": [
+        "Dagens geopolitiska dynamik påverkar internationella relationer och formar en värld i ständig utveckling.",
+        "Postmodern litteratur ifrågasätter konventionella berättarstrukturer och erbjuder fragmenterade och polyfona berättelser.",
+        "Samtida arkitektur överskrider traditionella gränser genom att integrera futuristiska och ekologiska element."
+      ]
+    },
+    "hu": {
+      "name": "Hongrois",
+      "sentences": [
+        "A jelenlegi geopolitikai dinamikák befolyásolják a nemzetközi kapcsolatokat, egy folyamatosan változó világot formálva.",
+        "A posztmodern irodalom megkérdőjelezi a hagyományos narratív struktúrákat, fragmentált és polifonikus történeteket kínálva.",
+        "A kortárs építészet túllépi a hagyományos határokat, futurisztikus és ökológiai elemeket integrálva."
+      ]
+    },
+    "fi": {
+      "name": "Finnois",
+      "sentences": [
+        "Nykyiset geopoliittiset dynamiikat vaikuttavat kansainvälisiin suhteisiin ja muokkaavat jatkuvasti muuttuvaa maailmaa.",
+        "Postmoderni kirjallisuus kyseenalaistaa perinteiset kertomusrakenteet, tarjoten pirstoutuneita ja monivivahteisia tarinoita.",
+        "Nykyarkkitehtuuri ylittää perinteiset rajat, integroimalla futuristisia ja ekologisia elementtejä."
+      ]
+    },
+    "da": {
+      "name": "Danois",
+      "sentences": [
+        "Nutidens geopolitiske dynamikker påvirker internationale relationer og former en verden i konstant udvikling.",
+        "Postmoderne litteratur stiller spørgsmål ved konventionelle narrative strukturer og tilbyder fragmenterede og polyfone fortællinger.",
+        "Moderne arkitektur overskrider traditionelle grænser ved at integrere futuristiske og økologiske elementer."
+      ]
+    },
+    "no": {
+      "name": "Norvégien",
+      "sentences": [
+        "Dagens geopolitiske dynamikk påvirker internasjonale relasjoner og former en stadig utviklende verden.",
+        "Postmoderne litteratur utfordrer konvensjonelle narrative strukturer og tilbyr fragmenterte og polyfone historier.",
+        "Samtidig arkitektur overskrider tradisjonelle grenser ved å integrere futuristiske og økologiske elementer."
+      ]
+    },
+    "sr": {
+      "name": "Serbe",
+      "sentences": [
+        "Savremene geopolitičke dinamike utiču na međunarodne odnose, oblikujući svet u stalnoj evoluciji.",
+        "Postmoderni književnost dovodi u pitanje konvencionalne narativne strukture, nudeći fragmentisane i polifonične priče.",
+        "Savremena arhitektura nadmašuje tradicionalne granice, integrišući futurističke i ekološke elemente."
+      ]
+    },
+    "hr": {
+      "name": "Croate",
+      "sentences": [
+        "Suvremene geopolitičke dinamike utječu na međunarodne odnose, oblikujući svijet u stalnoj evoluciji.",
+        "Postmoderni književnost dovodi u pitanje konvencionalne narativne strukture, nudeći fragmentirane i polifonične priče.",
+        "Suvremena arhitektura nadilazi tradicionalne granice, integrirajući futurističke i ekološke elemente."
+      ]
+    },
+    "bs": {
+      "name": "Bosniaque",
+      "sentences": [
+        "Suvremene geopolitičke dinamike utiču na međunarodne odnose, oblikujući svijet u stalnoj evoluciji.",
+        "Postmoderni književnost dovodi u pitanje konvencionalne narativne strukture, nudeći fragmentirane i polifonične priče.",
+        "Savremena arhitektura nadilazi tradicionalne granice, integrišući futurističke i ekološke elemente."
+      ]
+    },
+    "sk": {
+      "name": "Slovaque",
+      "sentences": [
+        "Súčasné geopolitické dynamiky ovplyvňujú medzinárodné vzťahy a formujú svet, ktorý sa neustále mení.",
+        "Postmoderná literatúra spochybňuje konvenčné naratívne štruktúry a ponúka fragmentárne a polyfonické príbehy.",
+        "Súčasná architektúra prekračuje tradičné hranice, integrujúc futuristické a ekologické prvky."
+      ]
+    },
+    "sl": {
+      "name": "Slovène",
+      "sentences": [
+        "Sodobne geopolitične dinamike vplivajo na mednarodne odnose in oblikujejo svet, ki se nenehno spreminja.",
+        "Postmoderni književnost postavlja pod vprašaj konvencionalne narativne strukture, ponuja fragmentirane in polifonične zgodbe.",
+        "Sodobna arhitektura presega tradicionalne meje, vključujoč futuristične in ekološke elemente."
+      ]
+    },
+    "lt": {
+      "name": "Lituanien",
+      "sentences": [
+        "Šiuolaikinės geopolitinės dinamikos veikia tarptautinius santykius ir formuoja nuolat kintantį pasaulį.",
+        "Postmoderni literatūra kelia abejonių įprastose pasakojimo struktūrose, siūlydama fragmentiškas ir polifonines istorijas.",
+        "Šiuolaikinė architektūra peržengia tradicines ribas, įtraukdama futuristinius ir ekologinius elementus."
+      ]
+    },
+    "lv": {
+      "name": "Letton",
+      "sentences": [
+        "Mūsdienu ģeopolitiskās dinamikas ietekmē starptautiskās attiecības, veidojot pastāvīgi mainīgu pasauli.",
+        "Postmodernā literatūra apšauba tradicionālās naratīva struktūras, piedāvājot fragmentāras un polifoniskas stāstus.",
+        "Mūsdienu arhitektūra pārsniedz tradicionālās robežas, integrējot futuristiskus un ekoloģiskus elementus."
+      ]
+    },
+    "et": {
+      "name": "Estonien",
+      "sentences": [
+        "Tänased geopoliitilised dünaamikad mõjutavad rahvusvahelisi suhteid, kujundades pidevalt muutuva maailma.",
+        "Postmodernne kirjandus seab kahtluse alla traditsioonilised narratiivstruktuurid, pakkudes killustatud ja polüfoonilisi lugusid.",
+        "Kaasaegne arhitektuur ületab traditsioonilised piirid, integreerides futuristlikke ja ökoloogilisi elemente."
+      ]
+    },
+    "sq": {
+      "name": "Albanais",
+      "sentences": [
+        "Dinamika gjeopolitike aktuale ndikojnë në marrëdhëniet ndërkombëtare, duke formuar një botë në zhvillim të vazhdueshëm.",
+        "Letërsia postmodern sfidon strukturat tradicionale narrative, duke ofruar tregime të fragmentuara dhe polifonike.",
+        "Arkitektura bashkëkohore tejkalon kufijtë tradicionalë, duke integruar elementë futuristikë dhe ekologjikë."
+      ]
+    },
+    "mk": {
+      "name": "Macédonien",
+      "sentences": [
+        "Современите геополитички динамики влијаат на меѓународните односи, обликувајќи свет кој постојано се менува.",
+        "Постмодерната литература ја поставува под прашање конвенционалната наративна структура, нудејќи фрагментирани и полифонски приказни.",
+        "Современата архитектура ги надминува традиционалните граници, интегрирајќи футуристички и еколошки елементи."
+      ]
+    },
+    "is": {
+      "name": "Islandais",
+      "sentences": [
+        "Nútímalegar landfræðileg-stefnumótandi kraftar hafa áhrif á alþjóðasambönd og móta heim sem er stöðugt í þróun.",
+        "Eftir nútímaleg bókmenntir efast um hefðbundnar sögulegar uppbyggingar, með því að bjóða upp á brotna og margra raddra saga.",
+        "Nútímaleg arkitektúr fer yfir hefðbundin landamæri með því að samþætta framtíðar- og umhverfisþætti."
+      ]
+    },
+    "mt": {
+      "name": "Maltais",
+      "sentences": [
+        "Id-dinami ġeopolitika attwali jinfluwenzaw ir-relazzjonijiet internazzjonali, jiffurmaw dinja li dejjem qed tinbidel.",
+        "Il-letteratura post-moderna tistaqsi l-istrutturi narrattivi konvenzjonali, toffri stejjer frammentati u polifoniċi.",
+        "L-arkitettura kontemporanja titgħadda mill-konfini tradizzjonali, tintegra elementi futuristi u ekoloġiċi."
+      ]
+    },
+    "ga": {
+      "name": "Gaélique Irlandais",
+      "sentences": [
+        "Tá tionchar ag dinimicíocht geopolaiticiúil reatha ar chaidrimh idirnáisiúnta, ag cruthú domhain atá i ndul chun cinn i gcónaí.",
+        "Cuirtear ceisteanna ar struchtúir inscne traidisiúnta sa litríocht postmodern, ag tairiscint scéalta bhriseadh agus ilfhuaimeanna.",
+        "Transcendann ailtireacht chomhaimseartha teorainneacha traidisiúnta, ag comhtháthú eilimintí todhchaí agus éiceolaíocha."
+      ]
+    },
+    "eu": {
+      "name": "Basque",
+      "sentences": [
+        "Gaur egungo geopolítica-dinamikek nazioarteko harremanak eragiten dituzte, etengabe aldatzen ari den mundua moldatuz.",
+        "Postmoderno literaturak narratiba egiturak ohikoak zalantzan jartzen ditu, zatituta eta soinu anitzeko istorioak eskainiz.",
+        "Eguneratze arkitektura tradiziozko mugarik gainditzen du, etorkizuneko eta ekologiko elementuak integratuz."
+      ]
+    },
+    "ca": {
+      "name": "Catalan",
+      "sentences": [
+        "Les dinàmiques geopolítiques actuals influeixen en les relacions internacionals, modelant un món en constant evolució.",
+        "La literatura postmoderna qüestiona les estructures narratives convencionals, oferint relats fragmentats i polifònics.",
+        "L'arquitectura contemporània transcendeix les fronteres tradicionals, integrant elements futuristes i ecològics."
+      ]
+    },
+    "gl": {
+      "name": "Galicien",
+      "sentences": [
+        "As dinámicas xeopolíticas actuais inflúen nas relacións internacionais, moldeando un mundo en constante evolución.",
+        "A literatura posmoderna cuestiona as estruturas narrativas convencionais, ofrecendo relatos fragmentados e polifónicos.",
+        "A arquitectura contemporánea transcende as fronteiras tradicionais, integrando elementos futuristas e ecolóxicos."
+      ]
+    },
+    "cy": {
+      "name": "Gallois",
+      "sentences": [
+        "Mae dinamikau geopolitig presennol yn dylanwadu ar gysylltiadau rhyngwladol, gan ffurfio byd sy'n newid yn barhaus.",
+        "Mae llenyddiaeth ôl-gyfoes yn herio strwythurau naratif confensiynol, gan gynnig straeon rhannol a lluosog o lais.",
+        "Mae pensaernïaeth gyfoes yn mynd y tu hwnt i ffiniau traddodiadol, gan integreiddio elfennau dyfodol a ecolegol."
+      ]
+    },
+    "br": {
+      "name": "Breton",
+      "sentences": [
+        "An holladurezh geopolitikel a-vremañ a zegas preder war an darempredoù enterezhek, o sevel un bed en un nebeud cheñchder konstant.",
+        "An literatour postmodern a zisporzh ar strukturoù kontouriel, o kinnig istorioù distrujus ha liesloud.",
+        "Ar savadur modern a zeuio a-benn an daolioù diwezhat, o kemer e plas elfennoù futurist ha ekologiañ."
+      ]
+    },
+    "lb": {
+      "name": "Luxembourgeois",
+      "sentences": [
+        "Déi aktuell geopolitesch Dynamiken beaflossen d'internatiounal Relatiounen a formen eng Welt, déi sech dauernd entwéckelt.",
+        "D'Postmodern Literatuer stellt d'konventiounell narrativ Strukturen an d'Fro, andeems se fragmentéiert an polyphon Geschicht ubitt.",
+        "D'zeitgenéischt Architektur iwwerschreëtt traditionell Grenzen an integréiert futuristesch a ekologesch Elementer."
+      ]
+    },
+    "sn": {
+      "name": "Shona",
+      "sentences": [
+        "Maitiro azvino ezvematongerwo enyika anobata hukama hwenyika dzepasi rose, achiumba nyika inoramba ichichinja.",
+        "Zvinyorwa zvepostmodern zvinobvunza maitiro echinyakare ekutaura nyaya, zvichipa nyaya dzakapwanyika uye dzine manzwi akawanda.",
+        "Zvokuvakira zvemazuva ano zvinopfuura miganhu yechinyakare, zvichibatanidza zvinhu zveramangwana uye zvepamusoro pezvakatipoteredza."
+      ]
+    },
+    "rw": {
+      "name": "Kinyarwanda",
+      "sentences": [
+        "Imiterere ya politiki mpuzamahanga y’iki gihe igira ingaruka ku mubano w’ibihugu, itegura isi ihora ihinduka.",
+        "Ubugeni bwa postmodern buhakana imiterere y’inkuru zisanzwe, butanga inkuru zigize udukoni kandi zifite amajwi menshi.",
+        "Ubwubatsi bugezweho burenga imbibi za kera, buhuza ibice by’ejo hazaza n’ibidukikije."
+      ]
+    },
+    "mg": {
+      "name": "Malagasy",
+      "sentences": [
+        "Ny firoboroboan'ny toe-draharaha ara-jeopolitika ankehitriny dia misy fiantraikany amin'ny fifandraisana iraisam-pirenena, mamolavola tontolo miovaova tsy an-kiato.",
+        "Ny literatiora postmodern dia manontany ny rafitra mahazatra amin'ny fitantarana, manolotra tantara vakivaky sy maro feo.",
+        "Ny maritrano maoderina dia mihoatra ny sisintany nentin-drazana, mampiditra singa ho an'ny ho avy sy ara-tontolo iainana."
+      ]
+    },
+    "st": {
+      "name": "Sesotho",
+      "sentences": [
+        "Dinamiki tsa geopolitiki tsa kajeno li ama likamano tsa machaba, li hlahisa lefatše le ntse le fetoha ka ho sa feleng.",
+        "Literature ea postmodern e botsa mehopolo ea litlhaloso tsa setso, e fana ka lipale tse arohaneng le tse nang le linhla tse ngata.",
+        "Mohloli oa morao-rao oa meralo o feta meeli ea setso, o kopanya likarolo tsa bokamoso le tsa tikoloho."
+      ]
+    }
+  }  
