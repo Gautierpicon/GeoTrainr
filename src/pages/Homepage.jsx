@@ -21,7 +21,7 @@ const Homepage = () => {
       {/* Logo */}
       <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
         <img src={logo} alt="FlagFinder Logo" className="w-24 h-24 sm:w-32 sm:h-32"/>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 leading-tight">
+        <h1 className="text-left text-4xl sm:text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 leading-tight">
           Devenez un Maître de la Géographie
         </h1>
       </div>

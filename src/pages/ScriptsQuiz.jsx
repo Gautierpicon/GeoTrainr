@@ -2,7 +2,7 @@ import React from 'react'
 
 const ScriptsQuiz = () => {
   return (
-    <div>Bientot</div>
+    <div className='min-h-[calc(100vh-5rem)]'>Bientot</div>
   )
 }
 

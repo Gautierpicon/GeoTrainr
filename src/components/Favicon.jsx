@@ -2,23 +2,36 @@ import { useEffect } from "react";
 
 const Favicon = ({ countryCode }) => {
   useEffect(() => {
-    const link = document.querySelector("link[rel='icon']") || document.createElement("link");
-    link.rel = "icon";
+    let link = document.querySelector("link[rel='icon']");
+    let originalHref = null;
+    let isLinkCreated = false;
 
-    if (countryCode) {
-      // Si le code du pays est disponible, on met la favicon du drapeau
-      link.href = `https://flagcdn.com/${countryCode}.svg`;
+    // Créer ou récupérer la balise link existante
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = "icon";
+      isLinkCreated = true;
     } else {
-      // Si pas de question, on garde la favicon par défaut
-      link.href = "/favicon.png";
+      originalHref = link.href; // Sauvegarder l'URL originale
     }
 
-    // Ajout de la balise link au head si elle n'existe pas déjà
-    document.head.appendChild(link);
+    // Mettre à jour l'URL de la favicon
+    link.href = countryCode 
+      ? `https://flagcdn.com/${countryCode}.svg`
+      : "/favicon.png";
 
-    // Cleanup de la balise link lorsqu'on quitte ce composant
+    // Ajouter la balise si elle a été créée
+    if (isLinkCreated) {
+      document.head.appendChild(link);
+    }
+
+    // Restaurer l'état original lors du nettoyage
     return () => {
-      link.remove();
+      if (isLinkCreated) {
+        link.remove();
+      } else if (originalHref !== null) {
+        link.href = originalHref;
+      }
     };
   }, [countryCode]);
 

@@ -62,13 +62,13 @@ const FlagsQuiz = () => {
   if (!question) return <div>Chargement...</div>;
 
   return (
-    <div className="flex flex-col items-center p-4 justify-center min-h-screen bg-gradient-to-b from-indigo-100 to-violet-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="flex flex-col items-center p-4 justify-center min-h-[calc(100vh-5rem)] bg-gradient-to-b from-indigo-100 to-violet-100 dark:from-gray-900 dark:to-gray-800">
       <Favicon countryCode={question.correct.code} />
       
       <img
         src={`https://flagcdn.com/${question.correct.code}.svg`}
         alt={`${question.correct.name}`}
-        className="w-96 h-auto mb-6 shadow-lg"
+        className="w-90 h-auto mb-6 shadow-lg"
       />
       
       <div className="grid grid-cols-1 gap-4 w-full max-w-md">
