@@ -1,6 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import logo from '../assets/logo.svg'
+
+import X from '../assets/logos/X.png';
+import GitHub from '../assets/logos/GitHub.png';
+import BlueSky from '../assets/logos/BlueSky.png'
+
 const Homepage = () => {
   // Fonction pour ouvrir une issue sur GitHub
   const openGitHubIssue = () => {
@@ -14,8 +20,8 @@ const Homepage = () => {
         <div className="max-w-4xl mx-auto">
           {/* Logo */}
           <div className="flex items-center justify-center space-x-4 mb-6">
-          <img src="../assets/test.jpg" alt="FlagFinder Logo" className="w-16 h-16" />
-          <h1 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 leading-tight">
+          <img src={logo} alt="FlagFinder Logo" className="w-35 h-35"/>
+          <h1 className="text-left text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 leading-tight">
             Devenez un Maître de la Géographie
           </h1>
           </div>
@@ -74,18 +80,18 @@ const Homepage = () => {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="p-6">
                 <div className="text-blue-600 dark:text-blue-400 text-4xl mb-4 font-bold">1</div>
-                <h3 className="text-xl font-semibold mb-3">Choisissez un Mode</h3>
-                <p className="text-gray-600 dark:text-gray-400">Drapeaux nationaux ou systèmes d'écriture</p>
+                <h3 className="text-xl text-gray-600 dark:text-gray-200 font-semibold mb-3">Choisissez un Mode</h3>
+                <p className="text-gray-600 dark:text-gray-200">Drapeaux nationaux ou systèmes d'écriture</p>
               </div>
               <div className="p-6">
                 <div className="text-blue-600 dark:text-blue-400 text-4xl mb-4 font-bold">2</div>
-                <h3 className="text-xl font-semibold mb-3">Jouez aux Devinettes</h3>
-                <p className="text-gray-600 dark:text-gray-400">Identifiez les éléments proposés parmi 4 options</p>
+                <h3 className="text-xl text-gray-600 dark:text-gray-200 font-semibold mb-3">Jouez aux Devinettes</h3>
+                <p className="text-gray-600 dark:text-gray-200">Identifiez les éléments proposés parmi 4 options</p>
               </div>
               <div className="p-6">
                 <div className="text-blue-600 dark:text-blue-400 text-4xl mb-4 font-bold">3</div>
-                <h3 className="text-xl font-semibold mb-3">Améliorez Vos Scores</h3>
-                <p className="text-gray-600 dark:text-gray-400">Suivez vos progrès et défiez vos amis <span className="font-bold">bientôt</span> !</p>
+                <h3 className="text-xl text-gray-600 dark:text-gray-200 font-semibold mb-3">Améliorez Vos Scores</h3>
+                <p className="text-gray-600 dark:text-gray-200">Suivez vos progrès et défiez vos amis <span className="font-bold">bientôt</span> !</p>
               </div>
             </div>
           </div>
@@ -93,41 +99,42 @@ const Homepage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-100 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-        <div className="container mx-auto px-6 py-8"> {/* Réduit le padding pour rapprocher le texte du bas */}
-          <div className="grid md:grid-cols-3 gap-8">
+      <footer className="bg-gradient-to-b from-green-50 to-emerald-50 dark:from-emerald-900 dark:to-emerald-900 border-t border-gray-200 dark:border-gray-700">
+        <div className="container mx-auto px-6 py-8">
+          <div className="md:flex md:justify-between md:space-x-8">
             {/* About Section */}
-            <div className="mb-8">
-              <div className="flex items-center space-x-3 mb-4">
-                <img src="/test.jpg" alt="FlagFinder Logo" className="w-10 h-10" />
+            <div className="mb-8 md:w-1/3">
+              <div className="flex items-center space-x-3 mb-4 w-8 h-8">
+                <img src={logo} alt="FlagFinder Logo" className="w-10 h-10" />
                 <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200">FlagFinder</h4>
               </div>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
+              <p className="text-gray-600 dark:text-gray-200 mb-4">
                 Améliorez vos compétences géographiques grâce à des défis ludiques et éducatifs.
               </p>
               <div className="flex space-x-4">
-                <a href="https://github.com/flagfinder" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">
-                  <span className="sr-only">GitHub</span>
-                  <img src="../assets/GitHub.png" alt="GitHub logo" className="w-6 h-6"/>
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                  <img src={GitHub} alt="GitHub logo" className="w-6 h-6"/>
                 </a>
-                <a href="https://twitter.com/flagfinder" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">
-                  <span className="sr-only">Twitter</span>
-                  <img src="../assets/X.png" alt="X logo" className="w-6 h-6"/>
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+                  <img src={X} alt="X logo" className="w-6 h-6"/>
+                </a>
+                <a href="https://bsky.app/profile/" target="_blank" rel="noopener noreferrer">
+                  <img src={BlueSky} alt="BlueSky logo" className="w-6 h-6"/>
                 </a>
               </div>
             </div>
 
-            {/* Game Modes */}
-            <div className="mb-8">
+            {/* Game Modes - Avec séparation */}
+            <div className="mb-8 md:w-1/3 md:border-l md:border-gray-300 dark:md:border-gray-700 md:pl-8">
               <h4 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">Modes de Jeu</h4>
               <ul className="space-y-2">
-                <li><Link to="/flagsquiz" className="text-gray-600 dark:text-gray-400 hover:text-blue-600">Quiz Drapeaux</Link></li>
-                <li><Link to="/scriptsquiz" className="text-gray-600 dark:text-gray-400 hover:text-green-600">Quiz Écritures</Link></li>
+                <li><Link to="/flagsquiz" className="text-gray-600 dark:text-gray-200 hover:text-blue-600">Quiz Drapeaux</Link></li>
+                <li><Link to="/scriptsquiz" className="text-gray-600 dark:text-gray-200 hover:text-green-600">Quiz Écritures</Link></li>
               </ul>
             </div>
 
-            {/* Report an Issue */}
-            <div className="mb-8">
+            {/* Report an Issue - Avec séparation */}
+            <div className="mb-8 md:w-1/3 md:border-l md:border-gray-300 dark:md:border-gray-700 md:pl-8">
               <h4 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">Contribuer</h4>
               <button
                 onClick={openGitHubIssue}
@@ -140,8 +147,8 @@ const Homepage = () => {
 
           {/* Copyright */}
           <div className="pt-6 mt-6 border-t border-gray-200 dark:border-gray-700 text-center">
-            <p className="text-gray-600 dark:text-gray-400">
-              © 2025 FlagFinder. Tous droits réservés.
+            <p className="text-gray-600 dark:text-gray-200">
+              {new Date().getFullYear()} - FlagFinder.
             </p>
           </div>
         </div>

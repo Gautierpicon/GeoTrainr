@@ -9,7 +9,7 @@ const Navbar = () => {
   const isSettingsPage = location.pathname === "/settings";
     
   return (
-    <nav className="flex items-center justify-between px-6 py-4 bg-white dark:bg-black shadow-sm">
+    <nav className="flex items-center justify-between px-6 py-4 bg-gray-50 dark:bg-black shadow-sm">
       {/* Logo et Nom */}
       <Link to="/" className="flex items-center space-x-3 cursor-pointer">
         <svg width="45" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +27,7 @@ const Navbar = () => {
       {/* Drapeaux et Langues */}
       <div className="flex items-center space-x-6">
         <Link to="/flagsquiz" className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
-            ${isFlagsPage ? "bg-blue-500 text-white dark:text-black" : "bg-white text-gray-800 dark:bg-black dark:text-gray-200"}`}>
+            ${isFlagsPage ? "bg-blue-500 text-white dark:text-black" : "bg-gray-50 text-gray-800 dark:bg-black dark:text-gray-200"}`}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
             <path
               fillRule="evenodd"
@@ -39,7 +39,7 @@ const Navbar = () => {
         </Link>
 
         <Link to="/scriptsquiz" className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
-            ${isScriptsPage ? "bg-green-500 text-white dark:text-black" : "bg-white text-gray-800 dark:bg-black dark:text-gray-200"}`}>
+            ${isScriptsPage ? "bg-green-500 text-white dark:text-black" : "bg-gray-50 text-gray-800 dark:bg-black dark:text-gray-200"}`}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="size-6">
             <path
               strokeLinecap="round"
@@ -53,7 +53,7 @@ const Navbar = () => {
         <div className="border-l border-gray-200 h-8 ml-4"></div>
 
         <Link to="/settings" className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
-            ${isSettingsPage ? "bg-gray-600 dark:bg-gray-400 text-white dark:text-black" : "bg-white text-gray-800 dark:bg-black dark:text-gray-200"}`}>
+            ${isSettingsPage ? "bg-gray-600 dark:bg-gray-400 text-white dark:text-black" : "bg-gray-50 text-gray-800 dark:bg-black dark:text-gray-200"}`}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="size-6">
             <path
               strokeLinecap="round"
