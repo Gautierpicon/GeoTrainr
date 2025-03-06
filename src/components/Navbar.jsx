@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className="bg-gray-50 dark:bg-black shadow-sm">
       <div className="flex items-center justify-between px-6 py-4">
         {/* Logo et Nom */}
-        <Link to="/" className="flex items-center space-x-3 cursor-pointer">
+        <Link to="/" className="flex items-center space-x-3 cursor-pointer hover:underline">
           <svg width="45" height="45" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="25" cy="25" r="25" fill="#0090C9" />
             <path
@@ -24,7 +24,7 @@ const Navbar = () => {
               fill="#25C402"
             />
           </svg>
-          <span className="text-xl font-bold text-gray-800 dark:text-gray-200">FlagFinder</span>
+          <span className="text-xl font-bold text-gray-800 dark:text-gray-200">GeoTrainr</span>
         </Link>
 
         {/* Liens de navigation pour desktop */}
@@ -32,7 +32,7 @@ const Navbar = () => {
           <Link
             to="/flagsquiz"
             className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
-              ${isFlagsPage ? "bg-indigo-500 text-white dark:text-black" : "bg-gray-50 text-gray-800 dark:bg-black dark:text-gray-200"}`}
+              ${isFlagsPage ? "bg-indigo-500 text-white dark:text-black" : "bg-transparent text-gray-800 dark:text-gray-200"}`}
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
               <path
@@ -47,7 +47,7 @@ const Navbar = () => {
           <Link
             to="/scriptsquiz"
             className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
-              ${isScriptsPage ? "bg-green-500 text-white dark:text-black" : "bg-gray-50 text-gray-800 dark:bg-black dark:text-gray-200"}`}
+              ${isScriptsPage ? "bg-green-500 text-white dark:text-black" : "bg-transparent text-gray-800 dark:text-gray-200"}`}
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
               <path
@@ -64,7 +64,7 @@ const Navbar = () => {
           <Link
             to="/settings"
             className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
-              ${isSettingsPage ? "bg-gray-600 dark:bg-gray-400 text-white dark:text-black" : "bg-gray-50 text-gray-800 dark:bg-black dark:text-gray-200"}`}
+              ${isSettingsPage ? "bg-gray-600 dark:bg-gray-400 text-white dark:text-black" : "bg-transparent text-gray-800 dark:text-gray-200"}`}
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
               <path
@@ -115,7 +115,7 @@ const Navbar = () => {
             to="/"
             onClick={() => setIsMobileMenuOpen(false)}
             className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
-                ${isHomePage ? "bg-blue-500 text-white dark:text-black" : "bg-gray-50 text-gray-800 dark:bg-black dark:text-gray-200"}`}
+                ${isHomePage ? "bg-blue-500 text-white dark:text-black" : "bg-transparent text-gray-800 dark:text-gray-200"}`}
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
               <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
@@ -128,7 +128,7 @@ const Navbar = () => {
             to="/flagsquiz"
             onClick={() => setIsMobileMenuOpen(false)}
             className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
-                ${isFlagsPage ? "bg-indigo-500 text-white dark:text-black" : "bg-gray-50 text-gray-800 dark:bg-black dark:text-gray-200"}`}
+                ${isFlagsPage ? "bg-indigo-500 text-white dark:text-black" : "bg-transparent text-gray-800 dark:text-gray-200"}`}
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
               <path
@@ -143,7 +143,7 @@ const Navbar = () => {
             to="/scriptsquiz"
             onClick={() => setIsMobileMenuOpen(false)}
             className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
-                ${isScriptsPage ? "bg-green-500 text-white dark:text-black" : "bg-gray-50 text-gray-800 dark:bg-black dark:text-gray-200"}`}
+                ${isScriptsPage ? "bg-green-500 text-white dark:text-black" : "bg-transparent text-gray-800 dark:text-gray-200"}`}
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
               <path
@@ -158,7 +158,7 @@ const Navbar = () => {
             to="/settings"
             onClick={() => setIsMobileMenuOpen(false)}
             className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
-                ${isSettingsPage ? "bg-gray-600 dark:bg-gray-400 text-white dark:text-black" : "bg-gray-50 text-gray-800 dark:bg-black dark:text-gray-200"}`}
+                ${isSettingsPage ? "bg-gray-600 dark:bg-gray-400 text-white dark:text-black" : "bg-transparent text-gray-800 dark:text-gray-200"}`}
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
               <path

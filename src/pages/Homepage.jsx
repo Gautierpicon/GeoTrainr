@@ -10,7 +10,7 @@ import BlueSky from '../assets/logos/BlueSky.png'
 const Homepage = () => {
   // Fonction pour ouvrir une issue sur GitHub
   const openGitHubIssue = () => {
-    window.open('https://github.com/flagfinder/flagfinder/issues/new', '_blank');
+    window.open('https://github.com/Gautierpicon/FlagFinder/issues/new', '_blank');
   };
 
   return (
@@ -21,12 +21,12 @@ const Homepage = () => {
       {/* Logo */}
       <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
         <img src={logo} alt="FlagFinder Logo" className="w-24 h-24 sm:w-32 sm:h-32"/>
-        <h1 className="text-left text-4xl sm:text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 leading-tight">
+        <h1 className="md:text-left text-center text-4xl sm:text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 leading-tight">
           Devenez un Maître de la Géographie
         </h1>
       </div>
       <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-8 sm:mb-12">
-        Perfectionnez vos compétences en reconnaissance visuelle et préparez-vous pour le GeoGuessr avec nos défis interactifs !
+        Perfectionnez vos compétences en reconnaissance visuelle et entrainez-vous pour <a href="https://www.geoguessr.com/" className='underline'>GeoGuessr</a> !
       </p>
 
       {/* Game Modes Grid */}
@@ -43,8 +43,8 @@ const Homepage = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800 dark:text-gray-100">Drapeaux du Monde</h3>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4">Apprenez à identifier les drapeaux nationaux et leurs symboles</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800 dark:text-gray-100">Drapeaux</h3>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4">Apprenez à identifier les drapeaux nationaux (254) des États américains (50), ainsi que les drapeaux de l'UE et de l'ONU.</p>
               <div className="text-blue-600 dark:text-blue-400 font-semibold">
                 Commencer le défi →
               </div>
@@ -65,9 +65,9 @@ const Homepage = () => {
                 </svg>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800 dark:text-gray-100">Systèmes d'Écriture</h3>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4">Maîtrisez la reconnaissance des alphabets et écritures internationales</p>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4">Maîtrisez la reconnaissance des alphabets, y compris les systèmes d'écriture latins, cyrilliques, arabes, asiatiques, et bien d'autres.</p>
               <div className="text-green-600 dark:text-green-400 font-semibold">
-                Explorer les écritures →
+                Commencer le défi →
               </div>
             </div>
           </Link>
@@ -81,17 +81,18 @@ const Homepage = () => {
           <div className="p-4 sm:p-6">
             <div className="text-blue-600 dark:text-blue-400 text-3xl sm:text-4xl mb-3 sm:mb-4 font-bold">1</div>
             <h3 className="text-lg sm:text-xl text-gray-600 dark:text-gray-200 font-semibold mb-2 sm:mb-3">Choisissez un Mode</h3>
-            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-200">Drapeaux nationaux ou systèmes d'écriture</p>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-200">Vous avez le choix entre <Link to="/flagsquiz" className='hover:underline'>Drapeau</Link> et <Link to="/scriptsquiz" className='hover:underline'>Écritures</Link></p>
           </div>
           <div className="p-4 sm:p-6">
             <div className="text-blue-600 dark:text-blue-400 text-3xl sm:text-4xl mb-3 sm:mb-4 font-bold">2</div>
-            <h3 className="text-lg sm:text-xl text-gray-600 dark:text-gray-200 font-semibold mb-2 sm:mb-3">Jouez aux Devinettes</h3>
-            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-200">Identifiez les éléments proposés parmi 4 options</p>
+            <h3 className="text-lg sm:text-xl text-gray-600 dark:text-gray-200 font-semibold mb-2 sm:mb-3">Jouez</h3>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-200">Identifiez l'élément proposé parmi les options</p>
           </div>
           <div className="p-4 sm:p-6">
             <div className="text-blue-600 dark:text-blue-400 text-3xl sm:text-4xl mb-3 sm:mb-4 font-bold">3</div>
             <h3 className="text-lg sm:text-xl text-gray-600 dark:text-gray-200 font-semibold mb-2 sm:mb-3">Améliorez Vos Scores</h3>
-            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-200">Suivez vos progrès et défiez vos amis <span className="font-bold">bientôt</span> !</p>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-200">Suivez vos scores et défiez vos amis !</p>
+            <span className="text-2xl font-bold text-red-400">bientôt</span>
           </div>
         </div>
       </div>
@@ -105,59 +106,60 @@ const Homepage = () => {
         {/* About Section */}
         <div className="mb-8 md:w-1/3">
   <div className="flex items-center space-x-3 mb-4">
-    <img src={logo} alt="FlagFinder Logo" className="w-8 h-8 sm:w-10 sm:h-10" />
-    <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200">FlagFinder</h4>
+    <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200">GeoTrainr</h4>
   </div>
   <p className="text-sm sm:text-base text-gray-600 dark:text-gray-200 mb-4">
-    Améliorez vos compétences géographiques grâce à des défis ludiques et éducatifs.
+  Perfectionnez vos compétences en reconnaissance visuelle et entrainez-vous pour <a href="https://www.geoguessr.com/" className='underline'>GeoGuessr</a> !
   </p>
-  <div className="flex space-x-4">
-    <div className="flex flex-col items-center">
-      <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-        <img src={GitHub} alt="GitHub logo" className="w-6 h-6"/>
-      </a>
-      <span className="text-xs text-gray-600 dark:text-gray-200 mt-1">GitHub</span>
-    </div>
-    <div className="flex flex-col items-center">
-      <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
-        <img src={X} alt="X logo" className="w-6 h-6"/>
-      </a>
-      <span className="text-xs text-gray-600 dark:text-gray-200 mt-1">Twitter</span>
-    </div>
-    <div className="flex flex-col items-center">
-      <a href="https://bsky.app/profile/" target="_blank" rel="noopener noreferrer">
-        <img src={BlueSky} alt="BlueSky logo" className="w-6 h-6"/>
-      </a>
-      <span className="text-xs text-gray-600 dark:text-gray-200 mt-1">BlueSky</span>
-    </div>
+  <div className="flex justify-start gap-4">
+  <div className="flex flex-col items-center gap-1">
+    <a href="https://github.com/Gautierpicon/FlagFinder/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
+      <img src={GitHub} alt="GitHub logo" className="w-6 h-6"/>
+      <span className="text-xs text-gray-600 dark:text-gray-200">GitHub</span>
+    </a>
   </div>
+  <div className="flex flex-col items-center gap-1">
+    <a href="https://x.com/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
+      <img src={X} alt="X logo" className="w-6 h-6"/>
+      <span className="text-xs text-gray-600 dark:text-gray-200">Twitter</span>
+    </a>
+  </div>
+  <div className="flex flex-col items-center gap-1">
+    <a href="https://bsky.app/profile/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
+      <img src={BlueSky} alt="BlueSky logo" className="w-6 h-6"/>
+      <span className="text-xs text-gray-600 dark:text-gray-200">BlueSky</span>
+    </a>
+  </div>
+</div>
+
 </div>
 
         {/* Game Modes - Avec séparation */}
         <div className="mb-8 md:w-1/3 md:border-l md:border-gray-300 dark:md:border-gray-500 md:pl-8">
-          <h4 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">Modes de Jeu</h4>
+          <h4 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">Remerciements :</h4>
           <ul className="space-y-2">
-            <li><Link to="/flagsquiz" className="text-sm sm:text-base text-gray-600 dark:text-gray-200 hover:text-blue-600">Quiz Drapeaux</Link></li>
-            <li><Link to="/scriptsquiz" className="text-sm sm:text-base text-gray-600 dark:text-gray-200 hover:text-green-600">Quiz Écritures</Link></li>
+            <li><a href="https://www.geoguessr.com/" target="_blank" className="hover:underline text-sm sm:text-base text-gray-600 dark:text-gray-200">GeoGuessr</a></li>
+            <li><a href="https://flagpedia.net/" target="_blank" className="hover:underline text-sm sm:text-base text-gray-600 dark:text-gray-200">flagpedia.net</a></li>
           </ul>
         </div>
 
         {/* Report an Issue - Avec séparation */}
         <div className="mb-8 md:w-1/3 md:border-l md:border-gray-300 dark:md:border-gray-500 md:pl-8">
-          <h4 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">Contribuer</h4>
+          <h4 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">Un bug ou une suggestion a nous partager ?</h4>
           <button
             onClick={openGitHubIssue}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors cursor-pointer"
           >
-            Signaler un problème
+            Nous le comuniquer
           </button>
         </div>
       </div>
 
       {/* Copyright */}
-      <div className="pt-6 mt-6 border-t border-gray-200 dark:border-gray-500 text-center">
-        <p className="text-sm sm:text-base text-gray-600 dark:text-gray-200">
-          {new Date().getFullYear()} - FlagFinder.
+      <div className="pt-6 mt-6 border-t border-gray-200 dark:border-gray-500 flex justify-center items-center gap-2">
+        <img src={logo} alt="GeoTrainr Logo" className="w-8 h-8" />
+        <p className="text-sm sm:text-base text-gray-600 dark:text-gray-200 m-0">
+          {new Date().getFullYear()} - GeoTrainr.
         </p>
       </div>
     </div>
