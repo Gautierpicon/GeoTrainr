@@ -2,16 +2,16 @@ import React from 'react';
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
-    const location = useLocation();
+  const location = useLocation();
 
-    const isFlagsPage = location.pathname === "/FlagsQuiz";
-    const isScriptsPage = location.pathname === "/ScriptsQuiz";
-    const isSettingsPage = location.pathname === "/settings";
+  const isFlagsPage = location.pathname === "/flagsquiz";
+  const isScriptsPage = location.pathname === "/scriptsquiz";
+  const isSettingsPage = location.pathname === "/settings";
     
   return (
     <nav className="flex items-center justify-between px-6 py-4 bg-white dark:bg-black shadow-sm">
       {/* Logo et Nom */}
-      <Link to="/FlagFinder" className="flex items-center space-x-3 cursor-pointer">
+      <Link to="/" className="flex items-center space-x-3 cursor-pointer">
         <svg width="45" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="25" cy="25" r="25" fill="#0090C9" />
           <path
@@ -26,7 +26,7 @@ const Navbar = () => {
 
       {/* Drapeaux et Langues */}
       <div className="flex items-center space-x-6">
-        <Link to="/FlagsQuiz" className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
+        <Link to="/flagsquiz" className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
             ${isFlagsPage ? "bg-blue-500 text-white dark:text-black" : "bg-white text-gray-800 dark:bg-black dark:text-gray-200"}`}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
             <path
@@ -38,7 +38,7 @@ const Navbar = () => {
           <span>Drapeaux</span>
         </Link>
 
-        <Link to="/ScriptsQuiz" className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
+        <Link to="/scriptsquiz" className={`flex items-center space-x-2 cursor-pointer hover:opacity-80 p-2 rounded-xl
             ${isScriptsPage ? "bg-green-500 text-white dark:text-black" : "bg-white text-gray-800 dark:bg-black dark:text-gray-200"}`}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="size-6">
             <path

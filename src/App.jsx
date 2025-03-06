@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 import Navbar from './components/Navbar';
 import FlagsQuiz from './pages/FlagsQuiz';
@@ -14,10 +14,12 @@ const App = () => {
     <Router>
       <Navbar />
         <Routes>
-          <Route path="/FlagFinder" element={<Homepage />} />
+          <Route path="/" element={<Homepage />} />
           <Route path="/flagsquiz" element={<FlagsQuiz />} />
           <Route path="/scriptsquiz" element={<ScriptsQuiz />} />
           <Route path="/settings" element={<Settings />} />
+          {/* Add a default redirect to /FlagFinder */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
     </Router>
   )
