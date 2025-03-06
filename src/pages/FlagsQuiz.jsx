@@ -62,7 +62,7 @@ const FlagsQuiz = () => {
   if (!question) return <div>Chargement...</div>;
 
   return (
-    <div className="flex flex-col items-center p-4 justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div className="flex flex-col items-center p-4 justify-center min-h-screen bg-gradient-to-b from-indigo-100 to-violet-100 dark:from-gray-900 dark:to-gray-800">
       <Favicon countryCode={question.correct.code} />
       
       <img
@@ -89,7 +89,7 @@ const FlagsQuiz = () => {
       <button
         onClick={generateQuestion}
         className={`mt-6 py-2 px-4 rounded text-white transition-all duration-300 cursor-pointer
-          ${showFeedback ? "bg-blue-500 hover:bg-blue-600 dark:hover:bg-blue-400" : "bg-gray-400 dark:bg-gray-400 cursor-not-allowed"}
+          ${showFeedback ? "bg-indigo-500 hover:bg-indigo-600 dark:hover:bg-indigo-400" : "bg-gray-400 dark:bg-gray-400 cursor-not-allowed"}
         `}
         disabled={!showFeedback} // Désactivé tant qu'aucune réponse n'est sélectionnée
       >
