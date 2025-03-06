@@ -136,7 +136,7 @@ const Homepage = () => {
 
         {/* Game Modes - Avec séparation */}
         <div className="mb-8 md:w-1/3 md:border-l md:border-gray-300 dark:md:border-gray-500 md:pl-8">
-          <h4 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">Remerciements :</h4>
+          <h4 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">Remerciements</h4>
           <ul className="space-y-2">
             <li><a href="https://www.geoguessr.com/" target="_blank" className="hover:underline text-sm sm:text-base text-gray-600 dark:text-gray-200">GeoGuessr</a></li>
             <li><a href="https://flagpedia.net/" target="_blank" className="hover:underline text-sm sm:text-base text-gray-600 dark:text-gray-200">flagpedia.net</a></li>
@@ -145,7 +145,7 @@ const Homepage = () => {
 
         {/* Report an Issue - Avec séparation */}
         <div className="mb-8 md:w-1/3 md:border-l md:border-gray-300 dark:md:border-gray-500 md:pl-8">
-          <h4 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">Un bug ou une suggestion a nous partager ?</h4>
+          <h4 className="text-lg font-semibold mb-6 text-gray-800 dark:text-gray-200">Un bug ou une suggestion a nous partager ?</h4>
           <button
             onClick={openGitHubIssue}
             className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors cursor-pointer"
