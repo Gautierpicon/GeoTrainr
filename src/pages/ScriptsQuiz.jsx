@@ -2,11 +2,18 @@ import React, { useState, useEffect } from "react";
 import languageData from "../data/languages.json";
 import QuizAnswerButtons from "../components/QuizAnswerButtons";
 
-const languages = Object.entries(languageData).map(([code, data]) => ({
-  code,
-  name: data.name,
-  sentences: data.sentences
-}));
+// On parcourt les groupes (régions) et on aplatit la structure en un tableau
+const languages = [];
+Object.entries(languageData).forEach(([region, regionLanguages]) => {
+  Object.entries(regionLanguages).forEach(([code, data]) => {
+    languages.push({
+      code,
+      group: region, // on utilise la clé du groupe comme identifiant de groupe
+      name: data.name,
+      sentences: data.sentences,
+    });
+  });
+});
 
 const LanguagesQuiz = () => {
   const [question, setQuestion] = useState(null);
@@ -14,27 +21,38 @@ const LanguagesQuiz = () => {
   const [showFeedback, setShowFeedback] = useState(false);
 
   const generateQuestion = () => {
+    // Choisir une langue aléatoire pour la question
     const correctLang = languages[Math.floor(Math.random() * languages.length)];
-    const sentence = correctLang.sentences[Math.floor(Math.random() * correctLang.sentences.length)];
-    
-    const otherLangs = languages.filter((l) => l.code !== correctLang.code);
-    // Mélanger les autres langues
-    for (let i = otherLangs.length - 1; i > 0; i--) {
+    const sentence =
+      correctLang.sentences[
+        Math.floor(Math.random() * correctLang.sentences.length)
+      ];
+
+    // Filtrer uniquement les langues du même groupe (région) que la langue correcte, hors elle-même
+    const sameGroupLangs = languages.filter(
+      (l) => l.group === correctLang.group && l.code !== correctLang.code
+    );
+
+    // Mélanger les langues du même groupe
+    for (let i = sameGroupLangs.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [otherLangs[i], otherLangs[j]] = [otherLangs[j], otherLangs[i]];
+      [sameGroupLangs[i], sameGroupLangs[j]] = [sameGroupLangs[j], sameGroupLangs[i]];
     }
-    
-    let options = [correctLang, ...otherLangs.slice(0, 4)];
-    // Mélanger les options
+
+    // Choisir 4 mauvaises réponses (si disponibles)
+    const wrongOptions = sameGroupLangs.slice(0, 4);
+
+    // Combiner la bonne réponse et les mauvaises réponses, puis mélanger
+    const options = [correctLang, ...wrongOptions];
     for (let i = options.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [options[i], options[j]] = [options[j], options[i]];
     }
-    
-    setQuestion({ 
-      correct: correctLang, 
+
+    setQuestion({
+      correct: correctLang,
       sentence,
-      options 
+      options,
     });
     setSelected(null);
     setShowFeedback(false);
@@ -70,7 +88,7 @@ const LanguagesQuiz = () => {
       <div className="md:text-3xl text-2xl mb-8 md:w-3xl w-full font-bold text-center text-black dark:text-white">
         {question.sentence}
       </div>
-      
+
       <div className="grid grid-cols-1 gap-4 w-full max-w-md">
         {question.options.map((option) => (
           <QuizAnswerButtons
@@ -85,7 +103,7 @@ const LanguagesQuiz = () => {
           </QuizAnswerButtons>
         ))}
       </div>
-      
+
       <button
         onClick={generateQuestion}
         className={`mt-6 py-2 px-4 rounded text-white transition-all duration-300 cursor-pointer
