@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import countryData from "../data/countries.json";
+import countryData from "../data/flags.json";
 import Favicon from "../components/Favicon";
 import QuizAnswerButtons from "../components/QuizAnswerButtons";
 
