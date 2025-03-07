@@ -45,7 +45,7 @@ Dans ce mode, une phrase est affichée, et vous devez identifier la langue dans 
 - Mode sombre pour une meilleure lisibilité.
 - Navigation fluide entre les différents modes.
 
-## 📷 Captures d'écran (à ajouter)
+## 📷 Captures d'écran
 
 ![Page d'accueil](public/ReadmePictures/HomepagePictures/Homepage.png)
 ![Mode Sombre avec page d'accueil](public/ReadmePictures/HomepagePictures/DarkHomepage.png)
