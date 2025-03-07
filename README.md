@@ -81,14 +81,14 @@ Si vous trouvez un bug ou souhaitez suggérer une amélioration, vous pouvez ouv
 
 ## 📷 Captures d'écran
 
-![Page d'accueil](public/ReadmePictures/HomepagePictures/Homepage.png)
-![Mode Sombre avec page d'accueil](public/ReadmePictures/HomepagePictures/DarkHomepage.png)
-![Exemple Quiz des Drapeaux](public/ReadmePictures/FlagsPictures/Flags.png)
-![Mode Sombre avec quiz des Drapeaux](public/ReadmePictures/FlagsPictures/DarkFlags.png)
-![Exemple Quiz des Langues](public/ReadmePictures/LanguagesPictures/Languages.png)
-![Mode Sombre avec quiz des Langues](public/ReadmePictures/LanguagesPictures/DarkLanguages.png)
-![Page des paramètres](public/ReadmePictures/SettingsPictures/Settings.png)
-![Mode Sombre Page des paramètres](public/ReadmePictures/SettingsPictures/DarkSettings.png)
+![Page d'accueil]ReadmePictures/HomepagePictures/Homepage.png)
+![Mode Sombre avec page d'accueil](ReadmePictures/HomepagePictures/DarkHomepage.png)
+![Exemple Quiz des Drapeaux](ReadmePictures/FlagsPictures/Flags.png)
+![Mode Sombre avec quiz des Drapeaux](ReadmePictures/FlagsPictures/DarkFlags.png)
+![Exemple Quiz des Langues](ReadmePictures/LanguagesPictures/Languages.png)
+![Mode Sombre avec quiz des Langues](ReadmePictures/LanguagesPictures/DarkLanguages.png)
+![Page des paramètres](ReadmePictures/SettingsPictures/Settings.png)
+![Mode Sombre Page des paramètres](ReadmePictures/SettingsPictures/DarkSettings.png)
 
 ---
 
