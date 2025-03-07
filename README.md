@@ -45,17 +45,6 @@ Dans ce mode, une phrase est affichée, et vous devez identifier la langue dans 
 - Mode sombre pour une meilleure lisibilité.
 - Navigation fluide entre les différents modes.
 
-## 📷 Captures d'écran
-
-![Page d'accueil](public/ReadmePictures/HomepagePictures/Homepage.png)
-![Mode Sombre avec page d'accueil](public/ReadmePictures/HomepagePictures/DarkHomepage.png)
-![Exemple Quiz des Drapeaux](public/ReadmePictures/FlagsPictures/Flags.png)
-![Mode Sombre avec quiz des Drapeaux](public/ReadmePictures/FlagsPictures/DarkFlags.png)
-![Exemple Quiz des Langues](public/ReadmePictures/LanguagesPictures/Languages.png)
-![Mode Sombre avec quiz des Langues](public/ReadmePictures/LanguagesPictures/DarkLanguages.png)
-![Page des paramètres](public/ReadmePictures/SettingsPictures/Settings.png)
-![Mode Sombre Page des paramètres](public/ReadmePictures/SettingsPictures/DarkSettings.png)
-
 ## 💻 Installation et utilisation
 
 ### Prérequis
@@ -88,6 +77,18 @@ Toutes les contributions sont les bienvenues ! Pour contribuer :
 4. Soumettez une pull request 📩
 
 Si vous trouvez un bug ou souhaitez suggérer une amélioration, vous pouvez ouvrir une issue [ici](https://github.com/Gautierpicon/FlagFinder/issues/new).
+
+
+## 📷 Captures d'écran
+
+![Page d'accueil](public/ReadmePictures/HomepagePictures/Homepage.png)
+![Mode Sombre avec page d'accueil](public/ReadmePictures/HomepagePictures/DarkHomepage.png)
+![Exemple Quiz des Drapeaux](public/ReadmePictures/FlagsPictures/Flags.png)
+![Mode Sombre avec quiz des Drapeaux](public/ReadmePictures/FlagsPictures/DarkFlags.png)
+![Exemple Quiz des Langues](public/ReadmePictures/LanguagesPictures/Languages.png)
+![Mode Sombre avec quiz des Langues](public/ReadmePictures/LanguagesPictures/DarkLanguages.png)
+![Page des paramètres](public/ReadmePictures/SettingsPictures/Settings.png)
+![Mode Sombre Page des paramètres](public/ReadmePictures/SettingsPictures/DarkSettings.png)
 
 ---
 
