@@ -84,7 +84,7 @@ const LanguagesQuiz = () => {
   if (!question) return <div>Chargement...</div>;
 
   return (
-    <div className="flex flex-col items-center p-4 justify-center min-h-[calc(100vh-4.75rem)] bg-gradient-to-b from-green-50 to-emerald-50 dark:from-gray-900 dark:to-green-900">
+    <div className="flex flex-col items-center p-4 justify-center min-h-[calc(100vh-4.75rem)] bg-gradient-to-b from-green-50 to-emerald-50 dark:from-emerald-950 dark:to-green-900">
       <div className="md:text-3xl text-2xl mb-8 md:w-3xl w-full font-bold text-center text-black dark:text-white">
         {question.sentence}
       </div>
