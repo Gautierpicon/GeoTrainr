@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import logo from '../assets/logo.svg'
 
-import X from '../assets/logos/X.png';
+import Twitter from '../assets/logos/Twitter.png';
 import GitHub from '../assets/logos/GitHub.png';
 import BlueSky from '../assets/logos/BlueSky.png'
 
@@ -117,13 +117,13 @@ const Homepage = () => {
     </a>
   </div>
   <div className="flex flex-col items-center gap-1">
-    <a href="https://x.com/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
-      <img src={X} alt="X logo" className="w-6 h-6"/>
+    <a href="https://x.com/vu_zip" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
+      <img src={X} alt="Twitter logo" className="w-6 h-6"/>
       <span className="text-xs text-gray-600 dark:text-gray-200">Twitter</span>
     </a>
   </div>
   <div className="flex flex-col items-center gap-1">
-    <a href="https://bsky.app/profile/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
+    <a href="https://bsky.app/profile/vu-zip.bsky.social" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
       <img src={BlueSky} alt="BlueSky logo" className="w-6 h-6"/>
       <span className="text-xs text-gray-600 dark:text-gray-200">BlueSky</span>
     </a>
