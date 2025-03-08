@@ -32,6 +32,17 @@ const FlagsQuiz = () => {
     }
   }, []);
 
+  // Mettre à jour le titre de la page avec l'emoji 🌎
+  useEffect(() => {
+    const originalTitle = document.title; // Sauvegarder le titre original
+    document.title = `🌎 ${originalTitle}`; // Ajouter l'emoji devant le titre
+
+    // Restaurer le titre original lors du nettoyage
+    return () => {
+      document.title = originalTitle; // Retirer l'emoji et restaurer le titre original
+    };
+  }, []);
+
   const generateQuestion = () => {
     const correctCountry = countries[Math.floor(Math.random() * countries.length)];
     
