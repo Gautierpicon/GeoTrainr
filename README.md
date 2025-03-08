@@ -1,6 +1,6 @@
 <img src="src/assets/logo.svg" width="80px" align="right">
 
-### [`GeoTrainr`](http://localhost:5173/FlagFinder#/)
+### [`GeoTrainr`](https://gautierpicon.github.io/GeoTrainr/)
 
 Perfectionnez vos compétences en reconnaissance visuelle et entraînez-vous pour [GeoGuessr](https://www.geoguessr.com/) !
 
