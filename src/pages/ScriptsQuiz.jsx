@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import languageData from "../data/languages.json";
 import QuizAnswerButtons from "../components/QuizAnswerButtons";
 import Timer from "../components/Settings/Timer/Timer";
+import Loader from "../components/Loader";
 
 // On parcourt les groupes (régions) et on aplatit la structure en un tableau
 const languages = [];
@@ -114,7 +115,7 @@ const ScriptsQuiz = () => {
     };
   }, [showFeedback]);
 
-  if (!question) return <div>Chargement...</div>;
+  if (!question) return <Loader />;
 
   return (
     <div className="flex flex-col items-center p-4 justify-center min-h-[calc(100vh-4.75rem)] bg-gradient-to-b from-green-50 to-emerald-50 dark:from-emerald-950 dark:to-green-900">

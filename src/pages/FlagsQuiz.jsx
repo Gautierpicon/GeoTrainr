@@ -3,6 +3,7 @@ import countryData from "../data/flags.json";
 import Favicon from "../components/Favicon";
 import QuizAnswerButtons from "../components/QuizAnswerButtons";
 import Timer from "../components/Settings/Timer/Timer";
+import Loader from "../components/Loader";
 
 const countries = Object.entries(countryData).map(([code, name]) => ({
   code,
@@ -92,7 +93,7 @@ const FlagsQuiz = () => {
     };
   }, [showFeedback]);
 
-  if (!question) return <div>Chargement...</div>;
+  if (!question) return <Loader />;
 
   return (
     <div className="flex flex-col items-center p-4 justify-center min-h-[calc(100vh-4.75rem)] bg-gradient-to-b from-indigo-100 to-violet-100 dark:from-gray-900 dark:to-indigo-900">
