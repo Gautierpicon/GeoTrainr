@@ -41,12 +41,12 @@ const Theme = () => {
   if (!mounted) return null;
 
   return (
-    <div className="flex flex-col items-center gap-4 p-4 bg-gray-200 rounded-2xl dark:bg-gray-800">
+    <div className="w-full flex flex-col items-center gap-4 p-4 bg-gray-200 rounded-2xl dark:bg-gray-800 mx-4 sm:mx-0">
       <span className="text-lg font-semibold text-gray-700 dark:text-gray-200">
         Choisir le thème
       </span>
       
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-wrap justify-center">
         {[
           { value: 'light', icon: SunIcon, label: 'Clair' },
           { value: 'dark', icon: MoonIcon, label: 'Sombre' },
