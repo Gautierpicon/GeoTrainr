@@ -18,7 +18,7 @@ const App = () => {
           <Route path="/flagsquiz" element={<FlagsQuiz />} />
           <Route path="/scriptsquiz" element={<ScriptsQuiz />} />
           <Route path="/settings" element={<Settings />} />
-          {/* Add a default redirect to /FlagFinder */}
+          
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
     </Router>

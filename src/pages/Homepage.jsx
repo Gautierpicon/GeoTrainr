@@ -8,7 +8,6 @@ import GitHub from '../assets/logos/GitHub.png';
 import BlueSky from '../assets/logos/BlueSky.png'
 
 const Homepage = () => {
-  // Fonction pour ouvrir une issue sur GitHub
   const openGitHubIssue = () => {
     window.open('https://github.com/Gautierpicon/FlagFinder/issues/new', '_blank');
   };
@@ -90,9 +89,8 @@ const Homepage = () => {
           </div>
           <div className="p-4 sm:p-6">
             <div className="text-blue-600 dark:text-blue-400 text-3xl sm:text-4xl mb-3 sm:mb-4 font-bold">3</div>
-            <h3 className="text-lg sm:text-xl text-gray-600 dark:text-gray-200 font-semibold mb-2 sm:mb-3">Améliorez Vos Scores</h3>
-            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-200">Suivez vos scores et défiez vos amis !</p>
-            <span className="text-2xl font-bold text-red-400">bientôt</span>
+            <h3 className="text-lg sm:text-xl text-gray-600 dark:text-gray-200 font-semibold mb-2 sm:mb-3">Améliorez votre Niveau</h3>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-200">Changez la difficultée en ajoutant du temps</p>
           </div>
         </div>
       </div>
@@ -134,7 +132,7 @@ const Homepage = () => {
 
 </div>
 
-        {/* Game Modes - Avec séparation */}
+        {/* Game Modes */}
         <div className="mb-8 md:w-1/3 md:border-l md:border-gray-300 dark:md:border-gray-500 md:pl-8">
           <h4 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">Remerciements</h4>
           <ul className="space-y-2">
@@ -143,7 +141,7 @@ const Homepage = () => {
           </ul>
         </div>
 
-        {/* Report an Issue - Avec séparation */}
+        {/* Report an Issue */}
         <div className="mb-8 md:w-1/3 md:border-l md:border-gray-300 dark:md:border-gray-500 md:pl-8">
           <h4 className="text-lg font-semibold mb-6 text-gray-800 dark:text-gray-200">Un bug ou une suggestion a nous partager ?</h4>
           <button
