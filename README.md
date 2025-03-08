@@ -78,6 +78,7 @@ Si vous trouvez un bug ou souhaitez suggérer une amélioration, vous pouvez ouv
 
 ## 📷 Captures d'écran
 
+Images de la bêta :
 ![Page d'accueil](ReadmePictures/HomepagePictures/Homepage.png)
 ![Mode Sombre avec page d'accueil](ReadmePictures/HomepagePictures/DarkHomepage.png)
 ![Exemple Quiz des Drapeaux](ReadmePictures/FlagsPictures/Flags.png)
