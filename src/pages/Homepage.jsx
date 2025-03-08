@@ -118,7 +118,7 @@ const Homepage = () => {
   </div>
   <div className="flex flex-col items-center gap-1">
     <a href="https://x.com/vu_zip" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
-      <img src={X} alt="Twitter logo" className="w-6 h-6"/>
+      <img src={Twitter} alt="Twitter logo" className="w-6 h-6"/>
       <span className="text-xs text-gray-600 dark:text-gray-200">Twitter</span>
     </a>
   </div>
