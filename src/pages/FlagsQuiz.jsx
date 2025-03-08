@@ -110,7 +110,7 @@ const FlagsQuiz = () => {
       <img
         src={`https://flagcdn.com/${question.correct.code}.svg`}
         alt={`${question.correct.name}`}
-        className="h-70 w-auto mb-6 shadow-lg"
+        className="lg:h-70 w-auto mb-6 lg:shadow-lg"
       />
       
       <div className="grid grid-cols-1 gap-4 w-full max-w-md">
