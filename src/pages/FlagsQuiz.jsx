@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import countryData from "../data/flags.json";
 import Favicon from "../components/Favicon";
-import QuizAnswerButtons from "../components/QuizAnswerButtons";
+import QuizAnswerButtons from "../components/Buttons/QuizAnswerButtons";
 import Timer from "../components/Settings/Timer/Timer";
 import Loader from "../components/Loader";
+import NextQuestionButtons from "../components/Buttons/NextQuestionButtons";
 
 const countries = Object.entries(countryData).map(([code, name]) => ({
   code,
@@ -96,7 +97,7 @@ const FlagsQuiz = () => {
   if (!question) return <Loader />;
 
   return (
-    <div className="flex flex-col items-center p-4 justify-center min-h-[calc(100vh-4.75rem)] bg-gradient-to-b from-indigo-100 to-violet-100 dark:from-gray-900 dark:to-indigo-900">
+    <div className="flex flex-col items-center p-4 justify-center min-h-[calc(100vh-4.5rem)] bg-gradient-to-b from-indigo-100 to-violet-100 dark:from-gray-900 dark:to-indigo-900">
       <Favicon countryCode={question.correct.code} />
       
       {timerEnabled && (
@@ -129,15 +130,11 @@ const FlagsQuiz = () => {
         ))}
       </div>
       
-      <button
+      <NextQuestionButtons 
         onClick={generateQuestion}
-        className={`mt-6 py-2 px-4 rounded text-white transition-all duration-300 cursor-pointer
-          ${showFeedback ? "bg-indigo-500 hover:bg-indigo-600 dark:hover:bg-indigo-400" : "bg-gray-400 dark:bg-gray-400 cursor-not-allowed"}
-        `}
         disabled={!showFeedback}
-      >
-        Prochaine question
-      </button>
+        variant="flags"
+      />
     </div>
   );
 };

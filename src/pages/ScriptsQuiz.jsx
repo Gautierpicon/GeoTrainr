@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import languageData from "../data/languages.json";
-import QuizAnswerButtons from "../components/QuizAnswerButtons";
+import QuizAnswerButtons from "../components/Buttons/QuizAnswerButtons";
 import Timer from "../components/Settings/Timer/Timer";
 import Loader from "../components/Loader";
+import NextQuestionButtons from "../components/Buttons/NextQuestionButtons";
 
 // On parcourt les groupes (régions) et on aplatit la structure en un tableau
 const languages = [];
@@ -118,7 +119,7 @@ const ScriptsQuiz = () => {
   if (!question) return <Loader />;
 
   return (
-    <div className="flex flex-col items-center p-4 justify-center min-h-[calc(100vh-4.75rem)] bg-gradient-to-b from-green-50 to-emerald-50 dark:from-emerald-950 dark:to-green-900">
+    <div className="flex flex-col items-center p-4 justify-center min-h-[calc(100vh-4.5rem)] bg-gradient-to-b from-green-50 to-emerald-50 dark:from-emerald-950 dark:to-green-900">
       {timerEnabled && (
         <Timer 
           duration={timerDuration}
@@ -147,15 +148,11 @@ const ScriptsQuiz = () => {
         ))}
       </div>
 
-      <button
+      <NextQuestionButtons 
         onClick={generateQuestion}
-        className={`mt-6 py-2 px-4 rounded text-white transition-all duration-300 cursor-pointer
-          ${showFeedback ? "bg-green-700 hover:bg-green-800 dark:bg-emerald-700 dark:hover:bg-emerald-800" : "bg-gray-400 dark:bg-gray-400 cursor-not-allowed"}
-        `}
         disabled={!showFeedback}
-      >
-        Prochaine question
-      </button>
+        variant="scripts"
+      />
     </div>
   );
 };
