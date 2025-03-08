@@ -143,12 +143,12 @@ const Homepage = () => {
 
         {/* Report an Issue */}
         <div className="mb-8 md:w-1/3 md:border-l md:border-gray-300 dark:md:border-gray-500 md:pl-8">
-          <h4 className="text-lg font-semibold mb-6 text-gray-800 dark:text-gray-200">Un bug ou une suggestion a nous partager ?</h4>
+          <h4 className="text-lg font-semibold mb-6 text-gray-800 dark:text-gray-200">Un bug à nous partager ?</h4>
           <button
             onClick={openGitHubIssue}
             className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors cursor-pointer"
           >
-            Nous le comuniquer
+            Signaler un problème
           </button>
         </div>
       </div>
