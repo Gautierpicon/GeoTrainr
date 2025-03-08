@@ -7,7 +7,7 @@ import Homepage from './pages/Homepage';
 import ScriptsQuiz from './pages/ScriptsQuiz';
 import Settings from './pages/Settings';
 
-import './theme.js';
+import './components/Settings/Theme/theme.js';
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
           <Route path="/flagsquiz" element={<FlagsQuiz />} />
           <Route path="/scriptsquiz" element={<ScriptsQuiz />} />
           <Route path="/settings" element={<Settings />} />
-          
+
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
     </Router>

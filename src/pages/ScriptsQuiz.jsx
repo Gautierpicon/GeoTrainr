@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import languageData from "../data/languages.json";
 import QuizAnswerButtons from "../components/QuizAnswerButtons";
+import Timer from "../components/Settings/Timer/Timer";
 
 // On parcourt les groupes (régions) et on aplatit la structure en un tableau
 const languages = [];
@@ -15,10 +16,26 @@ Object.entries(languageData).forEach(([region, regionLanguages]) => {
   });
 });
 
-const LanguagesQuiz = () => {
+const ScriptsQuiz = () => {
   const [question, setQuestion] = useState(null);
   const [selected, setSelected] = useState(null);
   const [showFeedback, setShowFeedback] = useState(false);
+  
+  // États pour le timer
+  const [timerEnabled, setTimerEnabled] = useState(false);
+  const [timerDuration, setTimerDuration] = useState(30);
+  const [timerRunning, setTimerRunning] = useState(false);
+
+  // Charger les paramètres du timer depuis localStorage
+  useEffect(() => {
+    setTimerEnabled(localStorage.getItem('quizTimerEnabled') === 'true');
+    const savedDuration = parseInt(localStorage.getItem('quizTimerDuration') || '30');
+    setTimerDuration(savedDuration);
+    
+    if (localStorage.getItem('quizTimerEnabled') === 'true') {
+      setTimerRunning(true);
+    }
+  }, []);
 
   const generateQuestion = () => {
     // Choisir une langue aléatoire pour la question
@@ -56,6 +73,11 @@ const LanguagesQuiz = () => {
     });
     setSelected(null);
     setShowFeedback(false);
+    
+    // Redémarrer le timer si activé
+    if (timerEnabled) {
+      setTimerRunning(true);
+    }
   };
 
   useEffect(() => {
@@ -66,6 +88,17 @@ const LanguagesQuiz = () => {
     if (selected !== null) return;
     setSelected(option);
     setShowFeedback(true);
+    // Arrêter le timer quand une réponse est sélectionnée
+    setTimerRunning(false);
+  };
+  
+  const handleTimeUp = () => {
+    if (!selected) {
+      // Seule la bonne réponse est sélectionnée, aucune mauvaise réponse n'est marquée
+      setSelected(question.correct);
+      setShowFeedback(true);
+      setTimerRunning(false);
+    }
   };
 
   useEffect(() => {
@@ -85,6 +118,15 @@ const LanguagesQuiz = () => {
 
   return (
     <div className="flex flex-col items-center p-4 justify-center min-h-[calc(100vh-4.75rem)] bg-gradient-to-b from-green-50 to-emerald-50 dark:from-emerald-950 dark:to-green-900">
+      {timerEnabled && (
+        <Timer 
+          duration={timerDuration}
+          onTimeUp={handleTimeUp}
+          isRunning={timerRunning}
+          className="mb-4"
+        />
+      )}
+      
       <div className="md:text-3xl text-2xl mb-8 md:w-3xl w-full font-bold text-center text-black dark:text-white">
         {question.sentence}
       </div>
@@ -117,4 +159,4 @@ const LanguagesQuiz = () => {
   );
 };
 
-export default LanguagesQuiz;
+export default ScriptsQuiz;

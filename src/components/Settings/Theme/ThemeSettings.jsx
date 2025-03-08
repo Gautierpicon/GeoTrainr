@@ -41,7 +41,7 @@ const Theme = () => {
   if (!mounted) return null;
 
   return (
-    <div className="flex flex-col items-center gap-4 p-4 bg-gray-100 rounded-2xl dark:bg-gray-800">
+    <div className="flex flex-col items-center gap-4 p-4 bg-gray-200 rounded-2xl dark:bg-gray-800">
       <span className="text-lg font-semibold text-gray-700 dark:text-gray-200">
         Choisir le thème
       </span>
