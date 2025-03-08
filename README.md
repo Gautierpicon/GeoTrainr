@@ -1,8 +1,8 @@
 <img src="src/assets/logo.svg" width="80px" align="right">
 
-### [`GeoTrainr`](https://gautierpicon.github.io/GeoTrainr/)
+### `GeoTrainr`
 
-Perfectionnez vos compétences en reconnaissance visuelle et entraînez-vous pour [GeoGuessr](https://www.geoguessr.com/) !
+### Le site est disponible en ligne et gartuitement ici : https://gautierpicon.github.io/GeoTrainr/
 
 ## Présentation du projet
 
@@ -46,17 +46,18 @@ Dans ce mode, une phrase est affichée, et vous devez identifier la langue dans 
 - Mode sombre pour une meilleure lisibilité.
 - Navigation fluide entre les différents modes.
 
-## 💻 Installation et utilisation
+## 🎯 Contribution
+
+Toutes les contributions sont les bienvenues ! Pour contribuer :
 
 ### Prérequis
-- Node.js (version 16 ou supérieure recommandée)
+- [Node.js](https://nodejs.org/fr)
 - npm ou yarn
-
-### Installation
+1. Clonez le projet 
 ```sh
 # Cloner le projet
-git clone https://github.com/Gautierpicon/FlagFinder.git
-cd FlagFinder
+git clone https://github.com/Gautierpicon/GeoTrainr.git
+cd GeoTrainr
 
 # Installer les dépendances
 npm install
@@ -66,23 +67,18 @@ npm install
 ```sh
 npm run dev
 ```
+L'application sera accessible sur `http://localhost:5173/`, a moins qu'un autre site utilise déjà cet emplacement. Dans ce cas referez-vous au lien que le terminal vous affiche.
 
-L'application sera accessible sur `http://localhost:5173/`.
-
-## 🎯 Contribution
-
-Toutes les contributions sont les bienvenues ! Pour contribuer :
-1. Clonez le projet 
 2. Créez une branche spécifique (`feature-nouvelle-fonctionnalite`) 🛠
-3. Faites vos modifications et testez-les ✅
+3. Faites vos modifications et **testez-les** ✅
 4. Soumettez une pull request 📩
 
-Si vous trouvez un bug ou souhaitez suggérer une amélioration, vous pouvez ouvrir une issue [ici](https://github.com/Gautierpicon/FlagFinder/issues/new).
+Si vous trouvez un bug ou souhaitez suggérer une amélioration, vous pouvez ouvrir une issue [ici](https://github.com/Gautierpicon/GeoTrainr/issues/new).
 
 
 ## 📷 Captures d'écran
 
-![Page d'accueil]ReadmePictures/HomepagePictures/Homepage.png)
+![Page d'accueil](ReadmePictures/HomepagePictures/Homepage.png)
 ![Mode Sombre avec page d'accueil](ReadmePictures/HomepagePictures/DarkHomepage.png)
 ![Exemple Quiz des Drapeaux](ReadmePictures/FlagsPictures/Flags.png)
 ![Mode Sombre avec quiz des Drapeaux](ReadmePictures/FlagsPictures/DarkFlags.png)
