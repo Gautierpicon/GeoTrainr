@@ -48,7 +48,7 @@ const TimerSettings = () => {
         <div className="flex flex-col gap-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2">
-              <HourglassIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+              <ClockIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
               <span className="text-gray-600 dark:text-gray-300">Durée du timer</span>
             </div>
             <span className="text-blue-600 dark:text-blue-400 font-medium">
@@ -83,12 +83,6 @@ const TimerSettings = () => {
 
 // Icônes SVG ajoutées pour correspondre au style du Theme
 const ClockIcon = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-  </svg>
-);
-
-const HourglassIcon = ({ className }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
   </svg>

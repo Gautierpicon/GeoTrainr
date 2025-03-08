@@ -15,6 +15,7 @@ Le jeu propose deux modes d'entraînement basés sur la reconnaissance des drape
 - 🔠 **Quiz des Langues** : Trouvez la langue d'une phrase affichée, en choisissant parmi des réponses plausibles basées sur des regroupements logiques.
 - 🌗 **Mode sombre** : Une interface adaptée aux préférences des utilisateurs.
 - 📱 **Responsive** : Interface entièrement adaptée aux mobiles, tablettes et ordinateurs.
+- 🕒 **Minuteur** : Possibilité de mettre un minuteur sur les questions
 
 ## Modes de jeu
 
