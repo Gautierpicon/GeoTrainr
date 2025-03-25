@@ -4,6 +4,8 @@
 
 ### Le site est disponible en ligne et gartuitement ici : https://gautierpicon.github.io/GeoTrainr/
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 ## Présentation du projet
 
 GeoTrainr est une plateforme interactive d'entraînement pour les amateurs de géographie et les joueurs de GeoGuessr.
@@ -85,8 +87,6 @@ Images de la bêta :
 ![Mode Sombre avec quiz des Drapeaux](ReadmePictures/FlagsPictures/DarkFlags.png)
 ![Exemple Quiz des Langues](ReadmePictures/LanguagesPictures/Languages.png)
 ![Mode Sombre avec quiz des Langues](ReadmePictures/LanguagesPictures/DarkLanguages.png)
-![Page des paramètres](ReadmePictures/SettingsPictures/Settings.png)
-![Mode Sombre Page des paramètres](ReadmePictures/SettingsPictures/DarkSettings.png)
 
 ---
 
