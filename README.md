@@ -75,14 +75,3 @@ L'application sera accessible sur `http://localhost:5173/`, a moins qu'un autre 
 4. Soumettez une pull request
 
 Si vous trouvez un bug ou souhaitez suggérer une amélioration, vous pouvez ouvrir une issue [ici](https://github.com/Gautierpicon/GeoTrainr/issues/new).
-
-
-## 📷 Captures d'écran
-
-Images de la bêta :
-![Page d'accueil](.github/ReadmePictures/HomepagePictures/Homepage.png)
-![Mode Sombre avec page d'accueil](.github/ReadmePictures/HomepagePictures/DarkHomepage.png)
-![Exemple Quiz des Drapeaux](.github/ReadmePictures/FlagsPictures/Flags.png)
-![Mode Sombre avec quiz des Drapeaux](.github/ReadmePictures/FlagsPictures/DarkFlags.png)
-![Exemple Quiz des Langues](.github/ReadmePictures/LanguagesPictures/Languages.png)
-![Mode Sombre avec quiz des Langues](.github/ReadmePictures/LanguagesPictures/DarkLanguages.png)
