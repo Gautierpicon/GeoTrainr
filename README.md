@@ -2,7 +2,7 @@
 
 ### `GeoTrainr`
 
-### Le site est disponible en ligne et gartuitement ici : https://gautierpicon.github.io/GeoTrainr/
+### Le site est disponible en ligne et gartuitement ici : https://geotrainr-jet.vercel.app/
 
 ## Présentation du projet
 
