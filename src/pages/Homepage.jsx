@@ -112,19 +112,19 @@ const Homepage = () => {
               <div className="flex justify-start gap-4">
                 <div className="flex flex-col items-center gap-1">
                   <a href="https://github.com/Gautierpicon/FlagFinder/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
-                    <img src={GitHub} alt="GitHub logo" className="w-6 h-6"/>
+                    <img src={GitHub} alt="GitHub logo" className="w-6 h-6 object-contain"/>
                     <span className="text-xs text-gray-600 dark:text-gray-200">GitHub</span>
                   </a>
                 </div>
                 <div className="flex flex-col items-center gap-1">
                   <a href="https://twitter.com/vu_zip" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
-                    <img src={Twitter} alt="Twitter logo" className="w-6 h-6"/>
+                    <img src={Twitter} alt="Twitter logo" className="w-6 h-6 object-contain"/>
                     <span className="text-xs text-gray-600 dark:text-gray-200">Twitter</span>
                   </a>
                 </div>
                 <div className="flex flex-col items-center gap-1">
                   <a href="https://bsky.app/profile/vu-zip.bsky.social" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
-                    <img src={BlueSky} alt="BlueSky logo" className="w-6 h-6"/>
+                    <img src={BlueSky} alt="BlueSky logo" className="w-6 h-6 object-contain"/>
                     <span className="text-xs text-gray-600 dark:text-gray-200">BlueSky</span>
                   </a>
                 </div>
