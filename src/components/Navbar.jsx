@@ -20,7 +20,7 @@ const Navbar = () => {
           to="/"
           className="flex items-center space-x-3 cursor-pointer transition-opacity duration-200 group"
         >
-          <img src={logo} alt="FlagFinder Logo" className="size-10"/>
+          <img src={logo} alt="GeoTrainr Logo" className="size-10"/>
           <span className="text-xl font-bold text-gray-800 dark:text-gray-200 group-hover:underline">
             GeoTrainr
           </span>
