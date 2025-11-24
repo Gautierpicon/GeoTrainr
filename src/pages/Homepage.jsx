@@ -25,7 +25,7 @@ const Homepage = () => {
             </h1>
           </div>
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-8 sm:mb-12">
-            Perfectionnez vos compétences en reconnaissance visuelle et entrainez-vous pour <a href="https://www.geoguessr.com/" className='underline'>GeoGuessr</a> !
+            Perfectionnez vos compétences en reconnaissance visuelle et entrainez-vous pour <a href="https://www.geoguessr.com/" target="_blank" className="text-gray-900 dark:text-white decoration-blue-600 dark:decoration-blue-500/30 underline">GeoGuessr</a> !
           </p>
 
           {/* Game Modes Grid */}
