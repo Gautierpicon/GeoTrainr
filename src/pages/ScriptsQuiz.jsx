@@ -108,7 +108,7 @@ const ScriptsQuiz = () => {
   if (!question) return <Loader />;
 
   return (
-    <div className="flex flex-col items-center p-4 justify-center min-h-[calc(100vh-4.5rem)] bg-gradient-to-b from-green-50 to-emerald-50 dark:from-emerald-950 dark:to-green-900">
+    <div className="flex flex-col items-center p-4 justify-center min-h-[calc(100vh-4rem)] bg-gradient-to-b from-green-50 to-emerald-50 dark:from-emerald-950 dark:to-green-900">
       {timerEnabled && (
         <Timer 
           duration={timerDuration}

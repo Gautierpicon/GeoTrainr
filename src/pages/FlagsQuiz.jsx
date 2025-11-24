@@ -98,7 +98,7 @@ const FlagsQuiz = () => {
   if (!question) return <Loader />;
 
   return (
-    <div className="flex flex-col items-center p-4 justify-center min-h-[calc(100vh-4.5rem)] bg-gradient-to-b from-indigo-100 to-violet-100 dark:from-gray-900 dark:to-blue-900">
+    <div className="flex flex-col items-center p-4 justify-center min-h-[calc(100vh-4rem)] bg-gradient-to-b from-indigo-100 to-violet-100 dark:from-gray-900 dark:to-blue-900">
       <Favicon countryCode={question.correct.code} />
       
       {timerEnabled && (
