@@ -11,11 +11,11 @@ Le jeu propose deux modes d'entraînement basés sur la reconnaissance des drape
 
 ## Fonctionnalités
 
-- 🏳️ **Quiz des Drapeaux** : Testez vos connaissances des drapeaux du monde en identifiant le bon pays parmi plusieurs options.
-- 🔠 **Quiz des Langues** : Trouvez la langue d'une phrase affichée, en choisissant parmi des réponses plausibles basées sur des regroupements logiques.
-- 🌗 **Mode sombre** : Une interface adaptée aux préférences des utilisateurs.
-- 📱 **Responsive** : Interface entièrement adaptée aux mobiles, tablettes et ordinateurs.
-- 🕒 **Minuteur** : Possibilité de mettre un minuteur sur les questions
+- **Quiz des Drapeaux** : Testez vos connaissances des drapeaux du monde en identifiant le bon pays parmi plusieurs options.
+- **Quiz des Langues** : Trouvez la langue d'une phrase affichée, en choisissant parmi des réponses plausibles basées sur des regroupements logiques.
+- **Mode sombre** : Une interface adaptée aux préférences des utilisateurs.
+- **Responsive** : Interface entièrement adaptée aux mobiles, tablettes et ordinateurs.
+- **Minuteur** : Possibilité de mettre un minuteur sur les questions
 
 ## Modes de jeu
 
@@ -53,6 +53,7 @@ Toutes les contributions sont les bienvenues ! Pour contribuer :
 ### Prérequis
 - [Node.js](https://nodejs.org/fr)
 - npm ou yarn
+
 1. Clonez le projet 
 ```sh
 # Cloner le projet
@@ -69,9 +70,9 @@ npm run dev
 ```
 L'application sera accessible sur `http://localhost:5173/`, a moins qu'un autre site utilise déjà cet emplacement. Dans ce cas referez-vous au lien que le terminal vous affiche.
 
-2. Créez une branche spécifique (`feature-nouvelle-fonctionnalite`) 🛠
-3. Faites vos modifications et **testez-les** ✅
-4. Soumettez une pull request 📩
+2. Créez une branche spécifique (`feature-nouvelle-fonctionnalite`)
+3. Faites vos modifications et **testez-les**
+4. Soumettez une pull request
 
 Si vous trouvez un bug ou souhaitez suggérer une amélioration, vous pouvez ouvrir une issue [ici](https://github.com/Gautierpicon/GeoTrainr/issues/new).
 
@@ -79,13 +80,9 @@ Si vous trouvez un bug ou souhaitez suggérer une amélioration, vous pouvez ouv
 ## 📷 Captures d'écran
 
 Images de la bêta :
-![Page d'accueil](ReadmePictures/HomepagePictures/Homepage.png)
-![Mode Sombre avec page d'accueil](ReadmePictures/HomepagePictures/DarkHomepage.png)
-![Exemple Quiz des Drapeaux](ReadmePictures/FlagsPictures/Flags.png)
-![Mode Sombre avec quiz des Drapeaux](ReadmePictures/FlagsPictures/DarkFlags.png)
-![Exemple Quiz des Langues](ReadmePictures/LanguagesPictures/Languages.png)
-![Mode Sombre avec quiz des Langues](ReadmePictures/LanguagesPictures/DarkLanguages.png)
-
----
-
-🌍 **Rejoignez-nous et devenez un expert en géographie avec GeoTrainr !** 🚀
+![Page d'accueil](.github/ReadmePictures/HomepagePictures/Homepage.png)
+![Mode Sombre avec page d'accueil](.github/ReadmePictures/HomepagePictures/DarkHomepage.png)
+![Exemple Quiz des Drapeaux](.github/ReadmePictures/FlagsPictures/Flags.png)
+![Mode Sombre avec quiz des Drapeaux](.github/ReadmePictures/FlagsPictures/DarkFlags.png)
+![Exemple Quiz des Langues](.github/ReadmePictures/LanguagesPictures/Languages.png)
+![Mode Sombre avec quiz des Langues](.github/ReadmePictures/LanguagesPictures/DarkLanguages.png)
