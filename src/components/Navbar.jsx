@@ -1,7 +1,19 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
+import logo from '../assets/logo.svg';
 
-import logo from '../assets/logo.svg'
+// Base component for icons with stroke
+const IconBase = ({ size = 24, className, children, ...props }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>{children}</svg>
+);
+
+// Required icons
+const Flag = (props) => <IconBase {...props}><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></IconBase>;
+const Languages = (props) => <IconBase {...props}><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></IconBase>;
+const Settings = (props) => <IconBase {...props}><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.75 1.3a2 2 0 0 0 .24 2.15l.77.77a2 2 0 0 1 0 2.73l-.77.77a2 2 0 0 0-.24 2.15l.75 1.3a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.75-1.3a2 2 0 0 0-.24-2.15l-.77-.77a2 2 0 0 1 0-2.73l.77-.77a2 2 0 0 0 .24-2.15l-.75-1.3a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></IconBase>;
+const Home = (props) => <IconBase {...props}><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></IconBase>;
+const Menu = (props) => <IconBase {...props}><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></IconBase>;
+const X = (props) => <IconBase {...props}><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></IconBase>;
 
 const Navbar = () => {
   const location = useLocation();
@@ -11,186 +23,146 @@ const Navbar = () => {
   const isFlagsPage = location.pathname === "/flagsquiz";
   const isScriptsPage = location.pathname === "/scriptsquiz";
   const isSettingsPage = location.pathname === "/settings";
-    
+  
+  // Base classes for inactive links
+  const baseLinkClasses = "flex items-center gap-3 p-3 rounded-xl transition-all duration-300 font-medium text-sm lg:text-base";
+
   return (
-    <nav className="bg-gray-50 dark:bg-black shadow-sm">
-      <div className="flex items-center justify-between px-6 py-4">
-        {/* Logo et Nom */}
-        <Link
-          to="/"
-          className="flex items-center space-x-3 cursor-pointer transition-opacity duration-200 group"
-        >
-          <img src={logo} alt="GeoTrainr Logo" className="size-10"/>
-          <span className="text-xl font-bold text-gray-800 dark:text-gray-200 group-hover:underline">
-            GeoTrainr
-          </span>
-        </Link>
-
-        {/* Liens de navigation pour desktop */}
-        <div className="hidden md:flex items-center space-x-6">
+    <nav className="sticky top-0 z-50 bg-white/95 dark:bg-slate-950/95 backdrop-blur-lg border-b border-gray-200 dark:border-slate-800 shadow-sm">
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-16">
+          
+          {/* Logo and Name */}
           <Link
-            to="/flagsquiz"
-            className={`flex items-center space-x-2 p-2 rounded-xl transition-all duration-300 ${
-              isFlagsPage 
-                ? "bg-indigo-600 dark:bg-indigo-500 text-white" 
-                : "text-gray-600 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-gray-800 hover:scale-[1.02]"
-            }`}
+            to="/"
+            className="flex items-center gap-3 cursor-pointer group"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-              <path
-                fillRule="evenodd"
-                d="M3 2.25a.75.75 0 0 1 .75.75v.54l1.838-.46a9.75 9.75 0 0 1 6.725.738l.108.054A8.25 8.25 0 0 0 18 4.524l3.11-.732a.75.75 0 0 1 .917.81 47.784 47.784 0 0 0 .005 10.337.75.75 0 0 1-.574.812l-3.114.733a9.75 9.75 0 0 1-6.594-.77l-.108-.054a8.25 8.25 0 0 0-5.69-.625l-2.202.55V21a.75.75 0 0 1-1.5 0V3A.75.75 0 0 1 3 2.25Z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <span>Drapeaux</span>
+            <img src={logo} alt="GeoTrainr Logo" className="w-8 h-8" />
+            <span className="text-xl font-bold text-gray-900 dark:text-white tracking-tight group-hover:text-neutral-400 transition-colors">
+              GeoTrainr
+            </span>
           </Link>
 
-          <Link
-            to="/scriptsquiz"
-            className={`flex items-center space-x-2 p-2 rounded-xl transition-all duration-300 ${
-              isScriptsPage 
-                ? "bg-green-600 dark:bg-green-500 text-white" 
-                : "text-gray-600 dark:text-gray-300 hover:bg-green-50 dark:hover:bg-gray-800 hover:scale-[1.02]"
-            }`}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802"
-              />
-            </svg>
-            <span>Écritures</span>
-          </Link>
+          {/* Desktop navigation links */}
+          <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
+            
+            {/* Flags Link */}
+            <Link
+              to="/flagsquiz"
+              className={`${baseLinkClasses} ${
+                isFlagsPage 
+                  ? "bg-blue-100 dark:bg-blue-600/10 text-blue-700 dark:text-blue-400 border border-blue-200 dark:border-blue-500/20 shadow-sm" 
+                  : "text-gray-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800/50 hover:text-gray-900 dark:hover:text-white"
+              }`}
+            >
+              <Flag className="w-5 h-5" />
+              <span>Drapeaux</span>
+            </Link>
 
-          <div className="border-l border-gray-200 h-8 ml-4"></div>
+            {/* Scripts Link */}
+            <Link
+              to="/scriptsquiz"
+              className={`${baseLinkClasses} ${
+                isScriptsPage 
+                  ? "bg-emerald-100 dark:bg-emerald-600/10 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/20 shadow-sm" 
+                  : "text-gray-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800/50 hover:text-gray-900 dark:hover:text-white"
+              }`}
+            >
+              <Languages className="w-5 h-5" />
+              <span>Écritures</span>
+            </Link>
 
-          <Link
-            to="/settings"
-            className={`flex items-center space-x-2 p-2 rounded-xl transition-all duration-300 ${
-              isSettingsPage 
-                ? "bg-gray-700 dark:bg-gray-600 text-white" 
-                : "text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:scale-[1.06]"
-            }`}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-              />
-            </svg>
-          </Link>
-        </div>
+            <div className="border-l border-gray-300 dark:border-slate-700 h-6 mx-2"></div>
 
-        {/* Bouton du menu burger pour mobile */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            type="button"
-            className="text-gray-800 dark:text-gray-200 hover:opacity-80 p-2 focus:outline-none transition-opacity duration-200"
-          >
-            <svg
-              className={`w-6 h-6 transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-90' : ''}`}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+            {/* Settings Link */}
+            <Link
+              to="/settings"
+              className={`${baseLinkClasses} p-2 ${
+                isSettingsPage 
+                  ? "bg-gray-200 dark:bg-slate-700/50 text-gray-900 dark:text-white border border-gray-300 dark:border-slate-600" 
+                  : "text-gray-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800/50 hover:text-gray-900 dark:hover:text-white hover:scale-[1.05]"
+              }`}
+            >
+              <Settings className="w-6 h-6" />
+            </Link>
+          </div>
+
+          {/* Mobile burger menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              type="button"
+              className="text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white p-2 rounded-lg transition-colors bg-gray-100 dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700 focus:outline-none"
             >
               {isMobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                <X className="w-6 h-6" />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                <Menu className="w-6 h-6" />
               )}
-            </svg>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Menu de navigation mobile avec animation */}
+      {/* Mobile navigation menu with animation */}
       <div
-        className={`md:hidden px-6 pb-4 transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+        className={`md:hidden transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
       >
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col space-y-2 p-4 border-t border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-900/80">
+          
+          {/* Home Link */}
           <Link
             to="/"
             onClick={() => setIsMobileMenuOpen(false)}
-            className={`flex items-center space-x-2 p-2 rounded-xl transition-all duration-300 ${
+            className={`${baseLinkClasses} ${
               isHomePage 
-                ? "bg-blue-500 text-white dark:text-black" 
-                : "bg-transparent text-gray-800 dark:text-gray-200 hover:bg-blue-500/10 dark:hover:bg-blue-400/10"
+                ? "bg-indigo-100 dark:bg-indigo-600/10 text-indigo-700 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-500/20" 
+                : "text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-700/50"
             }`}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-              <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
-              <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75v4.5a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198c.031-.028.061-.056.091-.086L12 5.43z" />
-            </svg>
+            <Home className="w-6 h-6" />
             <span>Accueil</span>
           </Link>
-
+          
+          {/* Flags Link */}
           <Link
             to="/flagsquiz"
             onClick={() => setIsMobileMenuOpen(false)}
-            className={`flex items-center space-x-2 p-2 rounded-xl transition-all duration-300 ${
+            className={`${baseLinkClasses} ${
               isFlagsPage 
-                ? "bg-indigo-500 text-white dark:text-black" 
-                : "bg-transparent text-gray-800 dark:text-gray-200 hover:bg-indigo-500/10 dark:hover:bg-indigo-400/10"
+                ? "bg-blue-100 dark:bg-blue-600/10 text-blue-700 dark:text-blue-400 border border-blue-200 dark:border-blue-500/20" 
+                : "text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-700/50"
             }`}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-              <path
-                fillRule="evenodd"
-                d="M3 2.25a.75.75 0 0 1 .75.75v.54l1.838-.46a9.75 9.75 0 0 1 6.725.738l.108.054A8.25 8.25 0 0 0 18 4.524l3.11-.732a.75.75 0 0 1 .917.81 47.784 47.784 0 0 0 .005 10.337.75.75 0 0 1-.574.812l-3.114.733a9.75 9.75 0 0 1-6.594-.77l-.108-.054a8.25 8.25 0 0 0-5.69-.625l-2.202.55V21a.75.75 0 0 1-1.5 0V3A.75.75 0 0 1 3 2.25Z"
-                clipRule="evenodd"
-              />
-            </svg>
+            <Flag className="w-6 h-6" />
             <span>Drapeaux</span>
           </Link>
+          
+          {/* Scripts Link */}
           <Link
             to="/scriptsquiz"
             onClick={() => setIsMobileMenuOpen(false)}
-            className={`flex items-center space-x-2 p-2 rounded-xl transition-all duration-300 ${
+            className={`${baseLinkClasses} ${
               isScriptsPage 
-                ? "bg-green-500 text-white dark:text-black" 
-                : "bg-transparent text-gray-800 dark:text-gray-200 hover:bg-green-500/10 dark:hover:bg-green-400/10"
+                ? "bg-emerald-100 dark:bg-emerald-600/10 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/20" 
+                : "text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-700/50"
             }`}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802"
-              />
-            </svg>
+            <Languages className="w-6 h-6" />
             <span>Écritures</span>
           </Link>
+          
+          {/* Settings Link */}
           <Link
             to="/settings"
             onClick={() => setIsMobileMenuOpen(false)}
-            className={`flex items-center space-x-2 p-2 rounded-xl transition-all duration-300 ${
+            className={`${baseLinkClasses} ${
               isSettingsPage 
-                ? "bg-gray-600 dark:bg-gray-400 text-white dark:text-black" 
-                : "bg-transparent text-gray-800 dark:text-gray-200 hover:bg-gray-500/10 dark:hover:bg-gray-400/10"
+                ? "bg-gray-200 dark:bg-slate-700/50 text-gray-900 dark:text-white border border-gray-300 dark:border-slate-600" 
+                : "text-gray-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-700/50"
             }`}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-              />
-            </svg>
+            <Settings className="w-6 h-6" />
             <span>Paramètres</span>
           </Link>
         </div>
