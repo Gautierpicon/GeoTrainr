@@ -1,4 +1,3 @@
-// NextQuestionButtons.jsx
 import React from 'react';
 
 const NextQuestionButtons = ({ onClick, disabled, variant = 'flags' }) => {

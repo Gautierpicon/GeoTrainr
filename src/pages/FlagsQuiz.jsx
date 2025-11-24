@@ -16,12 +16,10 @@ const FlagsQuiz = () => {
   const [selected, setSelected] = useState(null);
   const [showFeedback, setShowFeedback] = useState(false);
   
-  // États pour le timer
   const [timerEnabled, setTimerEnabled] = useState(false);
   const [timerDuration, setTimerDuration] = useState(30);
   const [timerRunning, setTimerRunning] = useState(false);
 
-  // Charger les paramètres du timer depuis localStorage
   useEffect(() => {
     setTimerEnabled(localStorage.getItem('quizTimerEnabled') === 'true');
     const savedDuration = parseInt(localStorage.getItem('quizTimerDuration') || '30');
@@ -32,14 +30,12 @@ const FlagsQuiz = () => {
     }
   }, []);
 
-  // Mettre à jour le titre de la page avec l'emoji 🌎
   useEffect(() => {
-    const originalTitle = document.title; // Sauvegarder le titre original
-    document.title = `🌎 ${originalTitle}`; // Ajouter l'emoji devant le titre
+    const originalTitle = document.title;
+    document.title = `🌎 ${originalTitle}`;
 
-    // Restaurer le titre original lors du nettoyage
     return () => {
-      document.title = originalTitle; // Retirer l'emoji et restaurer le titre original
+      document.title = originalTitle;
     };
   }, []);
 
@@ -47,14 +43,12 @@ const FlagsQuiz = () => {
     const correctCountry = countries[Math.floor(Math.random() * countries.length)];
     
     const otherCountries = countries.filter((c) => c.code !== correctCountry.code);
-    // Mélanger les autres pays
     for (let i = otherCountries.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [otherCountries[i], otherCountries[j]] = [otherCountries[j], otherCountries[i]];
     }
     
     let options = [correctCountry, ...otherCountries.slice(0, 4)];
-    // Mélanger les options
     for (let i = options.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [options[i], options[j]] = [options[j], options[i]];
@@ -64,7 +58,6 @@ const FlagsQuiz = () => {
     setSelected(null);
     setShowFeedback(false);
     
-    // Redémarrer le timer si activé
     if (timerEnabled) {
       setTimerRunning(true);
     }
@@ -78,20 +71,17 @@ const FlagsQuiz = () => {
     if (selected !== null) return;
     setSelected(option);
     setShowFeedback(true);
-    // Arrêter le timer quand une réponse est sélectionnée
     setTimerRunning(false);
   };
 
   const handleTimeUp = () => {
     if (!selected) {
-      // Seule la bonne réponse est sélectionnée, aucune mauvaise réponse n'est marquée
       setSelected(question.correct);
       setShowFeedback(true);
       setTimerRunning(false);
     }
   };
 
-  // Permet d'écouter la touche "Entrée" et de passer à la prochaine question si une réponse est donnée
   useEffect(() => {
     const handleKeyPress = (event) => {
       if (event.key === "Enter" && showFeedback) {

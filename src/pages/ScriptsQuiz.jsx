@@ -5,13 +5,12 @@ import Timer from "../components/Settings/Timer/Timer";
 import Loader from "../components/Loader";
 import NextQuestionButtons from "../components/Buttons/NextQuestionButtons";
 
-// On parcourt les groupes (régions) et on aplatit la structure en un tableau
 const languages = [];
 Object.entries(languageData).forEach(([region, regionLanguages]) => {
   Object.entries(regionLanguages).forEach(([code, data]) => {
     languages.push({
       code,
-      group: region, // on utilise la clé du groupe comme identifiant de groupe
+      group: region,
       name: data.name,
       sentences: data.sentences,
     });
@@ -23,12 +22,10 @@ const ScriptsQuiz = () => {
   const [selected, setSelected] = useState(null);
   const [showFeedback, setShowFeedback] = useState(false);
   
-  // États pour le timer
   const [timerEnabled, setTimerEnabled] = useState(false);
   const [timerDuration, setTimerDuration] = useState(30);
   const [timerRunning, setTimerRunning] = useState(false);
 
-  // Charger les paramètres du timer depuis localStorage
   useEffect(() => {
     setTimerEnabled(localStorage.getItem('quizTimerEnabled') === 'true');
     const savedDuration = parseInt(localStorage.getItem('quizTimerDuration') || '30');
@@ -40,28 +37,23 @@ const ScriptsQuiz = () => {
   }, []);
 
   const generateQuestion = () => {
-    // Choisir une langue aléatoire pour la question
     const correctLang = languages[Math.floor(Math.random() * languages.length)];
     const sentence =
       correctLang.sentences[
         Math.floor(Math.random() * correctLang.sentences.length)
       ];
 
-    // Filtrer uniquement les langues du même groupe (région) que la langue correcte, hors elle-même
     const sameGroupLangs = languages.filter(
       (l) => l.group === correctLang.group && l.code !== correctLang.code
     );
 
-    // Mélanger les langues du même groupe
     for (let i = sameGroupLangs.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [sameGroupLangs[i], sameGroupLangs[j]] = [sameGroupLangs[j], sameGroupLangs[i]];
     }
 
-    // Choisir 4 mauvaises réponses (si disponibles)
     const wrongOptions = sameGroupLangs.slice(0, 4);
 
-    // Combiner la bonne réponse et les mauvaises réponses, puis mélanger
     const options = [correctLang, ...wrongOptions];
     for (let i = options.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -76,7 +68,6 @@ const ScriptsQuiz = () => {
     setSelected(null);
     setShowFeedback(false);
     
-    // Redémarrer le timer si activé
     if (timerEnabled) {
       setTimerRunning(true);
     }
@@ -90,13 +81,11 @@ const ScriptsQuiz = () => {
     if (selected !== null) return;
     setSelected(option);
     setShowFeedback(true);
-    // Arrêter le timer quand une réponse est sélectionnée
     setTimerRunning(false);
   };
   
   const handleTimeUp = () => {
     if (!selected) {
-      // Seule la bonne réponse est sélectionnée, aucune mauvaise réponse n'est marquée
       setSelected(question.correct);
       setShowFeedback(true);
       setTimerRunning(false);

@@ -28,7 +28,6 @@ const TimerSettings = () => {
         Paramètres du timer
       </span>
       
-      {/* Toggle pour activer/désactiver le timer */}
       <div className="flex items-center justify-between w-full px-4 py-2 bg-white/50 rounded-xl dark:bg-gray-900/50">
         <div className="flex items-center gap-2">
           <ClockIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
@@ -45,7 +44,6 @@ const TimerSettings = () => {
         </label>
       </div>
 
-      {/* Sélecteur de durée du timer */}
       <div className="w-full p-4 bg-white/50 rounded-xl dark:bg-gray-900/50">
         <div className="flex flex-col gap-4">
           <div className="flex justify-between items-center">
@@ -82,7 +80,6 @@ const TimerSettings = () => {
   );
 };
 
-// Icônes SVG
 const ClockIcon = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className={className}>
     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
