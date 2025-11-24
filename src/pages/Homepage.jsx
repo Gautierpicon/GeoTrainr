@@ -27,35 +27,35 @@ const Homepage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-950 text-gray-900 dark:text-slate-200 selection:bg-indigo-500 selection:text-white font-sans overflow-x-hidden relative">
+    <div className="min-h-screen bg-gray-50 dark:bg-slate-950 text-gray-900 dark:text-slate-200 selection:bg-blue-500 selection:text-white font-sans overflow-x-hidden relative">
       
       {/* Background Effects */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         {/* Subtle grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         {/* Central glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-indigo-600/20 dark:bg-indigo-600/20 rounded-full blur-[120px] opacity-50"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-600/20 dark:bg-blue-600/20 rounded-full blur-[120px] opacity-50"></div>
       </div>
 
       {/* Hero Section */}
       <main className="relative z-10 container mx-auto px-6 pt-10 pb-20 sm:pt-20 sm:pb-32">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-500/10 border border-indigo-300 dark:border-indigo-500/20 text-indigo-700 dark:text-indigo-300 text-sm font-medium mb-4 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-500/10 border border-blue-300 dark:border-blue-500/20 text-blue-700 dark:text-blue-300 text-sm font-medium mb-4 backdrop-blur-sm">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-500 dark:bg-indigo-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600 dark:bg-indigo-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 dark:bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600 dark:bg-blue-500"></span>
             </span>
             Prêt pour GeoGuessr ?
           </div>
 
           <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-            Maîtrisez la <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400">Géographie</span>
+            Maîtrisez la <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 dark:from-blue-400 dark:via-blue-300 dark:to-blue-500">Géographie</span>
           </h1>
           
           <p className="text-lg sm:text-xl text-gray-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
             Perfectionnez votre reconnaissance visuelle. 
-            Identifiez drapeaux et alphabets pour devenir imbattable sur <a href="https://www.geoguessr.com/" target="_blank" className="text-gray-900 dark:text-white font-medium decoration-indigo-600 dark:decoration-indigo-500/30 underline decoration-2 underline-offset-4">GeoGuessr</a>.
+            Identifiez drapeaux et alphabets pour devenir imbattable sur <a href="https://www.geoguessr.com/" target="_blank" className="text-gray-900 dark:text-white font-medium decoration-blue-600 dark:decoration-blue-500/30 underline decoration-2 underline-offset-4">GeoGuessr</a>.
           </p>
 
           {/* Game Cards Grid */}
@@ -166,12 +166,12 @@ const Homepage = () => {
               <h4 className="font-bold text-gray-900 dark:text-white mb-6">Ressources</h4>
               <ul className="space-y-3 text-sm text-gray-600 dark:text-slate-400">
                 <li>
-                  <a href="https://www.geoguessr.com/" target="_blank" rel="noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors flex items-center gap-2">
+                  <a href="https://www.geoguessr.com/" target="_blank" rel="noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-2">
                     <ExternalLink size={14} /> GeoGuessr
                   </a>
                 </li>
                 <li>
-                  <a href="https://flagpedia.net/" target="_blank" rel="noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors flex items-center gap-2">
+                  <a href="https://flagpedia.net/" target="_blank" rel="noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-2">
                     <ExternalLink size={14} /> Flagpedia.net
                   </a>
                 </li>
