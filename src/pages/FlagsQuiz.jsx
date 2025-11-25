@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import gsap from "gsap";
 import countryData from "../data/flags.json";
 import Favicon from "../components/Favicon";
 import QuizAnswerButtons from "../components/Buttons/QuizAnswerButtons";
@@ -29,6 +30,10 @@ const FlagsQuiz = () => {
   const [timerDuration, setTimerDuration] = useState(30);
   const [timerRunning, setTimerRunning] = useState(false);
 
+  const flagRef = useRef(null);
+  const optionsRef = useRef([]);
+  const timerRef = useRef(null);
+
   useEffect(() => {
     setTimerEnabled(localStorage.getItem("quizTimerEnabled") === "true");
     setTimerDuration(parseInt(localStorage.getItem("quizTimerDuration") || "30"));
@@ -37,6 +42,44 @@ const FlagsQuiz = () => {
       setTimerRunning(true);
     }
   }, []);
+
+  useEffect(() => {
+    if (question && flagRef.current) {
+      gsap.fromTo(
+        flagRef.current,
+        {
+          scale: 0.7,
+          opacity: 0,
+          rotationY: -90,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          rotationY: 0,
+          duration: 0.6,
+          ease: "back.out(1.5)",
+        }
+      );
+
+      if (timerRef.current) {
+        gsap.from(timerRef.current, {
+          opacity: 0,
+          y: -20,
+          duration: 0.4,
+          ease: "power2.out",
+        });
+      }
+
+      gsap.from(optionsRef.current, {
+        opacity: 0,
+        y: 30,
+        stagger: 0.08,
+        duration: 0.5,
+        ease: "power3.out",
+        delay: 0.3,
+      });
+    }
+  }, [question]);
 
   const generateQuestion = () => {
     const randomContinent =
@@ -86,6 +129,24 @@ const FlagsQuiz = () => {
     setSelected(option);
     setShowFeedback(true);
     setTimerRunning(false);
+
+    if (option.code !== question.correct.code) {
+      gsap.to(flagRef.current, {
+        x: -10,
+        duration: 0.1,
+        repeat: 5,
+        yoyo: true,
+        ease: "power1.inOut",
+      });
+    } else {
+      gsap.to(flagRef.current, {
+        scale: 1.1,
+        duration: 0.2,
+        yoyo: true,
+        repeat: 1,
+        ease: "power2.inOut",
+      });
+    }
   };
 
   const handleTimeUp = () => {
@@ -117,32 +178,39 @@ const FlagsQuiz = () => {
       <Favicon countryCode={question.correct.code} />
 
       {timerEnabled && (
-        <Timer
-          duration={timerDuration}
-          onTimeUp={handleTimeUp}
-          isRunning={timerRunning}
-          className="mb-4"
-        />
+        <div ref={timerRef}>
+          <Timer
+            duration={timerDuration}
+            onTimeUp={handleTimeUp}
+            isRunning={timerRunning}
+            className="mb-4"
+          />
+        </div>
       )}
 
       <img
+        ref={flagRef}
         src={`https://flagcdn.com/${question.correct.code}.svg`}
         alt={question.correct.name}
         className="lg:h-70 w-auto mb-6 lg:shadow-lg"
       />
 
       <div className="grid grid-cols-1 gap-4 w-full max-w-md">
-        {question.options.map((option) => (
-          <QuizAnswerButtons
+        {question.options.map((option, index) => (
+          <div
             key={option.code}
-            isCorrect={option.code === question.correct.code}
-            isSelected={selected?.code === option.code}
-            showFeedback={showFeedback}
-            onClick={() => handleSelect(option)}
-            disabled={showFeedback}
+            ref={(el) => (optionsRef.current[index] = el)}
           >
-            {option.name}
-          </QuizAnswerButtons>
+            <QuizAnswerButtons
+              isCorrect={option.code === question.correct.code}
+              isSelected={selected?.code === option.code}
+              showFeedback={showFeedback}
+              onClick={() => handleSelect(option)}
+              disabled={showFeedback}
+            >
+              {option.name}
+            </QuizAnswerButtons>
+          </div>
         ))}
       </div>
 
