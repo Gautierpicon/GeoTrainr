@@ -38,14 +38,6 @@ const FlagsQuiz = () => {
     }
   }, []);
 
-  useEffect(() => {
-    const originalTitle = document.title;
-    document.title = `🌎 ${originalTitle}`;
-    return () => {
-      document.title = originalTitle;
-    };
-  }, []);
-
   const generateQuestion = () => {
     const randomContinent =
       continents[Math.floor(Math.random() * continents.length)];
