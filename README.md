@@ -19,22 +19,22 @@ Le jeu propose deux modes d'entraînement basés sur la reconnaissance des drape
 
 ## Modes de jeu
 
-### 🏳️ Mode Drapeaux
+### Mode Drapeaux
 
 Dans ce mode, une image de drapeau s'affiche, et vous devez identifier le pays correspondant parmi cinq propositions.
 
-#### 🔹 Génération des questions
+#### Génération des questions
 - Les drapeaux sont obtenus dynamiquement via l'API [FlagCDN](https://flagcdn.com/).
 - Une liste de pays est stockée dans un fichier JSON (`countries.json`).
 - Un pays est sélectionné aléatoirement comme bonne réponse.
 - Quatre autres pays sont choisis au hasard comme fausses réponses.
 - Les cinq options sont mélangées pour garantir l'équité du jeu.
 
-### 🔠 Mode Langues
+### Mode Langues
 
 Dans ce mode, une phrase est affichée, et vous devez identifier la langue dans laquelle elle est écrite.
 
-#### 🔹 Génération des questions
+#### Génération des questions
 - Les phrases sont stockées dans `languages.json`, un fichier structuré par régions linguistiques.
 - Une langue est choisie aléatoirement, et une phrase associée est affichée.
 - Les fausses réponses sont sélectionnées parmi les langues du même groupe régional, garantissant que toutes les options semblent plausibles.
@@ -46,7 +46,7 @@ Dans ce mode, une phrase est affichée, et vous devez identifier la langue dans 
 - Mode sombre pour une meilleure lisibilité.
 - Navigation fluide entre les différents modes.
 
-## 🎯 Contribution
+## Contribution
 
 Toutes les contributions sont les bienvenues ! Pour contribuer :
 
