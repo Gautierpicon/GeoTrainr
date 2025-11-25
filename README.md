@@ -2,7 +2,7 @@
 
 ### `GeoTrainr`
 
-### Le site est disponible en ligne et gartuitement ici : https://geotrainr-jet.vercel.app/
+### Le site est disponible en ligne et gartuitement ici : [GeoTrainr](https://geotrainr-jet.vercel.app/)
 
 ## Présentation du projet
 
