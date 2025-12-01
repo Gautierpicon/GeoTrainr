@@ -1,5 +1,6 @@
 import React from 'react'
 import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { Analytics } from '@vercel/analytics/react';
 
 import Navbar from './components/Navbar';
 import FlagsQuiz from './pages/FlagsQuiz';
@@ -11,8 +12,9 @@ import './components/Settings/Theme/theme.js';
 
 const App = () => {
   return (
-    <Router>
-      <Navbar />
+    <>
+      <Router>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/flagsquiz" element={<FlagsQuiz />} />
@@ -21,7 +23,9 @@ const App = () => {
 
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-    </Router>
+      </Router>
+      <Analytics />
+    </>
   )
 }
 
