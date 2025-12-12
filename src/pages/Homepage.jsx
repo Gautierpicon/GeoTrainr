@@ -32,7 +32,7 @@ const Homepage = () => {
       {/* Background Effects */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         {/* Subtle grid */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-position-[24px_24px]"></div>
         {/* Central glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-600/20 dark:bg-blue-600/20 rounded-full blur-[120px] opacity-50"></div>
       </div>
@@ -50,7 +50,7 @@ const Homepage = () => {
           </div>
 
           <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-            Maîtrisez la <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 dark:from-blue-400 dark:via-blue-300 dark:to-blue-500">Géographie</span>
+            Maîtrisez la <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-blue-600 to-blue-800 dark:from-blue-400 dark:via-blue-300 dark:to-blue-500">Géographie</span>
           </h1>
           
           <p className="text-lg sm:text-xl text-gray-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
@@ -76,7 +76,7 @@ const Homepage = () => {
                   <Flag className="text-blue-600 dark:text-blue-400" size={28} />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Drapeaux</h3>
-                <p className="text-gray-600 dark:text-slate-400 mb-8 flex-grow">
+                <p className="text-gray-600 dark:text-slate-400 mb-8 grow">
                   Testez vos connaissances sur 254 drapeaux nationaux, l'UE, l'ONU et les 50 états américains.
                 </p>
                 <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold group-hover:translate-x-2 transition-transform">
@@ -84,7 +84,7 @@ const Homepage = () => {
                 </div>
               </div>
               {/* Background Gradient Animation */}
-              <div className={`absolute inset-0 bg-gradient-to-br from-blue-500/10 dark:from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+              <div className={`absolute inset-0 bg-linear-to-br from-blue-500/10 dark:from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
             </Link>
 
             {/* Scripts Card */}
@@ -102,14 +102,14 @@ const Homepage = () => {
                   <Languages className="text-emerald-600 dark:text-emerald-400" size={28} />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Systèmes d'Écriture</h3>
-                <p className="text-gray-600 dark:text-slate-400 mb-8 flex-grow">
+                <p className="text-gray-600 dark:text-slate-400 mb-8 grow">
                   Distinguez le Cyrillique du Grec, l'Arabe du Persan. Maîtrisez les alphabets du monde.
                 </p>
                 <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-semibold group-hover:translate-x-2 transition-transform">
                   Commencer <ArrowRight size={18} />
                 </div>
               </div>
-              <div className={`absolute inset-0 bg-gradient-to-br from-emerald-500/10 dark:from-emerald-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+              <div className={`absolute inset-0 bg-linear-to-br from-emerald-500/10 dark:from-emerald-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
             </Link>
 
           </div>
