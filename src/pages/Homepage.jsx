@@ -39,14 +39,6 @@ const Homepage = () => {
       {/* Hero Section */}
       <main className="relative z-10 container mx-auto px-6 pt-10 pb-20 sm:pt-20 sm:pb-32">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-500/10 border border-blue-300 dark:border-blue-500/20 text-blue-700 dark:text-blue-300 text-sm font-medium mb-4 backdrop-blur-sm">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 dark:bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600 dark:bg-blue-500"></span>
-            </span>
-            Prêt pour GeoGuessr ?
-          </div>
 
           <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white">
             Maîtrisez la <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-blue-600 to-blue-800 dark:from-blue-400 dark:via-blue-300 dark:to-blue-500">Géographie</span>
