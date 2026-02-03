@@ -33,16 +33,21 @@ const Homepage = () => {
       </div>
 
       <main className="relative z-10 container mx-auto px-6 pt-10 pb-20 sm:pt-20 sm:pb-32">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
+        <div className="max-w-5xl mx-auto space-y-8">
 
-          <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-            Maîtrisez la <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-blue-600 to-blue-800 dark:from-blue-400 dark:via-blue-300 dark:to-blue-500">Géographie</span>
-          </h1>
-          
-          <p className="text-lg sm:text-xl text-gray-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Perfectionnez votre reconnaissance visuelle. 
-            Identifiez drapeaux et alphabets pour devenir imbattable sur <a href="https://www.geoguessr.com/" target="_blank" className="text-gray-900 dark:text-white font-medium decoration-blue-600 dark:decoration-blue-500/30 underline decoration-2 underline-offset-4">GeoGuessr</a>.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-center sm:text-left">
+            <img src={logo} alt="GeoTrainr Logo" className="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 shrink-0" />
+            <div className="space-y-4">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+                Maîtrisez la <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-blue-600 to-blue-800 dark:from-blue-400 dark:via-blue-300 dark:to-blue-500">Géographie</span>
+              </h1>
+              
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+                Perfectionnez votre reconnaissance visuelle. 
+                Identifiez drapeaux et alphabets pour devenir imbattable sur <a href="https://www.geoguessr.com/" target="_blank" className="text-gray-900 dark:text-white font-medium decoration-blue-600 dark:decoration-blue-500/30 underline decoration-2 underline-offset-4">GeoGuessr</a>.
+              </p>
+            </div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-12 max-w-5xl mx-auto">
             
