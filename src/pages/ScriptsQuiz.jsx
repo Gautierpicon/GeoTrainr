@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import gsap from 'gsap';
 import languageData from '../data/languages.json';
 import QuizAnswerButtons from '../components/Buttons/QuizAnswerButtons';
@@ -81,7 +81,7 @@ const ScriptsQuiz = () => {
     }
   }, [question]);
 
-  const generateQuestion = () => {
+  const generateQuestion = useCallback(() => {
     const correctLang = languages[Math.floor(Math.random() * languages.length)];
     const sentence =
       correctLang.sentences[
@@ -119,11 +119,11 @@ const ScriptsQuiz = () => {
     if (timerEnabled) {
       setTimerRunning(true);
     }
-  };
+  }, [timerEnabled]);
 
   useEffect(() => {
     generateQuestion();
-  }, []);
+  }, [generateQuestion]);
 
   const handleSelect = (option) => {
     if (selected !== null) return;
@@ -169,12 +169,12 @@ const ScriptsQuiz = () => {
     return () => {
       window.removeEventListener('keydown', handleKeyPress);
     };
-  }, [showFeedback]);
+  }, [showFeedback, generateQuestion]);
 
   if (!question) return <Loader />;
 
   return (
-    <div className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center bg-gradient-to-b from-green-50 to-emerald-50 p-4 dark:from-emerald-950 dark:to-green-900">
+    <div className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center bg-linear-to-b from-green-50 to-emerald-50 p-4 dark:from-emerald-950 dark:to-green-900">
       {timerEnabled && (
         <div ref={timerRef}>
           <Timer

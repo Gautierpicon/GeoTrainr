@@ -35,7 +35,7 @@ const TimerSettings = () => {
             Activer le timer
           </span>
         </div>
-        <label className="relative inline-block h-8 w-14 cursor-pointer rounded-full bg-gray-300 transition [-webkit-tap-highlight-color:_transparent] has-[:checked]:bg-blue-600 dark:bg-gray-600">
+        <label className="relative inline-block h-8 w-14 cursor-pointer rounded-full bg-gray-300 transition [-webkit-tap-highlight-color:transparent] has-checked:bg-blue-600 dark:bg-gray-600">
           <input
             type="checkbox"
             className="peer sr-only"

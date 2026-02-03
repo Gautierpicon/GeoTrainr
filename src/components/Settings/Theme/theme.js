@@ -21,7 +21,7 @@
   if (savedTheme === 'system') {
     window
       .matchMedia('(prefers-color-scheme: dark)')
-      .addEventListener('change', (e) => {
+      .addEventListener('change', () => {
         if (!localStorage.getItem('theme')) {
           applyTheme('system');
         }

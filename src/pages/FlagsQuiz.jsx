@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import gsap from 'gsap';
 import countryData from '../data/flags.json';
 import Favicon from '../components/Favicon';
@@ -83,7 +83,7 @@ const FlagsQuiz = () => {
     }
   }, [question]);
 
-  const generateQuestion = () => {
+  const generateQuestion = useCallback(() => {
     const randomContinent =
       continents[Math.floor(Math.random() * continents.length)];
 
@@ -120,11 +120,11 @@ const FlagsQuiz = () => {
     if (timerEnabled) {
       setTimerRunning(true);
     }
-  };
+  }, [timerEnabled]);
 
   useEffect(() => {
     generateQuestion();
-  }, []);
+  }, [generateQuestion]);
 
   const handleSelect = (option) => {
     if (selected) return;
@@ -170,12 +170,12 @@ const FlagsQuiz = () => {
     return () => {
       window.removeEventListener('keydown', handleKeyPress);
     };
-  }, [showFeedback]);
+  }, [showFeedback, generateQuestion]);
 
   if (!question) return <Loader />;
 
   return (
-    <div className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center bg-gradient-to-b from-indigo-100 to-violet-100 p-4 dark:from-gray-900 dark:to-blue-900">
+    <div className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center bg-linear-to-b from-indigo-100 to-violet-100 p-4 dark:from-gray-900 dark:to-blue-900">
       <Favicon countryCode={question.correct.code} />
 
       {timerEnabled && (

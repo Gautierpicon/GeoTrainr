@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const QuizAnswerButtons = ({
   children,
@@ -8,11 +8,8 @@ const QuizAnswerButtons = ({
   onClick,
   disabled,
 }) => {
-  const [clicked, setClicked] = useState(false);
-
   const handleClick = () => {
     if (disabled) return;
-    setClicked(true);
     onClick();
   };
 

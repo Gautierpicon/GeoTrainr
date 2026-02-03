@@ -33,7 +33,7 @@ const Theme = () => {
     applyTheme(theme);
 
     const systemDarkMedia = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleSystemThemeChange = (e) => {
+    const handleSystemThemeChange = () => {
       if (theme === 'system') applyTheme('system');
     };
 
@@ -55,7 +55,7 @@ const Theme = () => {
           { value: 'light', icon: SunIcon, label: 'Clair' },
           { value: 'dark', icon: MoonIcon, label: 'Sombre' },
           { value: 'system', icon: SystemIcon, label: 'Système' },
-        ].map(({ value, icon: Icon, label }) => (
+        ].map(({ value, label }) => (
           <button
             key={value}
             onClick={() => setTheme(value)}
