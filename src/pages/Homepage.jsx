@@ -160,7 +160,7 @@ const Homepage = () => {
 
             <div>
                 <h4 className="font-bold text-gray-900 dark:text-white mb-6">Contribution</h4>
-                <p className="text-sm text-gray-600 dark:text-slate-400 mb-4">Un bug ? Une suggestion ? Le projet est open-source.</p>
+                <p className="text-sm text-gray-600 dark:text-slate-400 mb-4">Un bug ? Une suggestion ? Le projet est open-source !</p>
                 <button 
                     onClick={openGitHubIssue}
                     className="cursor-pointer flex items-center gap-2 bg-emerald-100 dark:bg-emerald-600/10 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-600/20 px-4 py-2 rounded-lg hover:bg-emerald-200 dark:hover:bg-emerald-600/20 transition-all text-sm font-medium"
@@ -171,7 +171,7 @@ const Homepage = () => {
           </div>
 
           <div className="border-t border-gray-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 dark:text-slate-500">
-            <p>&copy; {new Date().getFullYear()} GeoTrainr. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} GeoTrainr. Tous droits réservés.</p>
           </div>
         </div>
       </footer>
