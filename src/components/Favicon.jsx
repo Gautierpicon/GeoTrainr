@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 const Favicon = ({ countryCode }) => {
   useEffect(() => {
@@ -7,16 +7,16 @@ const Favicon = ({ countryCode }) => {
     let isLinkCreated = false;
 
     if (!link) {
-      link = document.createElement("link");
-      link.rel = "icon";
+      link = document.createElement('link');
+      link.rel = 'icon';
       isLinkCreated = true;
     } else {
       originalHref = link.href;
     }
 
-    link.href = countryCode 
+    link.href = countryCode
       ? `https://flagcdn.com/${countryCode}.svg`
-      : "/favicon.png";
+      : '/favicon.png';
 
     if (isLinkCreated) {
       document.head.appendChild(link);

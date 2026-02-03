@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-const Timer = ({ 
+const Timer = ({
   duration = 30,
   onTimeUp,
   isRunning = true,
-  className = ""
+  className = '',
 }) => {
   const [timeLeft, setTimeLeft] = useState(duration);
 
@@ -38,7 +38,7 @@ const Timer = ({
 
   return (
     <div className={`w-full max-w-md ${className}`}>
-      <div className="flex justify-between items-center mb-1">
+      <div className="mb-1 flex items-center justify-between">
         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
           Temps restant
         </span>
@@ -46,9 +46,9 @@ const Timer = ({
           {timeLeft}s
         </span>
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-        <div 
-          className={`h-2.5 rounded-full transition-all duration-1000 ${colorClass}`} 
+      <div className="h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
+        <div
+          className={`h-2.5 rounded-full transition-all duration-1000 ${colorClass}`}
           style={{ width: `${progressPercent}%` }}
         ></div>
       </div>

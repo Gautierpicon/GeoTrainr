@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
-import gsap from "gsap";
-import countryData from "../data/flags.json";
-import Favicon from "../components/Favicon";
-import QuizAnswerButtons from "../components/Buttons/QuizAnswerButtons";
-import Timer from "../components/Settings/Timer/Timer";
-import Loader from "../components/Loader";
-import NextQuestionButtons from "../components/Buttons/NextQuestionButtons";
+import React, { useState, useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import countryData from '../data/flags.json';
+import Favicon from '../components/Favicon';
+import QuizAnswerButtons from '../components/Buttons/QuizAnswerButtons';
+import Timer from '../components/Settings/Timer/Timer';
+import Loader from '../components/Loader';
+import NextQuestionButtons from '../components/Buttons/NextQuestionButtons';
 
 const continents = Object.keys(countryData);
 
@@ -14,7 +14,7 @@ const countriesByContinent = Object.entries(countryData).reduce(
     acc[continent] = Object.entries(countries).map(([code, name]) => ({
       code,
       name,
-      continent
+      continent,
     }));
     return acc;
   },
@@ -35,10 +35,12 @@ const FlagsQuiz = () => {
   const timerRef = useRef(null);
 
   useEffect(() => {
-    setTimerEnabled(localStorage.getItem("quizTimerEnabled") === "true");
-    setTimerDuration(parseInt(localStorage.getItem("quizTimerDuration") || "30"));
+    setTimerEnabled(localStorage.getItem('quizTimerEnabled') === 'true');
+    setTimerDuration(
+      parseInt(localStorage.getItem('quizTimerDuration') || '30')
+    );
 
-    if (localStorage.getItem("quizTimerEnabled") === "true") {
+    if (localStorage.getItem('quizTimerEnabled') === 'true') {
       setTimerRunning(true);
     }
   }, []);
@@ -57,7 +59,7 @@ const FlagsQuiz = () => {
           opacity: 1,
           rotationY: 0,
           duration: 0.6,
-          ease: "back.out(1.5)",
+          ease: 'back.out(1.5)',
         }
       );
 
@@ -66,7 +68,7 @@ const FlagsQuiz = () => {
           opacity: 0,
           y: -20,
           duration: 0.4,
-          ease: "power2.out",
+          ease: 'power2.out',
         });
       }
 
@@ -75,7 +77,7 @@ const FlagsQuiz = () => {
         y: 30,
         stagger: 0.08,
         duration: 0.5,
-        ease: "power3.out",
+        ease: 'power3.out',
         delay: 0.3,
       });
     }
@@ -95,7 +97,7 @@ const FlagsQuiz = () => {
       const j = Math.floor(Math.random() * (i + 1));
       [otherCountries[i], otherCountries[j]] = [
         otherCountries[j],
-        otherCountries[i]
+        otherCountries[i],
       ];
     }
 
@@ -109,7 +111,7 @@ const FlagsQuiz = () => {
     setQuestion({
       correct: correctCountry,
       continent: randomContinent,
-      options
+      options,
     });
 
     setSelected(null);
@@ -136,7 +138,7 @@ const FlagsQuiz = () => {
         duration: 0.1,
         repeat: 5,
         yoyo: true,
-        ease: "power1.inOut",
+        ease: 'power1.inOut',
       });
     } else {
       gsap.to(flagRef.current, {
@@ -144,7 +146,7 @@ const FlagsQuiz = () => {
         duration: 0.2,
         yoyo: true,
         repeat: 1,
-        ease: "power2.inOut",
+        ease: 'power2.inOut',
       });
     }
   };
@@ -159,22 +161,21 @@ const FlagsQuiz = () => {
 
   useEffect(() => {
     const handleKeyPress = (event) => {
-      if (event.key === "Enter" && showFeedback) {
+      if (event.key === 'Enter' && showFeedback) {
         generateQuestion();
       }
     };
 
-    window.addEventListener("keydown", handleKeyPress);
+    window.addEventListener('keydown', handleKeyPress);
     return () => {
-      window.removeEventListener("keydown", handleKeyPress);
+      window.removeEventListener('keydown', handleKeyPress);
     };
   }, [showFeedback]);
 
   if (!question) return <Loader />;
 
   return (
-    <div className="flex flex-col items-center p-4 justify-center min-h-[calc(100vh-4rem)] bg-gradient-to-b from-indigo-100 to-violet-100 dark:from-gray-900 dark:to-blue-900">
-
+    <div className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center bg-gradient-to-b from-indigo-100 to-violet-100 p-4 dark:from-gray-900 dark:to-blue-900">
       <Favicon countryCode={question.correct.code} />
 
       {timerEnabled && (
@@ -192,15 +193,12 @@ const FlagsQuiz = () => {
         ref={flagRef}
         src={`https://flagcdn.com/${question.correct.code}.svg`}
         alt={question.correct.name}
-        className="lg:h-70 w-auto mb-6 lg:shadow-lg"
+        className="mb-6 w-auto lg:h-70 lg:shadow-lg"
       />
 
-      <div className="grid grid-cols-1 gap-4 w-full max-w-md">
+      <div className="grid w-full max-w-md grid-cols-1 gap-4">
         {question.options.map((option, index) => (
-          <div
-            key={option.code}
-            ref={(el) => (optionsRef.current[index] = el)}
-          >
+          <div key={option.code} ref={(el) => (optionsRef.current[index] = el)}>
             <QuizAnswerButtons
               isCorrect={option.code === question.correct.code}
               isSelected={selected?.code === option.code}

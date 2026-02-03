@@ -1,5 +1,10 @@
-import React from 'react'
-import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import React from 'react';
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
 
 import Navbar from './components/Navbar';
@@ -26,7 +31,7 @@ const App = () => {
       </Router>
       <Analytics />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

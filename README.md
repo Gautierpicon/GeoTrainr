@@ -24,6 +24,7 @@ Le jeu propose deux modes d'entraînement basés sur la reconnaissance des drape
 Dans ce mode, une image de drapeau s'affiche, et vous devez identifier le pays correspondant parmi cinq propositions.
 
 #### Génération des questions
+
 - Les drapeaux sont obtenus dynamiquement via l'API [FlagCDN](https://flagcdn.com/).
 - Une liste de pays est stockée dans un fichier JSON (`countries.json`).
 - Un pays est sélectionné aléatoirement comme bonne réponse.
@@ -35,6 +36,7 @@ Dans ce mode, une image de drapeau s'affiche, et vous devez identifier le pays c
 Dans ce mode, une phrase est affichée, et vous devez identifier la langue dans laquelle elle est écrite.
 
 #### Génération des questions
+
 - Les phrases sont stockées dans `languages.json`, un fichier structuré par régions linguistiques.
 - Une langue est choisie aléatoirement, et une phrase associée est affichée.
 - Les fausses réponses sont sélectionnées parmi les langues du même groupe régional, garantissant que toutes les options semblent plausibles.
@@ -51,10 +53,12 @@ Dans ce mode, une phrase est affichée, et vous devez identifier la langue dans 
 Toutes les contributions sont les bienvenues ! Pour contribuer :
 
 ### Prérequis
+
 - [Node.js](https://nodejs.org/fr)
 - npm ou yarn
 
-1. Clonez le projet 
+1. Clonez le projet
+
 ```sh
 # Cloner le projet
 git clone https://github.com/Gautierpicon/GeoTrainr.git
@@ -65,9 +69,11 @@ npm install
 ```
 
 ### Démarrer l'application
+
 ```sh
 npm run dev
 ```
+
 L'application sera accessible sur `http://localhost:5173/`, a moins qu'un autre site utilise déjà cet emplacement. Dans ce cas referez-vous au lien que le terminal vous affiche.
 
 2. Créez une branche spécifique (`feature-nouvelle-fonctionnalite`)

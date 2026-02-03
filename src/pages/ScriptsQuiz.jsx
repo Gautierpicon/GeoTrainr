@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
-import gsap from "gsap";
-import languageData from "../data/languages.json";
-import QuizAnswerButtons from "../components/Buttons/QuizAnswerButtons";
-import Timer from "../components/Settings/Timer/Timer";
-import Loader from "../components/Loader";
-import NextQuestionButtons from "../components/Buttons/NextQuestionButtons";
+import React, { useState, useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import languageData from '../data/languages.json';
+import QuizAnswerButtons from '../components/Buttons/QuizAnswerButtons';
+import Timer from '../components/Settings/Timer/Timer';
+import Loader from '../components/Loader';
+import NextQuestionButtons from '../components/Buttons/NextQuestionButtons';
 
 const languages = [];
 Object.entries(languageData).forEach(([region, regionLanguages]) => {
@@ -22,7 +22,7 @@ const ScriptsQuiz = () => {
   const [question, setQuestion] = useState(null);
   const [selected, setSelected] = useState(null);
   const [showFeedback, setShowFeedback] = useState(false);
-  
+
   const [timerEnabled, setTimerEnabled] = useState(false);
   const [timerDuration, setTimerDuration] = useState(30);
   const [timerRunning, setTimerRunning] = useState(false);
@@ -33,9 +33,11 @@ const ScriptsQuiz = () => {
 
   useEffect(() => {
     setTimerEnabled(localStorage.getItem('quizTimerEnabled') === 'true');
-    const savedDuration = parseInt(localStorage.getItem('quizTimerDuration') || '30');
+    const savedDuration = parseInt(
+      localStorage.getItem('quizTimerDuration') || '30'
+    );
     setTimerDuration(savedDuration);
-    
+
     if (localStorage.getItem('quizTimerEnabled') === 'true') {
       setTimerRunning(true);
     }
@@ -55,7 +57,7 @@ const ScriptsQuiz = () => {
           opacity: 1,
           rotationY: 0,
           duration: 0.6,
-          ease: "back.out(1.5)",
+          ease: 'back.out(1.5)',
         }
       );
 
@@ -64,7 +66,7 @@ const ScriptsQuiz = () => {
           opacity: 0,
           y: -20,
           duration: 0.4,
-          ease: "power2.out",
+          ease: 'power2.out',
         });
       }
 
@@ -73,7 +75,7 @@ const ScriptsQuiz = () => {
         y: 30,
         stagger: 0.08,
         duration: 0.5,
-        ease: "power3.out",
+        ease: 'power3.out',
         delay: 0.3,
       });
     }
@@ -92,7 +94,10 @@ const ScriptsQuiz = () => {
 
     for (let i = sameGroupLangs.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [sameGroupLangs[i], sameGroupLangs[j]] = [sameGroupLangs[j], sameGroupLangs[i]];
+      [sameGroupLangs[i], sameGroupLangs[j]] = [
+        sameGroupLangs[j],
+        sameGroupLangs[i],
+      ];
     }
 
     const wrongOptions = sameGroupLangs.slice(0, 4);
@@ -110,7 +115,7 @@ const ScriptsQuiz = () => {
     });
     setSelected(null);
     setShowFeedback(false);
-    
+
     if (timerEnabled) {
       setTimerRunning(true);
     }
@@ -132,7 +137,7 @@ const ScriptsQuiz = () => {
         duration: 0.1,
         repeat: 5,
         yoyo: true,
-        ease: "power1.inOut",
+        ease: 'power1.inOut',
       });
     } else {
       gsap.to(sentenceRef.current, {
@@ -140,11 +145,11 @@ const ScriptsQuiz = () => {
         duration: 0.2,
         yoyo: true,
         repeat: 1,
-        ease: "power2.inOut",
+        ease: 'power2.inOut',
       });
     }
   };
-  
+
   const handleTimeUp = () => {
     if (!selected) {
       setSelected(question.correct);
@@ -155,24 +160,24 @@ const ScriptsQuiz = () => {
 
   useEffect(() => {
     const handleKeyPress = (event) => {
-      if (event.key === "Enter" && showFeedback) {
+      if (event.key === 'Enter' && showFeedback) {
         generateQuestion();
       }
     };
 
-    window.addEventListener("keydown", handleKeyPress);
+    window.addEventListener('keydown', handleKeyPress);
     return () => {
-      window.removeEventListener("keydown", handleKeyPress);
+      window.removeEventListener('keydown', handleKeyPress);
     };
   }, [showFeedback]);
 
   if (!question) return <Loader />;
 
   return (
-    <div className="flex flex-col items-center p-4 justify-center min-h-[calc(100vh-4rem)] bg-gradient-to-b from-green-50 to-emerald-50 dark:from-emerald-950 dark:to-green-900">
+    <div className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center bg-gradient-to-b from-green-50 to-emerald-50 p-4 dark:from-emerald-950 dark:to-green-900">
       {timerEnabled && (
         <div ref={timerRef}>
-          <Timer 
+          <Timer
             duration={timerDuration}
             onTimeUp={handleTimeUp}
             isRunning={timerRunning}
@@ -180,20 +185,17 @@ const ScriptsQuiz = () => {
           />
         </div>
       )}
-      
-      <div 
+
+      <div
         ref={sentenceRef}
-        className="md:text-3xl text-2xl mb-8 md:w-3xl w-full font-bold text-center text-black dark:text-white"
+        className="mb-8 w-full text-center text-2xl font-bold text-black md:w-3xl md:text-3xl dark:text-white"
       >
         {question.sentence}
       </div>
 
-      <div className="grid grid-cols-1 gap-4 w-full max-w-md">
+      <div className="grid w-full max-w-md grid-cols-1 gap-4">
         {question.options.map((option, index) => (
-          <div
-            key={option.code}
-            ref={(el) => (optionsRef.current[index] = el)}
-          >
+          <div key={option.code} ref={(el) => (optionsRef.current[index] = el)}>
             <QuizAnswerButtons
               isCorrect={option.code === question.correct.code}
               isSelected={selected?.code === option.code}
@@ -207,7 +209,7 @@ const ScriptsQuiz = () => {
         ))}
       </div>
 
-      <NextQuestionButtons 
+      <NextQuestionButtons
         onClick={generateQuestion}
         disabled={!showFeedback}
         variant="scripts"
