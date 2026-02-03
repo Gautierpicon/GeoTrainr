@@ -28,15 +28,11 @@ const Homepage = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-slate-950 text-gray-900 dark:text-slate-200 selection:bg-blue-500 selection:text-white font-sans overflow-x-hidden relative">
       
-      {/* Background Effects */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        {/* Subtle grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-position-[24px_24px]"></div>
-        {/* Central glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-600/20 dark:bg-blue-600/20 rounded-full blur-[120px] opacity-50"></div>
       </div>
 
-      {/* Hero Section */}
       <main className="relative z-10 container mx-auto px-6 pt-10 pb-20 sm:pt-20 sm:pb-32">
         <div className="max-w-4xl mx-auto text-center space-y-8">
 
@@ -49,10 +45,8 @@ const Homepage = () => {
             Identifiez drapeaux et alphabets pour devenir imbattable sur <a href="https://www.geoguessr.com/" target="_blank" className="text-gray-900 dark:text-white font-medium decoration-blue-600 dark:decoration-blue-500/30 underline decoration-2 underline-offset-4">GeoGuessr</a>.
           </p>
 
-          {/* Game Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-12 max-w-5xl mx-auto">
             
-            {/* Flags Card */}
             <Link 
               to="/flagsquiz"
               onMouseEnter={() => setHoveredCard('flags')}
@@ -74,11 +68,9 @@ const Homepage = () => {
                   Commencer <ArrowRight size={18} />
                 </div>
               </div>
-              {/* Background Gradient Animation */}
               <div className={`absolute inset-0 bg-linear-to-br from-blue-500/10 dark:from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
             </Link>
 
-            {/* Scripts Card */}
             <Link 
               to="/scriptsquiz"
               onMouseEnter={() => setHoveredCard('scripts')}
@@ -106,7 +98,6 @@ const Homepage = () => {
           </div>
         </div>
 
-        {/* How it Works - Minimalist Steps */}
         <div className="mt-32 border-t border-gray-200 dark:border-slate-800/50 pt-20">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Comment ça marche ?</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -125,12 +116,10 @@ const Homepage = () => {
         </div>
       </main>
 
-      {/* Modern Footer */}
       <footer className="relative z-10 border-t border-gray-200 dark:border-slate-800 bg-gray-100/50 dark:bg-slate-950/50 backdrop-blur-md pt-16 pb-8">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             
-            {/* Brand Column */}
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <img src={logo} alt="GeoTrainr Logo" className="w-7 h-7" />
@@ -152,7 +141,6 @@ const Homepage = () => {
               </div>
             </div>
 
-            {/* Links Column */}
             <div>
               <h4 className="font-bold text-gray-900 dark:text-white mb-6">Ressources</h4>
               <ul className="space-y-3 text-sm text-gray-600 dark:text-slate-400">
@@ -169,7 +157,6 @@ const Homepage = () => {
               </ul>
             </div>
 
-            {/* Support Column */}
             <div>
                 <h4 className="font-bold text-gray-900 dark:text-white mb-6">Contribution</h4>
                 <p className="text-sm text-gray-600 dark:text-slate-400 mb-4">Un bug ? Une suggestion ? Le projet est open-source.</p>

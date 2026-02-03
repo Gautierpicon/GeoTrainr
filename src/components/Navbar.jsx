@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import logo from '../assets/logo.svg';
 
-// Base component for icons with stroke
 const IconBase = ({ size = 24, className, children, ...props }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>{children}</svg>
 );
 
-// Required icons
 const Flag = (props) => <IconBase {...props}><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></IconBase>;
 const Languages = (props) => <IconBase {...props}><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></IconBase>;
 const Settings = (props) => <IconBase {...props}><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.75 1.3a2 2 0 0 0 .24 2.15l.77.77a2 2 0 0 1 0 2.73l-.77.77a2 2 0 0 0-.24 2.15l.75 1.3a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.75-1.3a2 2 0 0 0-.24-2.15l-.77-.77a2 2 0 0 1 0-2.73l.77-.77a2 2 0 0 0 .24-2.15l-.75-1.3a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></IconBase>;
@@ -24,7 +22,6 @@ const Navbar = () => {
   const isScriptsPage = location.pathname === "/scriptsquiz";
   const isSettingsPage = location.pathname === "/settings";
   
-  // Base classes for inactive links
   const baseLinkClasses = "flex items-center gap-3 p-3 rounded-xl transition-all duration-300 font-medium text-sm lg:text-base";
 
   return (
@@ -32,7 +29,6 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           
-          {/* Logo and Name */}
           <Link
             to="/"
             className="flex items-center gap-3 cursor-pointer group"
@@ -43,10 +39,8 @@ const Navbar = () => {
             </span>
           </Link>
 
-          {/* Desktop navigation links */}
           <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
             
-            {/* Flags Link */}
             <Link
               to="/flagsquiz"
               className={`${baseLinkClasses} ${
@@ -59,7 +53,6 @@ const Navbar = () => {
               <span>Drapeaux</span>
             </Link>
 
-            {/* Scripts Link */}
             <Link
               to="/scriptsquiz"
               className={`${baseLinkClasses} ${
@@ -74,7 +67,6 @@ const Navbar = () => {
 
             <div className="border-l border-gray-300 dark:border-slate-700 h-6 mx-2"></div>
 
-            {/* Settings Link */}
             <Link
               to="/settings"
               className={`${baseLinkClasses} p-2 ${
@@ -87,7 +79,6 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile burger menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -104,13 +95,11 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile navigation menu with animation */}
       <div
         className={`md:hidden transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
       >
         <div className="flex flex-col space-y-2 p-4 border-t border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-900/80">
           
-          {/* Home Link */}
           <Link
             to="/"
             onClick={() => setIsMobileMenuOpen(false)}
@@ -124,7 +113,6 @@ const Navbar = () => {
             <span>Accueil</span>
           </Link>
           
-          {/* Flags Link */}
           <Link
             to="/flagsquiz"
             onClick={() => setIsMobileMenuOpen(false)}
@@ -138,7 +126,6 @@ const Navbar = () => {
             <span>Drapeaux</span>
           </Link>
           
-          {/* Scripts Link */}
           <Link
             to="/scriptsquiz"
             onClick={() => setIsMobileMenuOpen(false)}
@@ -152,7 +139,6 @@ const Navbar = () => {
             <span>Écritures</span>
           </Link>
           
-          {/* Settings Link */}
           <Link
             to="/settings"
             onClick={() => setIsMobileMenuOpen(false)}
