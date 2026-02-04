@@ -1,0 +1,45 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+labels: ['enhancement']
+body:
+  - type: textarea
+    attributes:
+      label: Feature Description
+      description: Briefly describe the feature you're suggesting
+
+  - type: textarea
+    attributes:
+      label: Problem Solved
+      description: |
+        What user problem or need does this feature address?
+        Why would it be useful?
+
+  - type: textarea
+    attributes:
+      label: Proposed Solution
+      description: |
+        Describe how you imagine this feature
+        - Envisioned UX/UI
+        - Expected behavior
+
+  - type: textarea
+    attributes:
+      label: Alternatives Considered
+      description: Have you thought of other approaches?
+
+  - type: checkboxes
+    attributes:
+      label: Feature Type
+      options:
+        - label: New quiz mode
+        - label: UI/UX improvement
+        - label: New settings
+        - label: Performance improvement
+        - label: Accessibility
+
+  - type: textarea
+    attributes:
+      label: Additional Data (optional)
+      description: |
+        - List of countries/languages to add?
+        - External APIs to integrate?
