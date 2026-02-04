@@ -55,7 +55,8 @@ const Theme = () => {
           { value: 'light', icon: SunIcon, label: 'Clair' },
           { value: 'dark', icon: MoonIcon, label: 'Sombre' },
           { value: 'system', icon: SystemIcon, label: 'Système' },
-        ].map(({ value, label }) => (
+          // eslint-disable-next-line no-unused-vars
+        ].map(({ value, icon: IconComponent, label }) => (
           <button
             key={value}
             onClick={() => setTheme(value)}
@@ -65,7 +66,7 @@ const Theme = () => {
                 : 'bg-gray-50/50 text-gray-500 hover:bg-gray-50 hover:text-gray-400 dark:bg-gray-900/50 dark:text-gray-400 dark:hover:bg-gray-700'
             } `}
           >
-            <Icon
+            <IconComponent
               className={`mb-2 h-8 w-8 ${theme === value ? 'text-blue-500' : 'text-current'}`}
             />
             <span className="text-sm font-medium">{label}</span>
