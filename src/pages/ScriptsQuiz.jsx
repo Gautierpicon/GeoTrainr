@@ -20,7 +20,7 @@ const ScriptsQuiz = () => {
   const [showFeedback, setShowFeedback] = useState(false);
 
   const [timerEnabled, setTimerEnabled] = useState(false);
-  const [timerDuration, setTimerDuration] = useState(30);
+  const [timerDuration, setTimerDuration] = useState(10);
   const [timerRunning, setTimerRunning] = useState(false);
 
   const sentenceRef = useRef(null);
@@ -58,7 +58,7 @@ const ScriptsQuiz = () => {
   useEffect(() => {
     setTimerEnabled(localStorage.getItem('quizTimerEnabled') === 'true');
     const savedDuration = parseInt(
-      localStorage.getItem('quizTimerDuration') || '30'
+      localStorage.getItem('quizTimerDuration') || '10'
     );
     setTimerDuration(savedDuration);
 

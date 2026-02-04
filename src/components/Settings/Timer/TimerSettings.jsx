@@ -7,7 +7,7 @@ const TimerSettings = () => {
     localStorage.getItem('quizTimerEnabled') === 'true'
   );
   const [timerDuration, setTimerDuration] = useState(
-    parseInt(localStorage.getItem('quizTimerDuration') || '30')
+    parseInt(localStorage.getItem('quizTimerDuration') || '10')
   );
   const [mounted, setMounted] = useState(false);
 
@@ -48,40 +48,39 @@ const TimerSettings = () => {
         </label>
       </div>
 
-      <div className="w-full rounded-xl bg-white/50 p-4 dark:bg-gray-900/50">
-        <div className="flex flex-col gap-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <span className="text-gray-600 dark:text-gray-300">
-                {t('settings.timer.duration')}
+      {timerEnabled && (
+        <div className="w-full rounded-xl bg-white/50 p-4 dark:bg-gray-900/50">
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <span className="text-gray-600 dark:text-gray-300">
+                  {t('settings.timer.duration')}
+                </span>
+              </div>
+              <span className="font-medium text-blue-600 dark:text-blue-400">
+                {timerDuration}s
               </span>
             </div>
-            <span className="font-medium text-blue-600 dark:text-blue-400">
-              {timerDuration}s
-            </span>
-          </div>
 
-          <div className="flex flex-col gap-2">
-            <input
-              type="range"
-              min="5"
-              max="120"
-              step="5"
-              value={timerDuration}
-              onChange={(e) => setTimerDuration(parseInt(e.target.value))}
-              disabled={!timerEnabled}
-              className={`h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 dark:bg-gray-700 ${
-                !timerEnabled ? 'cursor-not-allowed opacity-50' : ''
-              } transition-opacity`}
-            />
-            <div className="flex justify-between text-sm text-gray-500 dark:text-gray-400">
-              <span>5s</span>
-              <span>60s</span>
-              <span>120s</span>
+            <div className="flex flex-col gap-2">
+              <input
+                type="range"
+                min="2"
+                max="20"
+                step="1"
+                value={timerDuration}
+                onChange={(e) => setTimerDuration(parseInt(e.target.value))}
+                className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 dark:bg-gray-700"
+              />
+              <div className="flex justify-between text-sm text-gray-500 dark:text-gray-400">
+                <span>2s</span>
+                <span className="pr-7">10s</span>
+                <span>20s</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

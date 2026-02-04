@@ -22,7 +22,7 @@ const FlagsQuiz = () => {
   const [showFeedback, setShowFeedback] = useState(false);
 
   const [timerEnabled, setTimerEnabled] = useState(false);
-  const [timerDuration, setTimerDuration] = useState(30);
+  const [timerDuration, setTimerDuration] = useState(10);
   const [timerRunning, setTimerRunning] = useState(false);
 
   const flagRef = useRef(null);
@@ -63,7 +63,7 @@ const FlagsQuiz = () => {
   useEffect(() => {
     setTimerEnabled(localStorage.getItem('quizTimerEnabled') === 'true');
     setTimerDuration(
-      parseInt(localStorage.getItem('quizTimerDuration') || '30')
+      parseInt(localStorage.getItem('quizTimerDuration') || '10')
     );
 
     if (localStorage.getItem('quizTimerEnabled') === 'true') {

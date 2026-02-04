@@ -40,7 +40,7 @@ const Timer = ({
 
   return (
     <div className={`w-full max-w-md ${className}`}>
-      <div className="mb-1 flex items-center justify-between">
+      <div className="mb-1 flex items-center justify-between gap-1">
         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
           {t('quiz.timeLeft')}
         </span>
