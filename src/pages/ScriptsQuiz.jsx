@@ -1,24 +1,20 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import gsap from 'gsap';
-import languageData from '../data/languages.json';
+import i18n from '../i18n';
+import languageDataFr from '../data/fr/languages.json';
+import languageDataEn from '../data/en/languages.json';
 import QuizAnswerButtons from '../components/Buttons/QuizAnswerButtons';
 import Timer from '../components/Settings/Timer/Timer';
 import Loader from '../components/Loader';
 import NextQuestionButtons from '../components/Buttons/NextQuestionButtons';
 
-const languages = [];
-Object.entries(languageData).forEach(([region, regionLanguages]) => {
-  Object.entries(regionLanguages).forEach(([code, data]) => {
-    languages.push({
-      code,
-      group: region,
-      name: data.name,
-      sentences: data.sentences,
-    });
-  });
-});
+const getLanguageData = () => {
+  return i18n.language === 'en' ? languageDataEn : languageDataFr;
+};
 
 const ScriptsQuiz = () => {
+  const [languages, setLanguages] = useState([]);
+
   const [question, setQuestion] = useState(null);
   const [selected, setSelected] = useState(null);
   const [showFeedback, setShowFeedback] = useState(false);
@@ -30,6 +26,34 @@ const ScriptsQuiz = () => {
   const sentenceRef = useRef(null);
   const optionsRef = useRef([]);
   const timerRef = useRef(null);
+
+  useEffect(() => {
+    const processLanguageData = (data) => {
+      const langs = [];
+      Object.entries(data).forEach(([region, regionLanguages]) => {
+        Object.entries(regionLanguages).forEach(([code, langData]) => {
+          langs.push({
+            code,
+            group: region,
+            name: langData.name,
+            sentences: langData.sentences,
+          });
+        });
+      });
+      setLanguages(langs);
+    };
+
+    processLanguageData(getLanguageData());
+
+    const handleLanguageChanged = () => {
+      processLanguageData(getLanguageData());
+    };
+
+    i18n.on('languageChanged', handleLanguageChanged);
+    return () => {
+      i18n.off('languageChanged', handleLanguageChanged);
+    };
+  }, []);
 
   useEffect(() => {
     setTimerEnabled(localStorage.getItem('quizTimerEnabled') === 'true');
@@ -82,6 +106,8 @@ const ScriptsQuiz = () => {
   }, [question]);
 
   const generateQuestion = useCallback(() => {
+    if (languages.length === 0) return;
+
     const correctLang = languages[Math.floor(Math.random() * languages.length)];
     const sentence =
       correctLang.sentences[
@@ -119,11 +145,13 @@ const ScriptsQuiz = () => {
     if (timerEnabled) {
       setTimerRunning(true);
     }
-  }, [timerEnabled]);
+  }, [languages, timerEnabled]);
 
   useEffect(() => {
-    generateQuestion();
-  }, [generateQuestion]);
+    if (languages.length > 0) {
+      generateQuestion();
+    }
+  }, [languages, generateQuestion]);
 
   const handleSelect = (option) => {
     if (selected !== null) return;

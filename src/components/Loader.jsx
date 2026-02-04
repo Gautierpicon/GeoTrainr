@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Loader = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="text-center">
       <div
@@ -10,7 +13,9 @@ const Loader = () => {
           borderStyle: 'dashed',
         }}
       ></div>
-      <h2 className="mt-4 text-zinc-600 dark:text-white">Chargement</h2>
+      <h2 className="mt-4 text-zinc-600 dark:text-white">
+        {t('quiz.loading')}
+      </h2>
     </div>
   );
 };

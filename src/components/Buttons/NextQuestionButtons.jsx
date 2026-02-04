@@ -1,6 +1,8 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const NextQuestionButtons = ({ onClick, disabled, variant = 'flags' }) => {
+  const { t } = useTranslation();
   const colorClasses = {
     flags: {
       base: 'bg-indigo-500 hover:bg-indigo-600 dark:bg-indigo-600 dark:hover:bg-indigo-700',
@@ -33,7 +35,7 @@ const NextQuestionButtons = ({ onClick, disabled, variant = 'flags' }) => {
           >
             <div className="relative z-10 flex items-center space-x-2">
               <span className="transition-all duration-500">
-                Prochaine Question
+                {t('quiz.nextQuestion')}
               </span>
             </div>
           </span>

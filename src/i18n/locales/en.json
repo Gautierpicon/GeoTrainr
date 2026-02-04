@@ -1,0 +1,72 @@
+{
+  "homepage": {
+    "title": "Master",
+    "titleHighlight": "Geography",
+    "description": "Perfect your visual recognition. Identify flags and alphabets to become unbeatable on",
+    "flags": {
+      "title": "Flags",
+      "description": "Test your knowledge on 254 national flags, the EU, the UN and the 50 US states.",
+      "start": "Start"
+    },
+    "scripts": {
+      "title": "Writing Systems",
+      "description": "Distinguish Cyrillic from Greek, Arabic from Persian. Master the world's alphabets.",
+      "start": "Start"
+    },
+    "howItWorks": {
+      "title": "How does it work?",
+      "steps": {
+        "choose": {
+          "title": "Choose",
+          "desc": "Flags or Alphabets"
+        },
+        "play": {
+          "title": "Play",
+          "desc": "Identify the correct element"
+        },
+        "progress": {
+          "title": "Progress",
+          "desc": "Timer mode for the challenge"
+        }
+      }
+    }
+  },
+  "footer": {
+    "description": "The ultimate training tool for geography enthusiasts and competitive players.",
+    "resources": "Resources",
+    "contribution": "Contribution",
+    "contributionDesc": "A bug? A suggestion? The project is open-source!",
+    "reportIssue": "Report an issue",
+    "copyright": "All rights reserved."
+  },
+  "navbar": {
+    "home": "Home",
+    "flags": "Flags",
+    "scripts": "Scripts",
+    "settings": "Settings"
+  },
+  "settings": {
+    "title": "Settings",
+    "theme": {
+      "title": "Choose theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "timer": {
+      "title": "Timer settings",
+      "enable": "Enable timer",
+      "duration": "Timer duration"
+    },
+    "language": {
+      "title": "Language",
+      "french": "French",
+      "english": "English"
+    }
+  },
+  "quiz": {
+    "nextQuestion": "Next Question",
+    "timeLeft": "Time left",
+    "loading": "Loading"
+  }
+}

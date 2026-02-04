@@ -1,27 +1,22 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import gsap from 'gsap';
-import countryData from '../data/flags.json';
+import i18n from '../i18n';
+import countryDataFr from '../data/fr/flags.json';
+import countryDataEn from '../data/en/flags.json';
 import Favicon from '../components/Favicon';
 import QuizAnswerButtons from '../components/Buttons/QuizAnswerButtons';
 import Timer from '../components/Settings/Timer/Timer';
 import Loader from '../components/Loader';
 import NextQuestionButtons from '../components/Buttons/NextQuestionButtons';
 
-const continents = Object.keys(countryData);
-
-const countriesByContinent = Object.entries(countryData).reduce(
-  (acc, [continent, countries]) => {
-    acc[continent] = Object.entries(countries).map(([code, name]) => ({
-      code,
-      name,
-      continent,
-    }));
-    return acc;
-  },
-  {}
-);
+const getCountryData = () => {
+  return i18n.language === 'en' ? countryDataEn : countryDataFr;
+};
 
 const FlagsQuiz = () => {
+  const [continents, setContinents] = useState(Object.keys(getCountryData()));
+  const [countriesByContinent, setCountriesByContinent] = useState({});
+
   const [question, setQuestion] = useState(null);
   const [selected, setSelected] = useState(null);
   const [showFeedback, setShowFeedback] = useState(false);
@@ -33,6 +28,37 @@ const FlagsQuiz = () => {
   const flagRef = useRef(null);
   const optionsRef = useRef([]);
   const timerRef = useRef(null);
+
+  useEffect(() => {
+    const processCountryData = (data) => {
+      const conts = Object.keys(data);
+      setContinents(conts);
+
+      const processed = Object.entries(data).reduce(
+        (acc, [continent, countries]) => {
+          acc[continent] = Object.entries(countries).map(([code, name]) => ({
+            code,
+            name,
+            continent,
+          }));
+          return acc;
+        },
+        {}
+      );
+      setCountriesByContinent(processed);
+    };
+
+    processCountryData(getCountryData());
+
+    const handleLanguageChanged = () => {
+      processCountryData(getCountryData());
+    };
+
+    i18n.on('languageChanged', handleLanguageChanged);
+    return () => {
+      i18n.off('languageChanged', handleLanguageChanged);
+    };
+  }, []);
 
   useEffect(() => {
     setTimerEnabled(localStorage.getItem('quizTimerEnabled') === 'true');
@@ -84,10 +110,17 @@ const FlagsQuiz = () => {
   }, [question]);
 
   const generateQuestion = useCallback(() => {
+    if (
+      continents.length === 0 ||
+      Object.keys(countriesByContinent).length === 0
+    )
+      return;
+
     const randomContinent =
       continents[Math.floor(Math.random() * continents.length)];
 
     const list = countriesByContinent[randomContinent];
+    if (!list || list.length < 5) return;
 
     const correctCountry = list[Math.floor(Math.random() * list.length)];
 
@@ -120,11 +153,13 @@ const FlagsQuiz = () => {
     if (timerEnabled) {
       setTimerRunning(true);
     }
-  }, [timerEnabled]);
+  }, [continents, countriesByContinent, timerEnabled]);
 
   useEffect(() => {
-    generateQuestion();
-  }, [generateQuestion]);
+    if (continents.length > 0 && Object.keys(countriesByContinent).length > 0) {
+      generateQuestion();
+    }
+  }, [continents, countriesByContinent, generateQuestion]);
 
   const handleSelect = (option) => {
     if (selected) return;

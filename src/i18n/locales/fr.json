@@ -1,0 +1,72 @@
+{
+  "homepage": {
+    "title": "Maîtrisez la",
+    "titleHighlight": "Géographie",
+    "description": "Perfectionnez votre reconnaissance visuelle. Identifiez drapeaux et alphabets pour devenir imbattable sur",
+    "flags": {
+      "title": "Drapeaux",
+      "description": "Testez vos connaissances sur 254 drapeaux nationaux, l'UE, l'ONU et les 50 états américains.",
+      "start": "Commencer"
+    },
+    "scripts": {
+      "title": "Systèmes d'Écriture",
+      "description": "Distinguez le Cyrillique du Grec, l'Arabe du Persan. Maîtrisez les alphabets du monde.",
+      "start": "Commencer"
+    },
+    "howItWorks": {
+      "title": "Comment ça marche ?",
+      "steps": {
+        "choose": {
+          "title": "Choisissez",
+          "desc": "Drapeaux ou Alphabets"
+        },
+        "play": {
+          "title": "Jouez",
+          "desc": "Identifiez l'élément correct"
+        },
+        "progress": {
+          "title": "Progressez",
+          "desc": "Mode chrono pour le défi"
+        }
+      }
+    }
+  },
+  "footer": {
+    "description": "L'outil d'entraînement ultime pour les passionnés de géographie et les joueurs compétitifs.",
+    "resources": "Ressources",
+    "contribution": "Contribution",
+    "contributionDesc": "Un bug ? Une suggestion ? Le projet est open-source !",
+    "reportIssue": "Signaler un problème",
+    "copyright": "Tous droits réservés."
+  },
+  "navbar": {
+    "home": "Accueil",
+    "flags": "Drapeaux",
+    "scripts": "Écritures",
+    "settings": "Paramètres"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "theme": {
+      "title": "Choisir le thème",
+      "light": "Clair",
+      "dark": "Sombre",
+      "system": "Système"
+    },
+    "timer": {
+      "title": "Paramètres du timer",
+      "enable": "Activer le timer",
+      "duration": "Durée du timer"
+    },
+    "language": {
+      "title": "Langue",
+      "french": "Français",
+      "english": "Anglais"
+    }
+  },
+  "quiz": {
+    "nextQuestion": "Prochaine Question",
+    "timeLeft": "Temps restant",
+    "loading": "Chargement"
+  }
+}

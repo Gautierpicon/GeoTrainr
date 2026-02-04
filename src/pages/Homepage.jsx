@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import logo from '../assets/logo.svg';
 
 const IconBase = ({ size = 24, className, children, ...props }) => (
@@ -85,6 +86,7 @@ const Globe = (props) => (
 );
 
 const Homepage = () => {
+  const { t } = useTranslation();
   const [_hoveredCard, setHoveredCard] = useState(null);
 
   const openGitHubIssue = () => {
@@ -111,15 +113,14 @@ const Homepage = () => {
             />
             <div className="space-y-4">
               <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl dark:text-white">
-                Maîtrisez la{' '}
+                {t('homepage.title')}{' '}
                 <span className="bg-linear-to-r from-blue-400 via-blue-600 to-blue-800 bg-clip-text text-transparent dark:from-blue-400 dark:via-blue-300 dark:to-blue-500">
-                  Géographie
+                  {t('homepage.titleHighlight')}
                 </span>
               </h1>
 
               <p className="max-w-2xl text-sm leading-relaxed text-gray-600 sm:text-base lg:text-lg dark:text-slate-400">
-                Perfectionnez votre reconnaissance visuelle. Identifiez drapeaux
-                et alphabets pour devenir imbattable sur{' '}
+                {t('homepage.description')}{' '}
                 <a
                   href="https://www.geoguessr.com/"
                   target="_blank"
@@ -150,14 +151,13 @@ const Homepage = () => {
                   />
                 </div>
                 <h3 className="mb-2 text-2xl font-bold text-gray-900 dark:text-white">
-                  Drapeaux
+                  {t('homepage.flags.title')}
                 </h3>
                 <p className="mb-8 grow text-gray-600 dark:text-slate-400">
-                  Testez vos connaissances sur 254 drapeaux nationaux, l'UE,
-                  l'ONU et les 50 états américains.
+                  {t('homepage.flags.description')}
                 </p>
                 <div className="flex items-center gap-2 font-semibold text-blue-600 transition-transform group-hover:translate-x-2 dark:text-blue-400">
-                  Commencer <ArrowRight size={18} />
+                  {t('homepage.flags.start')} <ArrowRight size={18} />
                 </div>
               </div>
               <div
@@ -182,14 +182,13 @@ const Homepage = () => {
                   />
                 </div>
                 <h3 className="mb-2 text-2xl font-bold text-gray-900 dark:text-white">
-                  Systèmes d'Écriture
+                  {t('homepage.scripts.title')}
                 </h3>
                 <p className="mb-8 grow text-gray-600 dark:text-slate-400">
-                  Distinguez le Cyrillique du Grec, l'Arabe du Persan. Maîtrisez
-                  les alphabets du monde.
+                  {t('homepage.scripts.description')}
                 </p>
                 <div className="flex items-center gap-2 font-semibold text-emerald-600 transition-transform group-hover:translate-x-2 dark:text-emerald-400">
-                  Commencer <ArrowRight size={18} />
+                  {t('homepage.scripts.start')} <ArrowRight size={18} />
                 </div>
               </div>
               <div
@@ -201,26 +200,26 @@ const Homepage = () => {
 
         <div className="mt-32 border-t border-gray-200 pt-20 dark:border-slate-800/50">
           <h2 className="mb-12 text-center text-3xl font-bold text-gray-900 dark:text-white">
-            Comment ça marche ?
+            {t('homepage.howItWorks.title')}
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {[
               {
                 icon: Map,
-                title: 'Choisissez',
-                desc: 'Drapeaux ou Alphabets',
+                title: t('homepage.howItWorks.steps.choose.title'),
+                desc: t('homepage.howItWorks.steps.choose.desc'),
                 color: 'text-blue-600 dark:text-blue-400',
               },
               {
                 icon: Globe,
-                title: 'Jouez',
-                desc: "Identifiez l'élément correct",
+                title: t('homepage.howItWorks.steps.play.title'),
+                desc: t('homepage.howItWorks.steps.play.desc'),
                 color: 'text-purple-600 dark:text-purple-400',
               },
               {
                 icon: AlertCircle,
-                title: 'Progressez',
-                desc: 'Mode chrono pour le défi',
+                title: t('homepage.howItWorks.steps.progress.title'),
+                desc: t('homepage.howItWorks.steps.progress.desc'),
                 color: 'text-pink-600 dark:text-pink-400',
               },
             ].map((step, idx) => (
@@ -250,8 +249,7 @@ const Homepage = () => {
                 </span>
               </div>
               <p className="text-sm leading-relaxed text-gray-600 dark:text-slate-400">
-                L'outil d'entraînement ultime pour les passionnés de géographie
-                et les joueurs compétitifs.
+                {t('footer.description')}
               </p>
               <div className="flex gap-4 pt-2">
                 <a
@@ -275,7 +273,7 @@ const Homepage = () => {
 
             <div>
               <h4 className="mb-6 font-bold text-gray-900 dark:text-white">
-                Ressources
+                {t('footer.resources')}
               </h4>
               <ul className="space-y-3 text-sm text-gray-600 dark:text-slate-400">
                 <li>
@@ -303,23 +301,24 @@ const Homepage = () => {
 
             <div>
               <h4 className="mb-6 font-bold text-gray-900 dark:text-white">
-                Contribution
+                {t('footer.contribution')}
               </h4>
               <p className="mb-4 text-sm text-gray-600 dark:text-slate-400">
-                Un bug ? Une suggestion ? Le projet est open-source !
+                {t('footer.contributionDesc')}
               </p>
               <button
                 onClick={openGitHubIssue}
                 className="flex cursor-pointer items-center gap-2 rounded-lg border border-emerald-300 bg-emerald-100 px-4 py-2 text-sm font-medium text-emerald-700 transition-all hover:bg-emerald-200 dark:border-emerald-600/20 dark:bg-emerald-600/10 dark:text-emerald-400 dark:hover:bg-emerald-600/20"
               >
-                <MessageCircle size={16} /> Signaler un problème
+                <MessageCircle size={16} /> {t('footer.reportIssue')}
               </button>
             </div>
           </div>
 
           <div className="flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 text-xs text-gray-500 md:flex-row dark:border-slate-800 dark:text-slate-500">
             <p>
-              &copy; {new Date().getFullYear()} GeoTrainr. Tous droits réservés.
+              &copy; {new Date().getFullYear()} GeoTrainr.{' '}
+              {t('footer.copyright')}
             </p>
           </div>
         </div>

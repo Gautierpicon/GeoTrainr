@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import logo from '../assets/logo.svg';
 
 const IconBase = ({ size = 24, className, children, ...props }) => (
@@ -60,6 +61,7 @@ const X = (props) => (
 );
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -92,7 +94,7 @@ const Navbar = () => {
               }`}
             >
               <Flag className="h-5 w-5" />
-              <span>Drapeaux</span>
+              <span>{t('navbar.flags')}</span>
             </Link>
 
             <Link
@@ -104,7 +106,7 @@ const Navbar = () => {
               }`}
             >
               <Languages className="h-5 w-5" />
-              <span>Écritures</span>
+              <span>{t('navbar.scripts')}</span>
             </Link>
 
             <div className="mx-2 h-6 border-l border-gray-300 dark:border-slate-700"></div>
@@ -151,7 +153,7 @@ const Navbar = () => {
             }`}
           >
             <Home className="h-6 w-6" />
-            <span>Accueil</span>
+            <span>{t('navbar.home')}</span>
           </Link>
 
           <Link
@@ -164,7 +166,7 @@ const Navbar = () => {
             }`}
           >
             <Flag className="h-6 w-6" />
-            <span>Drapeaux</span>
+            <span>{t('navbar.flags')}</span>
           </Link>
 
           <Link
@@ -177,7 +179,7 @@ const Navbar = () => {
             }`}
           >
             <Languages className="h-6 w-6" />
-            <span>Écritures</span>
+            <span>{t('navbar.scripts')}</span>
           </Link>
 
           <Link
@@ -190,7 +192,7 @@ const Navbar = () => {
             }`}
           >
             <Settings className="h-6 w-6" />
-            <span>Paramètres</span>
+            <span>{t('navbar.settings')}</span>
           </Link>
         </div>
       </div>

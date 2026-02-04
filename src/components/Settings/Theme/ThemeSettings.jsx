@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Theme = () => {
+  const { t } = useTranslation();
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'system');
   const [mounted, setMounted] = useState(false);
 
@@ -47,14 +49,18 @@ const Theme = () => {
   return (
     <div className="mx-4 flex w-full flex-col items-center gap-4 rounded-2xl bg-gray-200 p-4 sm:mx-0 dark:bg-gray-800">
       <span className="text-lg font-semibold text-gray-700 dark:text-gray-200">
-        Choisir le thème
+        {t('settings.theme.title')}
       </span>
 
       <div className="flex flex-wrap justify-center gap-2">
         {[
-          { value: 'light', icon: SunIcon, label: 'Clair' },
-          { value: 'dark', icon: MoonIcon, label: 'Sombre' },
-          { value: 'system', icon: SystemIcon, label: 'Système' },
+          { value: 'light', icon: SunIcon, label: t('settings.theme.light') },
+          { value: 'dark', icon: MoonIcon, label: t('settings.theme.dark') },
+          {
+            value: 'system',
+            icon: SystemIcon,
+            label: t('settings.theme.system'),
+          },
           // eslint-disable-next-line no-unused-vars
         ].map(({ value, icon: IconComponent, label }) => (
           <button

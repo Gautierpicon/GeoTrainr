@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Timer = ({
   duration = 30,
@@ -6,6 +7,7 @@ const Timer = ({
   isRunning = true,
   className = '',
 }) => {
+  const { t } = useTranslation();
   const [timeLeft, setTimeLeft] = useState(duration);
 
   useEffect(() => {
@@ -40,7 +42,7 @@ const Timer = ({
     <div className={`w-full max-w-md ${className}`}>
       <div className="mb-1 flex items-center justify-between">
         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-          Temps restant
+          {t('quiz.timeLeft')}
         </span>
         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
           {timeLeft}s
