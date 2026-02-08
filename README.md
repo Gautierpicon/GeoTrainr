@@ -61,7 +61,7 @@ Toutes les contributions sont les bienvenues ! Pour contribuer :
 
 ```sh
 # Cloner le projet
-git clone https://github.com/Gautierpicon/GeoTrainr.git
+git clone https://github.com/GautierPicon/GeoTrainr.git
 cd GeoTrainr
 
 # Installer les dépendances
