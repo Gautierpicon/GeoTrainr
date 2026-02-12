@@ -16,6 +16,7 @@ The game offers two training modes based on flag and language recognition.
 - **Dark Mode**: An interface adapted to user preferences.
 - **Responsive**: Fully responsive interface for mobile, tablet, and desktop devices.
 - **Timer**: Option to add a timer to questions
+- **Multilingual**: Available in French and English
 
 ## Game Modes
 
@@ -75,9 +76,5 @@ npm run dev
 ```
 
 The application will be accessible at `http://localhost:5173/`, unless another site is already using this location. In that case, refer to the link displayed in your terminal.
-
-2. Create a specific branch (`feature-new-feature`)
-3. Make your changes and **test them**
-4. Submit a pull request
 
 If you find a bug or want to suggest an improvement, you can open an issue [here](https://github.com/Gautierpicon/GeoTrainr/issues/new).
