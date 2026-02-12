@@ -2,82 +2,82 @@
 
 ### `GeoTrainr`
 
-### Le site est disponible en ligne et gartuitement ici : [GeoTrainr](https://geotrainr-jet.vercel.app/)
+### The site is available online and for free here: [GeoTrainr](https://geotrainr-jet.vercel.app/)
 
-## Présentation du projet
+## Project Overview
 
-GeoTrainr est une plateforme interactive d'entraînement pour les amateurs de géographie et les joueurs de GeoGuessr.
-Le jeu propose deux modes d'entraînement basés sur la reconnaissance des drapeaux et des langues.
+GeoTrainr is an interactive training platform for geography enthusiasts and GeoGuessr players.
+The game offers two training modes based on flag and language recognition.
 
-## Fonctionnalités
+## Features
 
-- **Quiz des Drapeaux** : Testez vos connaissances des drapeaux du monde en identifiant le bon pays parmi plusieurs options.
-- **Quiz des Langues** : Trouvez la langue d'une phrase affichée, en choisissant parmi des réponses plausibles basées sur des regroupements logiques.
-- **Mode sombre** : Une interface adaptée aux préférences des utilisateurs.
-- **Responsive** : Interface entièrement adaptée aux mobiles, tablettes et ordinateurs.
-- **Minuteur** : Possibilité de mettre un minuteur sur les questions
+- **Flags Quiz**: Test your knowledge of world flags by identifying the correct country among several options.
+- **Languages Quiz**: Identify the language of a displayed sentence, choosing from plausible answers based on logical groupings.
+- **Dark Mode**: An interface adapted to user preferences.
+- **Responsive**: Fully responsive interface for mobile, tablet, and desktop devices.
+- **Timer**: Option to add a timer to questions
 
-## Modes de jeu
+## Game Modes
 
-### Mode Drapeaux
+### Flags Mode
 
-Dans ce mode, une image de drapeau s'affiche, et vous devez identifier le pays correspondant parmi cinq propositions.
+In this mode, a flag image is displayed, and you must identify the corresponding country from five options.
 
-#### Génération des questions
+#### Question Generation
 
-- Les drapeaux sont obtenus dynamiquement via l'API [FlagCDN](https://flagcdn.com/).
-- Une liste de pays est stockée dans un fichier JSON (`countries.json`).
-- Un pays est sélectionné aléatoirement comme bonne réponse.
-- Quatre autres pays sont choisis au hasard comme fausses réponses.
-- Les cinq options sont mélangées pour garantir l'équité du jeu.
+- Flags are obtained dynamically via the [FlagCDN](https://flagcdn.com/) API.
+- A list of countries is stored in a JSON file (`countries.json`).
+- A country is randomly selected as the correct answer.
+- Four other countries are randomly chosen as incorrect answers.
+- The five options are shuffled to ensure fairness.
 
-### Mode Langues
+### Languages Mode
 
-Dans ce mode, une phrase est affichée, et vous devez identifier la langue dans laquelle elle est écrite.
+In this mode, a sentence is displayed, and you must identify the language it is written in.
 
-#### Génération des questions
+#### Question Generation
 
-- Les phrases sont stockées dans `languages.json`, un fichier structuré par régions linguistiques.
-- Une langue est choisie aléatoirement, et une phrase associée est affichée.
-- Les fausses réponses sont sélectionnées parmi les langues du même groupe régional, garantissant que toutes les options semblent plausibles.
-- Les cinq choix sont mélangés pour éviter toute répétition prévisible.
+- Sentences are stored in `languages.json`, a file structured by linguistic regions.
+- A language is randomly selected, and an associated sentence is displayed.
+- Incorrect answers are selected from languages in the same regional group, ensuring all options appear plausible.
+- The five choices are shuffled to avoid any predictable repetition.
 
-## Interface et accessibilité
+## Interface and Accessibility
 
-- Interface moderne et épurée.
-- Mode sombre pour une meilleure lisibilité.
-- Navigation fluide entre les différents modes.
+- Modern and clean interface.
+- Dark mode for better readability.
+- Smooth navigation between different modes.
 
-## Contribution
+## Contributing
 
-Toutes les contributions sont les bienvenues ! Pour contribuer :
+All contributions are welcome! To contribute:
 
-### Prérequis
+### Prerequisites
 
-- [Node.js](https://nodejs.org/fr)
-- npm ou yarn
+- [Node.js](https://nodejs.org/)
+- npm or yarn
 
-1. Clonez le projet
+1. Clone the project
 
 ```sh
-# Cloner le projet
+# Clone the project
 git clone https://github.com/GautierPicon/GeoTrainr.git
 cd GeoTrainr
 
-# Installer les dépendances
+# Install dependencies
 npm install
 ```
 
-### Démarrer l'application
+### Start the website
 
 ```sh
 npm run dev
 ```
 
-L'application sera accessible sur `http://localhost:5173/`, a moins qu'un autre site utilise déjà cet emplacement. Dans ce cas referez-vous au lien que le terminal vous affiche.
+The application will be accessible at `http://localhost:5173/`, unless another site is already using this location. In that case, refer to the link displayed in your terminal.
 
-2. Créez une branche spécifique (`feature-nouvelle-fonctionnalite`)
-3. Faites vos modifications et **testez-les**
-4. Soumettez une pull request
+2. Create a specific branch (`feature-new-feature`)
+3. Make your changes and **test them**
+4. Submit a pull request
 
-Si vous trouvez un bug ou souhaitez suggérer une amélioration, vous pouvez ouvrir une issue [ici](https://github.com/Gautierpicon/GeoTrainr/issues/new).
+If you find a bug or want to suggest an improvement, you can open an issue [here](https://github.com/Gautierpicon/GeoTrainr/issues/new).
